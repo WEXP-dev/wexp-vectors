@@ -1,0 +1,181 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:wexp:vectors:schema:0.1.0",
+  "title": "WEXP implementation-independent vector envelope",
+  "description": "Repository infrastructure schema. This schema is not a WEXP wire-protocol specification.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "vector_id",
+    "specification",
+    "requirement_ids",
+    "description",
+    "classification",
+    "input",
+    "expected"
+  ],
+  "properties": {
+    "vector_id": {
+      "type": "string",
+      "pattern": "^WEXP-(CORE|REPRESENTATION|BOUNDARY|INTEROP|EXAMPLE)-V[0-9]{4,}$"
+    },
+    "specification": {
+      "enum": [
+        "core",
+        "representation",
+        "boundary",
+        "interop",
+        "schema-example"
+      ]
+    },
+    "requirement_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^WEXP-(CORE|REPRESENTATION)-REQ-[0-9]{4,}$"
+      },
+      "uniqueItems": true
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1
+    },
+    "classification": {
+      "enum": [
+        "positive",
+        "negative",
+        "valid",
+        "invalid",
+        "boundary",
+        "interop",
+        "non-normative-schema-example"
+      ]
+    },
+    "input": true,
+    "expected": {
+      "type": "object",
+      "minProperties": 1
+    },
+    "external_specifications": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/externalSpecification"
+      }
+    },
+    "mapping_id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]*$"
+    },
+    "assumptions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    }
+  },
+  "$defs": {
+    "externalSpecification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "identity",
+        "relationship",
+        "revision_kind",
+        "exact_revision"
+      ],
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1
+        },
+        "relationship": {
+          "enum": [
+            "REFERENCE",
+            "MAPPING",
+            "DEPENDENCY"
+          ]
+        },
+        "revision_kind": {
+          "enum": [
+            "document-revision",
+            "commit",
+            "tag",
+            "digest"
+          ]
+        },
+        "exact_revision": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_uri": {
+          "type": "string",
+          "format": "uri"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "required": [
+          "classification"
+        ],
+        "properties": {
+          "classification": {
+            "const": "non-normative-schema-example"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "specification": {
+            "const": "schema-example"
+          },
+          "requirement_ids": {
+            "maxItems": 0
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "requirement_ids": {
+            "minItems": 1
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "required": [
+          "classification"
+        ],
+        "properties": {
+          "classification": {
+            "const": "interop"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "external_specifications",
+          "mapping_id",
+          "assumptions"
+        ],
+        "properties": {
+          "specification": {
+            "const": "interop"
+          }
+        }
+      }
+    }
+  ]
+}

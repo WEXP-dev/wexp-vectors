@@ -1,0 +1,102 @@
+{
+  "artifact_kind": "wexp-public-genesis",
+  "created_at": "2026-08-11T19:00:54Z",
+  "genesis_kind": "authorized-public-state",
+  "manifest_version": 1,
+  "non_claims": [
+    "This public genesis does not assert that the included artifacts were originally created or published at the time of this Git root commit.",
+    "This manifest is not a release, independent conformance result, or IETF acceptance record."
+  ],
+  "payload": {
+    "file_count": 12,
+    "inventory": [
+      {
+        "mode": "100644",
+        "path": ".github/workflows/validate-vectors.yml",
+        "sha256": "b03e62640b07e1ff605c12e8931952a9496a9a0aa54f026eb51607531dccaafa",
+        "size": 839
+      },
+      {
+        "mode": "100644",
+        "path": ".gitignore",
+        "sha256": "061830dec9ff45907398d094d179f71c9fbc1838a30f0f869b43dccb98a87d7d",
+        "size": 30
+      },
+      {
+        "mode": "100644",
+        "path": "CONTRIBUTING.md",
+        "sha256": "64de4883bf2729565eb909dbe952236f3deca3f6c30d4997f5a15c137d85b1d4",
+        "size": 2603
+      },
+      {
+        "mode": "100644",
+        "path": "LICENSE",
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "size": 11358
+      },
+      {
+        "mode": "100644",
+        "path": "README.md",
+        "sha256": "00dec1abcd87597f9b3b84579bc218d4156fb8e7cf0b2bcba7d920724eb0298c",
+        "size": 4916
+      },
+      {
+        "mode": "100644",
+        "path": "VERSION",
+        "sha256": "e9dd8507f4bf0c6f42458e41aea833ad0bd3f6127272335eee9bf4d58541ed67",
+        "size": 6
+      },
+      {
+        "mode": "100644",
+        "path": "examples/non-normative-schema-example.json",
+        "sha256": "8d9d5074e38e6cf8b07ffe20f1fa1b2b41c7c9665e410b90f220a6ccea4573cc",
+        "size": 432
+      },
+      {
+        "mode": "100644",
+        "path": "manifests/vectors.json",
+        "sha256": "0feddbf3ee3516062a70efc41aa58b7a08cb65c6517a16aa7484f931c94022d9",
+        "size": 622
+      },
+      {
+        "mode": "100644",
+        "path": "requirements-validator.txt",
+        "sha256": "44ff0dc2f1e40311b8239e83146749ab9d9cee2a650e699f5464755d552ee20d",
+        "size": 19
+      },
+      {
+        "mode": "100644",
+        "path": "schema/vector.schema.json",
+        "sha256": "c5711c0c95bd4b4ac35631d630d12f30375cd39ca35eb1e0da15dbc4d239dd75",
+        "size": 3794
+      },
+      {
+        "mode": "100644",
+        "path": "scripts/validate_vectors.py",
+        "sha256": "ddb8c60f359920f5d31f8fa8c3220c6768a617381e8f97fb643223ebfe4febb5",
+        "size": 20505
+      },
+      {
+        "mode": "100644",
+        "path": "tests/test_validate_vectors.py",
+        "sha256": "30f1dda0365a3b0300ec63b99a74c7dd29807e6e0de152e70566af08e8759e41",
+        "size": 5484
+      }
+    ],
+    "snapshot": {
+      "format": "USTAR; UTF-8-byte-sorted regular files; no directory entries; uid/gid 0; empty uname/gname; mtime 0; inventory modes",
+      "sha256": "eab14236b5f2c5eccaf47acd4c4abd84be27a2afba1e0421b5e7af93bb8a002a"
+    },
+    "tree_digest_algorithm": "SHA-256 over 'wexp-public-tree-v1\\0' followed by UTF-8-byte-sorted mode\\0path\\0size_decimal\\0sha256hex\\n entries",
+    "tree_sha256": "7fef60463b5f506f55fc4e2a67f42282347464fc70ea944ef0c7457a81d91b0c"
+  },
+  "repository": "WEXP-dev/wexp-vectors",
+  "self_exclusion": {
+    "path": "provenance/PUBLIC-GENESIS.json",
+    "reason": "The manifest is excluded from its own payload inventory and digest to avoid a self-hash cycle."
+  },
+  "statements": [
+    "This public repository begins at an intentionally authorized public state.",
+    "Prior private engineering history is not part of this public Git history."
+  ]
+}

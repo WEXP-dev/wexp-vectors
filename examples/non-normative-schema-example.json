@@ -1,0 +1,14 @@
+{
+  "vector_id": "WEXP-EXAMPLE-V0001",
+  "specification": "schema-example",
+  "requirement_ids": [],
+  "description": "Non-normative repository-envelope example; this input and result are not WEXP protocol data or semantics.",
+  "classification": "non-normative-schema-example",
+  "input": {
+    "example_only": true,
+    "value": "not-a-wexp-protocol-record"
+  },
+  "expected": {
+    "validator_outcome": "schema-valid-only"
+  }
+}

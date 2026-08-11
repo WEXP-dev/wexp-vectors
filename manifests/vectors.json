@@ -1,0 +1,19 @@
+{
+  "manifest_version": 1,
+  "manifest_kind": "wexp-vector-integrity-index",
+  "repository_version": "0.1.0",
+  "release_status": "public-infrastructure-only",
+  "schema": {
+    "path": "schema/vector.schema.json",
+    "sha256": "c5711c0c95bd4b4ac35631d630d12f30375cd39ca35eb1e0da15dbc4d239dd75"
+  },
+  "vectors": [
+    {
+      "path": "examples/non-normative-schema-example.json",
+      "vector_id": "WEXP-EXAMPLE-V0001",
+      "classification": "non-normative-schema-example",
+      "status": "non-normative-schema-example",
+      "sha256": "8d9d5074e38e6cf8b07ffe20f1fa1b2b41c7c9665e410b90f220a6ccea4573cc"
+    }
+  ]
+}
