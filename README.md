@@ -1,8 +1,8 @@
 # WEXP Test Vectors
 
-WEXP (Witnessed Execution) is an IETF-oriented specification effort for
-independently verifiable claims about software and AI execution within explicit
-evidence and observation boundaries.
+WEXP (Witnessed Execution Protocol) is an IETF-oriented specification effort
+for evaluating support for claims about software and AI execution within
+explicit evidence and observation boundaries.
 
 This repository provides implementation-independent test-vector infrastructure
 for published WEXP specification states. The WEXP specifications are
