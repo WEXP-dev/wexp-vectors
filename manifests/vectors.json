@@ -5,7 +5,7 @@
   "release_status": "public-infrastructure-only",
   "schema": {
     "path": "schema/vector.schema.json",
-    "sha256": "c5711c0c95bd4b4ac35631d630d12f30375cd39ca35eb1e0da15dbc4d239dd75"
+    "sha256": "4a60b38d0a0a72cc955abe937a419ea11a7266fc2c30fa0d709f590dbbee241d"
   },
   "vectors": [
     {
