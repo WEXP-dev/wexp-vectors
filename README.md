@@ -1,10 +1,21 @@
-# WEXP implementation-independent test vectors
+# WEXP Test Vectors
 
-This repository is the public boundary for released,
-implementation-independent WEXP test-vector artifacts. The WEXP specifications
-are authoritative. Requirement traceability and expected results come from
+WEXP (Witnessed Execution) is an IETF-oriented specification effort for
+independently verifiable claims about software and AI execution within explicit
+evidence and observation boundaries.
+
+This repository provides implementation-independent test-vector infrastructure
+for published WEXP specification states. The WEXP specifications are
+authoritative: requirement traceability and expected behavior derive from
 specification text and reviewed requirement identifiers, never from observed
 behavior of `wexp-ref` or another implementation.
+
+**Released normative protocol vectors: none yet.**
+
+The repository currently contains a vector schema, validation tooling and
+tests, an integrity manifest, and one explicitly non-normative schema example.
+The example demonstrates only the repository envelope; it does not define WEXP
+input, output, wire format, or semantics.
 
 The intended dependency direction is:
 
@@ -12,17 +23,26 @@ The intended dependency direction is:
 WEXP specifications -> requirements -> vectors -> implementations
 ```
 
-`wexp-ref` is an optional executable interpretation and test vehicle. This repository does not import, execute, or depend on it. An external developer should be able to implement and test WEXP using `wexp-spec` plus this repository.
+`wexp-ref` is an optional executable interpretation and test vehicle. This
+repository does not import, execute, or depend on it.
 
 ## Released-vector status
 
-Released normative protocol vectors are not yet available. Development and
-review of unreleased vectors occur separately. The single file under `examples/`
-is explicitly classified as `non-normative-schema-example`; it demonstrates the
-repository envelope only and does not define WEXP input, output, wire format, or
-semantics.
+Development and review of unreleased vectors occur separately. The single file
+under `examples/` is explicitly classified as
+`non-normative-schema-example`.
 
 The schema and validator are test infrastructure. They are not part of the WEXP wire protocol and do not add normative meaning to a WEXP specification.
+
+## WEXP repositories
+
+- [Specifications — `wexp-spec`](https://github.com/WEXP-dev/wexp-spec) —
+  published WEXP specification states.
+- [Test vectors — `wexp-vectors`](https://github.com/WEXP-dev/wexp-vectors) —
+  implementation-independent test-vector infrastructure.
+- [Reference implementation — `wexp-ref`](https://github.com/WEXP-dev/wexp-ref)
+  — conservative implementation and generic tooling bounded by published WEXP
+  specifications.
 
 ## Vector classes
 
@@ -85,6 +105,12 @@ Vector repository versions use SemVer independently from IETF document
 revisions. IETF revision identifiers and vector release versions are different
 namespaces.
 
+## Public genesis
+
+The [public genesis manifest](provenance/PUBLIC-GENESIS.json) records the first
+intentionally authorized public repository state. It is not a vector release,
+conformance result, interoperability result, or IETF acceptance record.
+
 ## Licensing
 
 Repository-authored vectors, schemas, validators, examples, and supporting
@@ -96,3 +122,8 @@ underlying IETF specification text.
 ## Claims and non-claims
 
 A passing repository check establishes only that the checked files satisfy this repository's structural and integrity rules. It does not establish complete protocol correctness, independent conformance, interoperability, IETF submission, IETF acceptance, or remote execution.
+
+## Contributing
+
+See [`CONTRIBUTING.md`](CONTRIBUTING.md) for contribution and traceability
+requirements.
