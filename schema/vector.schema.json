@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "urn:wexp:vectors:schema:0.1.0",
   "title": "WEXP implementation-independent vector envelope",
-  "description": "Repository infrastructure schema. This schema is not a WEXP wire-protocol specification.",
+  "description": "Schema for implementation-independent WEXP vector files. It does not define the WEXP wire protocol.",
   "type": "object",
   "additionalProperties": false,
   "required": [

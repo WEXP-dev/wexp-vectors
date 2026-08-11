@@ -1,12 +1,14 @@
 # Contributing vectors
 
-Contributions are welcome when the expected result is traceable to an authoritative WEXP specification requirement. The specification, not `wexp-ref`, is the authority.
+Contributions are welcome when each expected result can be traced to a
+requirement in a published WEXP specification. Published WEXP specifications
+are authoritative; `wexp-ref` does not define expected behavior.
 
 ## Contribution requirements
 
 For each proposed protocol vector:
 
-1. Identify the exact WEXP document and revision that supplies the expected behavior.
+1. Identify the exact WEXP document and revision that defines the expected behavior.
 2. Cite one or more existing reviewed requirement IDs accepted by the schema. Do not invent a requirement to make a vector pass validation.
 3. Select the class that matches the property being tested. Keep record structure separate from semantic verification.
 4. Choose a stable, unique vector ID in the namespace enforced by the schema.
@@ -14,13 +16,17 @@ For each proposed protocol vector:
 6. Add the vector to `manifests/vectors.json` with its exact SHA-256 digest and matching metadata.
 7. Run the validator and unit tests documented in `README.md`.
 
-If the specification is ambiguous, stop and record the ambiguity in the specification development process. Do not infer expected semantics from an implementation and do not use a vector to silently create new normative meaning.
+If the specification is ambiguous, stop and document the ambiguity through the
+specification review process. Do not infer expected semantics from an
+implementation and do not use a vector to silently create new normative
+meaning.
 
 Schema examples must live under `examples/`, use the `WEXP-EXAMPLE-` ID namespace, and be classified exactly as `non-normative-schema-example`. They cannot cite fictional requirement IDs or be presented as protocol tests.
 
 ## Interop contributions
 
-Only stable, released interop cases belong here. Experimental cases belong in the pre-publication workspace.
+Only stable interop cases that have been released belong here. Experimental
+cases belong in the pre-publication workspace.
 
 An interop vector must:
 
@@ -33,9 +39,11 @@ An interop vector must:
 
 Floating revisions (`HEAD`, branches, `latest`, and equivalents) are not accepted.
 
-## Review boundaries
+## What review establishes
 
-A merged vector may demonstrate the expected behavior for the requirements it cites. Passing it does not prove complete WEXP correctness or independent conformance. GitHub Actions supplies repeatable checks, not WEXP specification authority.
+A merged vector may demonstrate the expected behavior for the requirements it
+cites. Passing it does not prove complete WEXP correctness or independent
+conformance. GitHub Actions runs repeatable checks; it does not define WEXP.
 
 Unless explicitly documented otherwise, contributions are submitted under the
 repository's Apache License 2.0. No contributor license agreement, copyright

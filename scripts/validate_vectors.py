@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
-"""Validate the self-contained WEXP vector repository.
+"""Validate this repository's WEXP vector schema, files, and integrity manifest.
 
-This tool validates repository infrastructure. It does not implement WEXP and
-does not determine protocol conformance independently of the specifications.
+This tool does not implement WEXP or determine protocol conformance.
 """
 
 from __future__ import annotations
@@ -21,7 +20,7 @@ try:
     from jsonschema.exceptions import SchemaError
 except ImportError as exc:  # pragma: no cover - exercised by CLI environments
     raise SystemExit(
-        "jsonschema is required; install requirements-validator.txt"
+        "The jsonschema package is required. Install the packages listed in requirements-validator.txt."
     ) from exc
 
 
@@ -383,7 +382,7 @@ def _validate_manifest(
 
         if release_status == "public-infrastructure-only" and entry.get("status") == "released":
             report.errors.append(
-                f"{location} cannot mark a vector released while the manifest is schema-only"
+                f"{location} cannot mark a vector as released while release_status is 'public-infrastructure-only'"
             )
 
         declared_hash = entry.get("sha256")
