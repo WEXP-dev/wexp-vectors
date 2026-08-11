@@ -25,8 +25,8 @@ Schema examples must live under `examples/`, use the `WEXP-EXAMPLE-` ID namespac
 
 ## Interop contributions
 
-Only stable interop cases intended for release belong here. Experimental cases
-belong in the pre-publication workspace.
+Only stable interop cases that have been released belong here. Experimental
+cases belong in the pre-publication workspace.
 
 An interop vector must:
 
