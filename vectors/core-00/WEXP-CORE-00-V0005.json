@@ -1,0 +1,63 @@
+{
+  "vector_id": "WEXP-CORE-00-V0005",
+  "specification": {
+    "document": "draft-sergeev-wexp-core",
+    "revision": "00",
+    "artifact": "xml",
+    "sha256": "6cd8b680059cc81e1ec4c84737d9319ee242ef63e89c57de497bd57ede08d810"
+  },
+  "requirement_ids": [
+    "WEXP-CORE-00-REQ-0002",
+    "WEXP-CORE-00-REQ-0003",
+    "WEXP-CORE-00-REQ-0004",
+    "WEXP-CORE-00-REQ-0006"
+  ],
+  "purpose": "Confirm the published downgrade target for a WL5 claim that has bound top-level provenance but lacks bound independent verification.",
+  "classification": "negative",
+  "test_representation": {
+    "id": "wexp-core-00-test-harness",
+    "revision": "1",
+    "status": "non-normative-test-representation"
+  },
+  "input": {
+    "prior_checks": {
+      "structure": "valid",
+      "canonicalization": "valid",
+      "timestamps": "valid",
+      "signature": "valid",
+      "key_binding": "valid",
+      "capabilities_resolution": "accepted",
+      "hash_algorithms": "supported",
+      "recorder_qualification": "absent",
+      "chain": "absent"
+    },
+    "boundary_type": "host-hook",
+    "claimed_level": "WL5",
+    "effective_conformance_class": "CC5",
+    "evidence": {
+      "arguments_hash": true,
+      "execution_fields": true,
+      "bound_provenance": true,
+      "bound_independent_verification": false
+    },
+    "unknown_extensions": []
+  },
+  "expected": {
+    "verdict": "downgrade",
+    "verified_level": "WL4"
+  },
+  "derivation": {
+    "source_locators": [
+      "Section 7.1 (XML anchor honesty-boundary), type-specific evidence lift",
+      "Section 8.2.1 (XML anchor verifier-downgrade), first explicit example",
+      "Section 4.1.1 (XML anchor cc-maxcap), Table 3",
+      "Section 8.1 (XML anchor verifier-result), normative base and verdict calculation"
+    ],
+    "steps": [
+      "The host-hook boundary and execution fields support WL3.",
+      "Bound provenance satisfies the WL4 lift.",
+      "The missing independent-verification artifact prevents the claimed WL5 lift.",
+      "The highest supported level is WL4, so the verdict is downgrade."
+    ]
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:wexp:vectors:core-00-test-harness:1",
+  "title": "Core -00 non-normative semantic test harness",
+  "description": "Validates the abstract input facts and expected observations used by the first Core -00 vector slice. This is not a WEXP record, protocol wire format, carrier, or source of WEXP semantics.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["input", "expected"],
+  "properties": {
+    "input": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "prior_checks",
+        "boundary_type",
+        "claimed_level",
+        "effective_conformance_class",
+        "evidence",
+        "unknown_extensions"
+      ],
+      "properties": {
+        "prior_checks": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "structure",
+            "canonicalization",
+            "timestamps",
+            "signature",
+            "key_binding",
+            "capabilities_resolution",
+            "hash_algorithms",
+            "recorder_qualification",
+            "chain"
+          ],
+          "properties": {
+            "structure": {"const": "valid", "description": "Core record structure has already passed the schema check."},
+            "canonicalization": {"const": "valid", "description": "The serialization's canonical signing input has already been produced successfully."},
+            "timestamps": {"const": "valid", "description": "All applicable Core timestamp checks have already succeeded."},
+            "signature": {"const": "valid", "description": "A present signature has already been verified successfully."},
+            "key_binding": {"const": "valid", "description": "The signing key has already been resolved and bound successfully."},
+            "capabilities_resolution": {"const": "accepted", "description": "capabilities_ref has already resolved to the accepted effective Conformance Class supplied by the harness."},
+            "hash_algorithms": {"const": "supported", "description": "Every field or evidence reference represented as present uses a supported hash algorithm and is honored."},
+            "recorder_qualification": {"const": "absent", "description": "No profile-defined recorder qualification or recorder ceiling applies."},
+            "chain": {"const": "absent", "description": "No chain or composition minimum applies."}
+          }
+        },
+        "boundary_type": {
+          "description": "The registered model.boundary_type value declared in the record after structure validation. Core evaluates and bounds the declared value under its signature, Conformance Class, and evidence rules; this harness fact does not independently prove that the real environment matched the declaration.",
+          "enum": [
+            "manual-approval",
+            "proxy",
+            "workflow",
+            "host-hook",
+            "kernel",
+            "tool-runtime",
+            "tee"
+          ]
+        },
+        "claimed_level": {
+          "enum": ["WL1", "WL2", "WL3", "WL4", "WL5"]
+        },
+        "effective_conformance_class": {
+          "enum": ["CC0", "CC1", "CC2", "CC3", "CC4", "CC5"]
+        },
+        "evidence": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "arguments_hash",
+            "execution_fields",
+            "bound_provenance",
+            "bound_independent_verification"
+          ],
+          "properties": {
+            "arguments_hash": {
+              "type": "boolean",
+              "description": "True means input.arguments_hash is present, syntactically valid, uses a supported algorithm, and is honored; false means the WL1/WL2 conditional field is not available."
+            },
+            "execution_fields": {
+              "type": "boolean",
+              "description": "True means all four Section 6.1 WL3 fields execution.started_at, execution.ended_at, execution.outcome, and execution.result_hash are present, syntactically valid, use supported algorithms where applicable, and are honored; false means the complete WL3 condition is not met."
+            },
+            "bound_provenance": {
+              "type": "boolean",
+              "description": "True means a top-level provenance evidence-ref is present, syntactically bound to the record under Core, uses a supported digest algorithm, and is honored; false means the WL4 artifact condition is not met. The harness does not appraise artifact internals."
+            },
+            "bound_independent_verification": {
+              "type": "boolean",
+              "description": "True means a top-level independent-verification evidence-ref is present, syntactically bound to the record under Core, uses a supported digest algorithm, and is honored; false means the WL5 artifact condition is not met. The harness does not appraise artifact internals."
+            }
+          }
+        },
+        "unknown_extensions": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["name", "critical"],
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^[a-z][a-z0-9-]*$"
+              },
+              "critical": {"type": "boolean"}
+            }
+          }
+        }
+      }
+    },
+    "expected": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["verdict", "verified_level"],
+          "properties": {
+            "verdict": {"enum": ["accept", "downgrade"]},
+            "verified_level": {"enum": ["WL0", "WL1", "WL2", "WL3", "WL4", "WL5"]}
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["verdict", "errors"],
+          "properties": {
+            "verdict": {"const": "reject"},
+            "errors": {
+              "type": "array",
+              "minItems": 1,
+              "uniqueItems": true,
+              "items": {"const": "E_UNKNOWN_CRITICAL_EXTENSION"}
+            }
+          }
+        }
+      ]
+    }
+  }
+}
