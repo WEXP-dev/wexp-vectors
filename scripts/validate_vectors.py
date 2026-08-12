@@ -360,6 +360,29 @@ def _validate_core_vector(
                 f"{_json_location(error.absolute_path)}: {error.message}"
             )
 
+    # The harness array represents entries from Core's extensions map. JSON
+    # Schema uniqueItems rejects duplicate objects, but the same extension
+    # name with different critical flags would still be two distinct objects.
+    # Reject that contradictory post-structure fact explicitly.
+    input_value = document.get("input")
+    extensions = (
+        input_value.get("unknown_extensions")
+        if isinstance(input_value, dict)
+        else None
+    )
+    if isinstance(extensions, list):
+        seen_extension_names: set[str] = set()
+        for index, extension in enumerate(extensions):
+            name = extension.get("name") if isinstance(extension, dict) else None
+            if not isinstance(name, str):
+                continue
+            if name in seen_extension_names:
+                report.errors.append(
+                    f"{label}: duplicate unknown extension name {name!r} at "
+                    f"input.unknown_extensions[{index}]"
+                )
+            seen_extension_names.add(name)
+
 
 def _validate_integrity_entry(
     root: Path,

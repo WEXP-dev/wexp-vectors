@@ -153,6 +153,19 @@ class ValidatorTests(unittest.TestCase):
         self.assertIn("test-harness schema error", self.errors())
         self.assertIn("'valid' was expected", self.errors())
 
+    def test_unknown_extension_names_must_be_unique(self) -> None:
+        vector_path = "vectors/core-00/WEXP-CORE-00-V0007.json"
+        vector = self.load_json(vector_path)
+        vector["input"]["unknown_extensions"] = [
+            {"name": "slice-unknown", "critical": False},
+            {"name": "slice-unknown", "critical": True},
+        ]
+        self.write_json(vector_path, vector)
+        self.assertIn(
+            "duplicate unknown extension name 'slice-unknown'",
+            self.errors(),
+        )
+
     def test_manifest_hash_mismatch_is_rejected(self) -> None:
         manifest_path = "manifests/vectors.json"
         manifest = self.load_json(manifest_path)
