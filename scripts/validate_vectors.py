@@ -147,6 +147,9 @@ def _load_schema(
     root: Path, relative_path: PurePosixPath, report: ValidationReport
 ) -> dict[str, Any] | None:
     schema_file = root / relative_path
+    if schema_file.is_symlink():
+        report.errors.append(f"schema must not be a symbolic link: {relative_path}")
+        return None
     if not schema_file.is_file():
         report.errors.append(f"missing schema: {relative_path}")
         return None
@@ -167,6 +170,11 @@ def _discover_vectors(root: Path, report: ValidationReport) -> list[Path]:
     files: list[Path] = []
     for relative_root in VECTOR_ROOTS:
         directory = root / relative_root
+        if directory.is_symlink():
+            report.errors.append(
+                f"vector root must not be a symbolic link: {relative_root}"
+            )
+            continue
         if not directory.is_dir():
             continue
         for path in directory.rglob("*.json"):
@@ -183,6 +191,11 @@ def _validate_requirements(
     root: Path, report: ValidationReport
 ) -> tuple[dict[str, Any] | None, set[str]]:
     registry_file = root / REQUIREMENTS_PATH
+    if registry_file.is_symlink():
+        report.errors.append(
+            f"requirement registry must not be a symbolic link: {REQUIREMENTS_PATH}"
+        )
+        return None, set()
     if not registry_file.is_file():
         report.errors.append(f"missing requirement registry: {REQUIREMENTS_PATH}")
         return None, set()
@@ -370,7 +383,9 @@ def _validate_integrity_entry(
         )
         return
     path = root / relative_path
-    if not path.is_file():
+    if path.is_symlink():
+        report.errors.append(f"{location}: listed file must not be a symbolic link")
+    elif not path.is_file():
         report.errors.append(f"{location}: listed file does not exist: {relative_path}")
     elif declared_hash != _sha256(path):
         report.errors.append(f"{location}: sha256 mismatch for {relative_path}")
@@ -384,6 +399,9 @@ def _validate_manifest(
     report: ValidationReport,
 ) -> None:
     manifest_file = root / MANIFEST_PATH
+    if manifest_file.is_symlink():
+        report.errors.append(f"manifest must not be a symbolic link: {MANIFEST_PATH}")
+        return
     if not manifest_file.is_file():
         report.errors.append(f"missing manifest: {MANIFEST_PATH}")
         return
@@ -538,7 +556,9 @@ def validate_repository(root: Path) -> ValidationReport:
 
     version_file = root / "VERSION"
     version: str | None = None
-    if not version_file.is_file():
+    if version_file.is_symlink():
+        report.errors.append("VERSION must not be a symbolic link")
+    elif not version_file.is_file():
         report.errors.append("missing VERSION")
     else:
         try:

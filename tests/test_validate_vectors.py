@@ -160,6 +160,19 @@ class ValidatorTests(unittest.TestCase):
         self.write_json(manifest_path, manifest)
         self.assertIn("sha256 mismatch for schema/vector.schema.json", self.errors())
 
+    def test_manifest_rejects_unsafe_paths(self) -> None:
+        manifest_path = "manifests/vectors.json"
+        for unsafe_path in ("../vector.json", "/vector.json", "vectors\\vector.json"):
+            with self.subTest(unsafe_path=unsafe_path):
+                manifest = self.load_json(manifest_path)
+                manifest["vectors"][1]["path"] = unsafe_path
+                self.write_json(manifest_path, manifest)
+                self.assertIn("unsafe or non-canonical path", self.errors())
+                shutil.copy2(
+                    REPOSITORY_ROOT / manifest_path,
+                    self.root / manifest_path,
+                )
+
     def test_manifest_rejects_released_entry_in_candidate_package(self) -> None:
         manifest_path = "manifests/vectors.json"
         manifest = self.load_json(manifest_path)
@@ -193,6 +206,38 @@ class ValidatorTests(unittest.TestCase):
         schema["type"] = "not-a-json-schema-type"
         self.write_json(schema_path, schema)
         self.assertIn("invalid JSON Schema", self.errors())
+
+    def test_fixed_manifest_files_must_not_be_symbolic_links(self) -> None:
+        for relative_path, expected_error in (
+            ("VERSION", "VERSION must not be a symbolic link"),
+            (
+                "manifests/vectors.json",
+                "manifest must not be a symbolic link",
+            ),
+            (
+                "requirements/core-00.json",
+                "requirement registry must not be a symbolic link",
+            ),
+            (
+                "schema/vector.schema.json",
+                "schema must not be a symbolic link",
+            ),
+        ):
+            with self.subTest(relative_path=relative_path):
+                original = self.root / relative_path
+                replacement = original.with_name(original.name + ".target")
+                original.rename(replacement)
+                original.symlink_to(replacement.name)
+                self.assertIn(expected_error, self.errors())
+                original.unlink()
+                replacement.rename(original)
+
+    def test_vector_roots_must_not_be_symbolic_links(self) -> None:
+        original = self.root / "vectors"
+        replacement = self.root / "vectors.target"
+        original.rename(replacement)
+        original.symlink_to(replacement.name, target_is_directory=True)
+        self.assertIn("vector root must not be a symbolic link: vectors", self.errors())
 
 
 if __name__ == "__main__":

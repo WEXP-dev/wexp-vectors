@@ -12,7 +12,7 @@ never comes from observed behavior of `wexp-ref` or another implementation.
 
 **Released normative protocol vectors: none yet.**
 
-This branch proposes seven Core -00 specification-derived test vectors for
+The repository contains seven Core -00 specification-derived test vectors for
 review. They remain candidates: they are neither released vectors nor a
 conformance suite. The repository also contains reviewed requirement references,
 two schemas, validation tooling and tests, an integrity manifest, and one
@@ -64,7 +64,7 @@ The current candidate package uses these classes:
 | --- | --- | --- |
 | Core semantics | `positive` | Specification-defined Core semantic behavior that is supported |
 | Core semantics | `negative` | Specification-defined Core rejection or unsupported behavior |
-| Verification boundary | `boundary` | Unsupported or prohibited inference across verification boundaries |
+| Verification ceiling | `boundary` | Behavior at an evidence, observation, or implementation-capability limit |
 | Schema example | `non-normative-schema-example` | Repository schema examples only |
 
 These classes preserve two important distinctions:
