@@ -12,10 +12,11 @@ never comes from observed behavior of `wexp-ref` or another implementation.
 
 **Released normative protocol vectors: none yet.**
 
-The repository currently contains a vector schema, validation tooling and
-tests, an integrity manifest, and one explicitly non-normative schema example.
-The example demonstrates only the vector envelope; it does not define WEXP
-input, output, wire format, or semantics.
+This branch proposes seven Core -00 specification-derived test vectors for
+review. They remain candidates: they are neither released vectors nor a
+conformance suite. The repository also contains reviewed requirement references,
+two schemas, validation tooling and tests, an integrity manifest, and one
+explicitly non-normative schema example.
 
 The intended dependency direction is:
 
@@ -26,14 +27,25 @@ WEXP specifications -> requirements -> vectors -> implementations
 `wexp-ref` is an optional executable interpretation and test vehicle. This
 repository does not import, execute, or depend on it.
 
-## Released-vector status
+## Vector status
 
-Development and review of unreleased vectors occur separately. The single file
-under `examples/` is explicitly classified as
-`non-normative-schema-example`.
+The seven files under `vectors/core-00/` form the first Core -00 candidate
+slice. Each expected result is traced through
+[`requirements/core-00.json`](requirements/core-00.json) to exact published
+Core -00 sections. The registry includes only requirements reviewed as ready
+for vectors. The integrity manifest marks each specification-derived vector as
+`candidate`.
 
-The schema and validator check repository files. They are not part of the WEXP
-wire protocol and do not define normative protocol behavior.
+The single file under `examples/` is classified as
+`non-normative-schema-example`. It demonstrates only the vector envelope; it
+does not define WEXP input, output, wire format, or semantics.
+
+The Core -00 inputs use the abstract representation defined by
+[`schema/core-00-test-harness.schema.json`](schema/core-00-test-harness.schema.json).
+It is explicitly a non-normative test representation, not a WEXP record,
+protocol wire format, or source of WEXP semantics. Both schemas and the
+validator check repository files; they do not define normative protocol
+behavior.
 
 ## WEXP repositories
 
@@ -46,17 +58,13 @@ wire protocol and do not define normative protocol behavior.
 
 ## Vector classes
 
-The schema defines the following classes. Only
-`non-normative-schema-example` is currently present.
+The current candidate package uses these classes:
 
 | Semantic scope | Classification | What it tests |
 | --- | --- | --- |
 | Core semantics | `positive` | Specification-defined Core semantic behavior that is supported |
 | Core semantics | `negative` | Specification-defined Core rejection or unsupported behavior |
-| Representation validity | `valid` | Structural or representation validity |
-| Representation invalidity | `invalid` | Structural or representation invalidity |
 | Verification boundary | `boundary` | Unsupported or prohibited inference across verification boundaries |
-| Interoperability | `interop` | Stable, mapped behavior involving an exactly identified external specification |
 | Schema example | `non-normative-schema-example` | Repository schema examples only |
 
 These classes preserve two important distinctions:
@@ -68,19 +76,26 @@ for the claim it carries.
 
 ## Vector envelope
 
-Every vector is a JSON document validated by [`schema/vector.schema.json`](schema/vector.schema.json). Required fields are:
+Every document is validated by
+[`schema/vector.schema.json`](schema/vector.schema.json). Core -00 vector files
+use revision-scoped IDs and include:
 
 - `vector_id`
 - `specification`
 - `requirement_ids`
-- `description`
+- `purpose`
 - `classification`
+- `test_representation`
 - `input`
 - `expected`
+- `derivation`
 
-Each released protocol vector must cite at least one reviewed requirement ID. An `expected` value records specification-defined expected behavior; it must not be copied from implementation output.
-
-Interop vectors additionally identify every external specification and its exact revision, and cite a stable `mapping_id`. Floating revisions such as `HEAD`, `main`, or `latest` are rejected. All data needed to execute a released vector must be present in this public repository; validation must not require an implementation, any private repository, private services, or privileged credentials.
+Each Core -00 candidate cites at least one reviewed
+`WEXP-CORE-00-REQ-NNNN` requirement. An `expected` value records behavior
+derived from the published specification and reviewed requirements; it must not
+be copied from implementation output. The package is self-contained and does
+not require `wexp-ref`, another implementation, a private repository, private
+services, or privileged credentials.
 
 ## Validate locally
 
@@ -93,15 +108,18 @@ python3 -m venv .venv
 .venv/bin/python -m unittest discover -s tests -v
 ```
 
-The validator checks the JSON Schema itself, every vector against that schema,
-duplicate JSON keys, duplicate vector and requirement IDs, ID formats,
-classification/specification/ID agreement, interop revision and mapping rules,
-and manifest paths, hashes, and metadata. When released, protocol vectors will
-be stored under `vectors/`.
+The validator checks both JSON Schemas, the non-normative harness inputs and
+expected observations, duplicate JSON keys, duplicate revision-scoped IDs,
+reviewed requirement status and use, Core -00 source identity, and every
+manifest path, digest, classification, and candidate status.
 
 ## Integrity manifest and version
 
-[`manifests/vectors.json`](manifests/vectors.json) is an integrity index, not a conformance or publication attestation. It binds `VERSION`, the schema digest, and every vector JSON path, ID, classification, and digest. Adding or changing a vector requires updating the manifest in the same change.
+[`manifests/vectors.json`](manifests/vectors.json) is an integrity index, not a
+conformance or publication attestation. It binds `VERSION`, both schema
+digests, the reviewed requirement registry, and every vector JSON path, ID,
+classification, status, and digest. Adding or changing a file covered by the
+integrity index requires updating the manifest in the same change.
 
 Vector repository versions use SemVer independently from IETF document
 revisions. IETF revision identifiers and vector release versions are different

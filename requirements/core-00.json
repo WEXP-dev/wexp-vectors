@@ -1,0 +1,110 @@
+{
+  "registry_version": 1,
+  "specification": {
+    "artifact": "xml",
+    "document": "draft-sergeev-wexp-core",
+    "revision": "00",
+    "sha256": "6cd8b680059cc81e1ec4c84737d9319ee242ef63e89c57de497bd57ede08d810"
+  },
+  "requirements": [
+    {
+      "dependencies": [
+        "registered boundary type",
+        "claimed-level conditional fields"
+      ],
+      "id": "WEXP-CORE-00-REQ-0001",
+      "specification": "draft-sergeev-wexp-core",
+      "revision": "00",
+      "keyword": "MUST",
+      "normative_proposition": "For WL1 through WL3, attainable is the highest level n not exceeding both the registered boundary base and the claim for which n's conditional-required fields are present; only a Core-00 evidence lift whose requirements are met can make WL4 or WL5 attainable.",
+      "review_status": "ready-for-vector",
+      "section": "7.1 and 11.1",
+      "source_locator": "XML anchors honesty-boundary and iana-boundary-types; base execution level, combined invariant, and Table 5",
+      "vector_eligibility": true
+    },
+    {
+      "dependencies": [
+        "accepted Conformance Class resolution",
+        "signature fact used to establish effective_cc",
+        "boundary-and-evidence attainable level"
+      ],
+      "id": "WEXP-CORE-00-REQ-0002",
+      "specification": "draft-sergeev-wexp-core",
+      "revision": "00",
+      "keyword": "MUST",
+      "normative_proposition": "verified_level cannot exceed maxCapability(effective_cc): CC0 and CC1 map to WL0, CC2 to WL2, CC3 to WL3, CC4 to WL4, and CC5 to WL5.",
+      "review_status": "ready-for-vector",
+      "section": "4.1.1 and 8.1",
+      "source_locator": "XML anchors cc-maxcap and verifier-result; Table 3 and normative verifier pseudocode",
+      "vector_eligibility": true
+    },
+    {
+      "dependencies": [
+        "execution-ownership boundary",
+        "complete WL3 execution fields",
+        "explicit presence-and-Core-binding status for provenance and independent-verification artifacts"
+      ],
+      "id": "WEXP-CORE-00-REQ-0003",
+      "specification": "draft-sergeev-wexp-core",
+      "revision": "00",
+      "keyword": "none (normative declarative text under the Section 7.1 MUST heading)",
+      "normative_proposition": "At an execution-ownership boundary with complete WL3 execution evidence and a claim high enough for the lift, bound provenance raises attainable to WL4 and bound independent verification raises attainable to WL5; neither artifact satisfies the other lift.",
+      "review_status": "ready-for-vector",
+      "section": "7.1, 7.4.1, and 8.2.1",
+      "source_locator": "XML anchors honesty-boundary, honesty-wl4, and verifier-downgrade; evidence-lift paragraphs and explicit examples",
+      "vector_eligibility": true
+    },
+    {
+      "dependencies": [
+        "structurally valid and safely interpretable input",
+        "successful earlier verifier checks",
+        "supported algorithms for fields treated as present",
+        "effective Conformance Class permits at least WL2",
+        "no recorder qualification or chain minimum lowers the result"
+      ],
+      "id": "WEXP-CORE-00-REQ-0004",
+      "specification": "draft-sergeev-wexp-core",
+      "revision": "00",
+      "keyword": "MUST",
+      "normative_proposition": "Absence of a field or bound artifact required by the claimed level does not by itself cause rejection; the verifier downgrades to the highest level not exceeding the claim whose own evidence requirements are met.",
+      "review_status": "ready-for-vector",
+      "section": "6.1 and 8.2.1",
+      "source_locator": "XML anchors fields-conditional and verifier-downgrade; conditional-field list and explicit WL3 example",
+      "vector_eligibility": true
+    },
+    {
+      "dependencies": [
+        "extension is inside the defined extensions map",
+        "extension name is unknown to the verifier",
+        "critical is true"
+      ],
+      "id": "WEXP-CORE-00-REQ-0005",
+      "specification": "draft-sergeev-wexp-core",
+      "revision": "00",
+      "keyword": "MUST",
+      "normative_proposition": "An unknown extension marked critical causes rejection with E_UNKNOWN_CRITICAL_EXTENSION before semantic level evaluation; it must not be ignored or partially accepted.",
+      "review_status": "ready-for-vector",
+      "section": "8.1 and 8.3",
+      "source_locator": "XML anchors verifier-result and verifier-failure; ordered pseudocode and safe-failure paragraph",
+      "vector_eligibility": true
+    },
+    {
+      "dependencies": [
+        "all earlier reject checks succeeded",
+        "registered boundary and reviewed evidence-presence facts",
+        "accepted effective Conformance Class",
+        "no recorder qualification",
+        "no chain"
+      ],
+      "id": "WEXP-CORE-00-REQ-0006",
+      "specification": "draft-sergeev-wexp-core",
+      "revision": "00",
+      "keyword": "MUST",
+      "normative_proposition": "When no recorder qualification or chain applies, verified_level is min(claimed_level, attainable(boundary_type, claimed_level, evidence), maxCapability(effective_cc)); the verdict is accept exactly when verified_level equals the claim and downgrade otherwise.",
+      "review_status": "ready-for-vector",
+      "section": "8.1",
+      "source_locator": "XML anchor verifier-result; normative base calculation and final verdict pseudocode",
+      "vector_eligibility": true
+    }
+  ]
+}

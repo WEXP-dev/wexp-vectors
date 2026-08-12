@@ -1,15 +1,14 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "urn:wexp:vectors:schema:0.1.0",
+  "$id": "urn:wexp:vectors:schema:0.2.0",
   "title": "WEXP implementation-independent vector envelope",
-  "description": "Schema for implementation-independent WEXP vector files. It does not define the WEXP wire protocol.",
+  "description": "Schema for WEXP vector files. Core -00 vectors use an explicitly non-normative test representation; this schema does not define a WEXP wire protocol.",
   "type": "object",
   "additionalProperties": false,
   "required": [
     "vector_id",
     "specification",
     "requirement_ids",
-    "description",
     "classification",
     "input",
     "expected"
@@ -17,108 +16,74 @@
   "properties": {
     "vector_id": {
       "type": "string",
-      "pattern": "^WEXP-(CORE|REPRESENTATION|BOUNDARY|INTEROP|EXAMPLE)-V[0-9]{4,}$"
+      "pattern": "^(WEXP-CORE-00-V[0-9]{4,}|WEXP-EXAMPLE-V[0-9]{4,})$"
     },
     "specification": {
-      "enum": [
-        "core",
-        "representation",
-        "boundary",
-        "interop",
-        "schema-example"
+      "oneOf": [
+        {"const": "schema-example"},
+        {"$ref": "#/$defs/core00Specification"}
       ]
     },
     "requirement_ids": {
       "type": "array",
       "items": {
         "type": "string",
-        "pattern": "^WEXP-(CORE|REPRESENTATION)-REQ-[0-9]{4,}$"
+        "pattern": "^WEXP-CORE-00-REQ-[0-9]{4,}$"
       },
       "uniqueItems": true
     },
-    "description": {
-      "type": "string",
-      "minLength": 1
-    },
+    "description": {"type": "string", "minLength": 1},
+    "purpose": {"type": "string", "minLength": 1},
     "classification": {
       "enum": [
         "positive",
         "negative",
-        "valid",
-        "invalid",
         "boundary",
-        "interop",
         "non-normative-schema-example"
       ]
     },
+    "test_representation": {"$ref": "#/$defs/testRepresentation"},
     "input": true,
-    "expected": {
-      "type": "object",
-      "minProperties": 1
-    },
-    "external_specifications": {
-      "type": "array",
-      "minItems": 1,
-      "uniqueItems": true,
-      "items": {
-        "$ref": "#/$defs/externalSpecification"
-      }
-    },
-    "mapping_id": {
-      "type": "string",
-      "minLength": 1,
-      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]*$"
-    },
-    "assumptions": {
-      "type": "array",
-      "items": {
-        "type": "string",
-        "minLength": 1
-      },
-      "uniqueItems": true
-    }
+    "expected": {"type": "object", "minProperties": 1},
+    "derivation": {"$ref": "#/$defs/derivation"}
   },
   "$defs": {
-    "externalSpecification": {
+    "core00Specification": {
       "type": "object",
       "additionalProperties": false,
-      "required": [
-        "identity",
-        "relationship",
-        "revision_kind",
-        "exact_revision"
-      ],
+      "required": ["document", "revision", "artifact", "sha256"],
       "properties": {
-        "identity": {
-          "type": "string",
-          "minLength": 1
+        "document": {"const": "draft-sergeev-wexp-core"},
+        "revision": {"const": "00"},
+        "artifact": {"const": "xml"},
+        "sha256": {"const": "6cd8b680059cc81e1ec4c84737d9319ee242ef63e89c57de497bd57ede08d810"}
+      }
+    },
+    "testRepresentation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "revision", "status"],
+      "properties": {
+        "id": {"const": "wexp-core-00-test-harness"},
+        "revision": {"const": "1"},
+        "status": {"const": "non-normative-test-representation"}
+      }
+    },
+    "derivation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_locators", "steps"],
+      "properties": {
+        "source_locators": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
         },
-        "relationship": {
-          "enum": [
-            "REFERENCE",
-            "MAPPING",
-            "DEPENDENCY"
-          ]
-        },
-        "revision_kind": {
-          "enum": [
-            "document-revision",
-            "commit",
-            "tag",
-            "digest"
-          ]
-        },
-        "exact_revision": {
-          "type": "string",
-          "minLength": 1
-        },
-        "source_uri": {
-          "type": "string",
-          "format": "uri"
-        },
-        "sha256": {
-          "type": "string",
-          "pattern": "^[a-f0-9]{64}$"
+        "steps": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"type": "string", "minLength": 1}
         }
       }
     }
@@ -126,55 +91,35 @@
   "allOf": [
     {
       "if": {
-        "required": [
-          "classification"
-        ],
         "properties": {
-          "classification": {
-            "const": "non-normative-schema-example"
-          }
-        }
+          "classification": {"const": "non-normative-schema-example"}
+        },
+        "required": ["classification"]
       },
       "then": {
+        "required": ["description"],
         "properties": {
-          "specification": {
-            "const": "schema-example"
-          },
-          "requirement_ids": {
-            "maxItems": 0
-          }
+          "vector_id": {"pattern": "^WEXP-EXAMPLE-V[0-9]{4,}$"},
+          "specification": {"const": "schema-example"},
+          "requirement_ids": {"maxItems": 0}
+        },
+        "not": {
+          "anyOf": [
+            {"required": ["purpose"]},
+            {"required": ["test_representation"]},
+            {"required": ["derivation"]}
+          ]
         }
       },
       "else": {
+        "required": ["purpose", "test_representation", "derivation"],
         "properties": {
-          "requirement_ids": {
-            "minItems": 1
-          }
-        }
-      }
-    },
-    {
-      "if": {
-        "required": [
-          "classification"
-        ],
-        "properties": {
-          "classification": {
-            "const": "interop"
-          }
-        }
-      },
-      "then": {
-        "required": [
-          "external_specifications",
-          "mapping_id",
-          "assumptions"
-        ],
-        "properties": {
-          "specification": {
-            "const": "interop"
-          }
-        }
+          "vector_id": {"pattern": "^WEXP-CORE-00-V[0-9]{4,}$"},
+          "specification": {"$ref": "#/$defs/core00Specification"},
+          "requirement_ids": {"minItems": 1},
+          "classification": {"enum": ["positive", "negative", "boundary"]}
+        },
+        "not": {"required": ["description"]}
       }
     }
   ]

@@ -1,0 +1,62 @@
+{
+  "vector_id": "WEXP-CORE-00-V0006",
+  "specification": {
+    "document": "draft-sergeev-wexp-core",
+    "revision": "00",
+    "artifact": "xml",
+    "sha256": "6cd8b680059cc81e1ec4c84737d9319ee242ef63e89c57de497bd57ede08d810"
+  },
+  "requirement_ids": [
+    "WEXP-CORE-00-REQ-0002",
+    "WEXP-CORE-00-REQ-0004",
+    "WEXP-CORE-00-REQ-0006"
+  ],
+  "purpose": "Confirm that a WL3 claim missing execution fields downgrades to WL2 when the arguments commitment is present.",
+  "classification": "negative",
+  "test_representation": {
+    "id": "wexp-core-00-test-harness",
+    "revision": "1",
+    "status": "non-normative-test-representation"
+  },
+  "input": {
+    "prior_checks": {
+      "structure": "valid",
+      "canonicalization": "valid",
+      "timestamps": "valid",
+      "signature": "valid",
+      "key_binding": "valid",
+      "capabilities_resolution": "accepted",
+      "hash_algorithms": "supported",
+      "recorder_qualification": "absent",
+      "chain": "absent"
+    },
+    "boundary_type": "host-hook",
+    "claimed_level": "WL3",
+    "effective_conformance_class": "CC3",
+    "evidence": {
+      "arguments_hash": true,
+      "execution_fields": false,
+      "bound_provenance": false,
+      "bound_independent_verification": false
+    },
+    "unknown_extensions": []
+  },
+  "expected": {
+    "verdict": "downgrade",
+    "verified_level": "WL2"
+  },
+  "derivation": {
+    "source_locators": [
+      "Section 6.1 (XML anchor fields-conditional), WL2 and WL3 fields",
+      "Section 8.2.1 (XML anchor verifier-downgrade), explicit missing-execution example",
+      "Section 4.1.1 (XML anchor cc-maxcap), Table 3",
+      "Section 8.1 (XML anchor verifier-result), normative base and verdict calculation"
+    ],
+    "steps": [
+      "The host-hook boundary can ground WL3, but the required execution fields are absent.",
+      "The arguments hash satisfies the WL2 conditional requirement.",
+      "Core requires downgrade rather than rejection for this absence.",
+      "The highest supported level is WL2, so the verdict is downgrade."
+    ]
+  }
+}

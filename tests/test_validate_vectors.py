@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import ast
 import importlib.util
 import json
 import shutil
@@ -26,6 +27,8 @@ class ValidatorTests(unittest.TestCase):
         self.root.mkdir()
         for relative_directory in (
             "schema",
+            "requirements",
+            "vectors",
             "examples",
             "manifests",
         ):
@@ -38,8 +41,11 @@ class ValidatorTests(unittest.TestCase):
     def tearDown(self) -> None:
         self.temporary_directory.cleanup()
 
-    def errors(self) -> list[str]:
-        return VALIDATOR.validate_repository(self.root).errors
+    def report(self) -> VALIDATOR.ValidationReport:
+        return VALIDATOR.validate_repository(self.root)
+
+    def errors(self) -> str:
+        return "\n".join(self.report().errors)
 
     def write_json(self, relative_path: str, value: object) -> None:
         destination = self.root / relative_path
@@ -49,89 +55,144 @@ class ValidatorTests(unittest.TestCase):
             encoding="utf-8",
         )
 
-    def load_example(self) -> dict[str, object]:
-        return json.loads(
-            (self.root / "examples/non-normative-schema-example.json").read_text(
-                encoding="utf-8"
-            )
-        )
+    def load_json(self, relative_path: str) -> dict[str, object]:
+        value = json.loads((self.root / relative_path).read_text(encoding="utf-8"))
+        self.assertIsInstance(value, dict)
+        return value
 
-    def test_public_infrastructure_repository_is_valid(self) -> None:
-        report = VALIDATOR.validate_repository(self.root)
+    def test_candidate_repository_is_valid(self) -> None:
+        report = self.report()
         self.assertEqual([], report.errors)
-        self.assertEqual(1, report.vector_count)
+        self.assertEqual(8, report.vector_count)
+        self.assertEqual(7, report.core_vector_count)
+        self.assertEqual(7, report.candidate_count)
+        self.assertEqual(0, report.released_count)
+        self.assertEqual(6, report.requirement_count)
         self.assertEqual(1, report.schema_example_count)
-        self.assertEqual(0, report.interop_count)
+
+    def test_validator_does_not_import_reference_implementation(self) -> None:
+        source = VALIDATOR_PATH.read_text(encoding="utf-8")
+        tree = ast.parse(source)
+        imported_roots: set[str] = set()
+        for node in ast.walk(tree):
+            if isinstance(node, ast.Import):
+                imported_roots.update(alias.name.split(".")[0] for alias in node.names)
+            elif isinstance(node, ast.ImportFrom) and node.module:
+                imported_roots.add(node.module.split(".")[0])
+        self.assertNotIn("wexp_ref", imported_roots)
 
     def test_duplicate_document_and_vector_id_are_rejected(self) -> None:
         shutil.copy2(
-            self.root / "examples/non-normative-schema-example.json",
-            self.root / "examples/duplicate.json",
+            self.root / "vectors/core-00/WEXP-CORE-00-V0001.json",
+            self.root / "vectors/core-00/copy.json",
         )
-        errors = "\n".join(self.errors())
+        errors = self.errors()
         self.assertIn("duplicate vector document content", errors)
         self.assertIn("duplicate vector_id", errors)
 
     def test_duplicate_json_member_is_rejected(self) -> None:
-        destination = self.root / "examples/duplicate-key.json"
+        destination = self.root / "vectors/core-00/duplicate-key.json"
         destination.write_text(
-            '{"vector_id":"WEXP-EXAMPLE-V0002",'
-            '"vector_id":"WEXP-EXAMPLE-V0003"}\n',
+            '{"vector_id":"WEXP-CORE-00-V0098",'
+            '"vector_id":"WEXP-CORE-00-V0099"}\n',
             encoding="utf-8",
         )
-        self.assertIn("duplicate JSON member 'vector_id'", "\n".join(self.errors()))
+        self.assertIn("duplicate JSON member 'vector_id'", self.errors())
 
-    def test_requirement_id_format_is_checked_explicitly(self) -> None:
-        vector = self.load_example()
-        vector.update(
-            {
-                "vector_id": "WEXP-CORE-V0001",
-                "specification": "core",
-                "classification": "positive",
-                "requirement_ids": ["NOT-A-REQUIREMENT-ID"],
-                "description": "Synthetic validator test fixture; not a protocol vector.",
-            }
-        )
-        self.write_json("vectors/bad-requirement.json", vector)
-        self.assertIn("invalid requirement ID", "\n".join(self.errors()))
+    def test_revision_scoped_requirement_id_is_required(self) -> None:
+        vector_path = "vectors/core-00/WEXP-CORE-00-V0001.json"
+        vector = self.load_json(vector_path)
+        vector["requirement_ids"] = ["WEXP-CORE-REQ-0001"]
+        self.write_json(vector_path, vector)
+        self.assertIn("invalid requirement ID 'WEXP-CORE-REQ-0001'", self.errors())
 
-    def test_interop_requires_mapping_and_rejects_floating_revision(self) -> None:
-        vector = {
-            "vector_id": "WEXP-INTEROP-V0001",
-            "specification": "interop",
-            "requirement_ids": [],
-            "description": "Synthetic validator test fixture; not an interop claim.",
-            "classification": "interop",
-            "input": {"fixture": True},
-            "expected": {"validator_fixture": True},
-            "external_specifications": [
-                {
-                    "identity": "synthetic-test-document",
-                    "relationship": "MAPPING",
-                    "revision_kind": "tag",
-                    "exact_revision": "HEAD"
-                }
-            ],
-            "assumptions": ["Synthetic validation fixture only"]
-        }
-        self.write_json("vectors/floating-interop.json", vector)
-        errors = "\n".join(self.errors())
-        self.assertIn("must declare mapping_id", errors)
-        self.assertIn("uses floating revision 'HEAD'", errors)
+    def test_unknown_reviewed_requirement_is_rejected(self) -> None:
+        vector_path = "vectors/core-00/WEXP-CORE-00-V0001.json"
+        vector = self.load_json(vector_path)
+        vector["requirement_ids"] = ["WEXP-CORE-00-REQ-9999"]
+        self.write_json(vector_path, vector)
+        self.assertIn("unknown reviewed requirement", self.errors())
+
+    def test_unreviewed_requirement_is_rejected(self) -> None:
+        registry_path = "requirements/core-00.json"
+        registry = self.load_json(registry_path)
+        requirements = registry["requirements"]
+        self.assertIsInstance(requirements, list)
+        requirements[0]["review_status"] = "ambiguous"
+        requirements[0]["vector_eligibility"] = False
+        self.write_json(registry_path, registry)
+        errors = self.errors()
+        self.assertIn("requirement is not ready for vectors", errors)
+        self.assertIn("requirement is not vector-eligible", errors)
+
+    def test_unused_requirement_is_rejected(self) -> None:
+        for path in sorted((self.root / "vectors/core-00").glob("*.json")):
+            vector = json.loads(path.read_text(encoding="utf-8"))
+            vector["requirement_ids"] = [
+                item
+                for item in vector["requirement_ids"]
+                if item != "WEXP-CORE-00-REQ-0005"
+            ]
+            if not vector["requirement_ids"]:
+                vector["requirement_ids"] = ["WEXP-CORE-00-REQ-0006"]
+            self.write_json(path.relative_to(self.root).as_posix(), vector)
+        self.assertIn("WEXP-CORE-00-REQ-0005", self.errors())
+
+    def test_core_source_hash_mismatch_is_rejected(self) -> None:
+        vector_path = "vectors/core-00/WEXP-CORE-00-V0001.json"
+        vector = self.load_json(vector_path)
+        vector["specification"]["sha256"] = "0" * 64
+        self.write_json(vector_path, vector)
+        self.assertIn("Core source identity mismatch", self.errors())
+
+    def test_non_normative_harness_shape_is_enforced(self) -> None:
+        vector_path = "vectors/core-00/WEXP-CORE-00-V0001.json"
+        vector = self.load_json(vector_path)
+        vector["input"]["prior_checks"]["signature"] = "unchecked"
+        self.write_json(vector_path, vector)
+        self.assertIn("test-harness schema error", self.errors())
+        self.assertIn("'valid' was expected", self.errors())
 
     def test_manifest_hash_mismatch_is_rejected(self) -> None:
-        manifest_path = self.root / "manifests/vectors.json"
-        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-        manifest["schema"]["sha256"] = "0" * 64
-        self.write_json("manifests/vectors.json", manifest)
-        self.assertIn("schema sha256 mismatch", "\n".join(self.errors()))
+        manifest_path = "manifests/vectors.json"
+        manifest = self.load_json(manifest_path)
+        manifest["schemas"]["vector_envelope"]["sha256"] = "0" * 64
+        self.write_json(manifest_path, manifest)
+        self.assertIn("sha256 mismatch for schema/vector.schema.json", self.errors())
 
-    def test_invalid_json_schema_is_reported_without_crashing(self) -> None:
-        schema_path = self.root / "schema/vector.schema.json"
-        schema = json.loads(schema_path.read_text(encoding="utf-8"))
+    def test_manifest_rejects_released_entry_in_candidate_package(self) -> None:
+        manifest_path = "manifests/vectors.json"
+        manifest = self.load_json(manifest_path)
+        manifest["vectors"][1]["status"] = "released"
+        self.write_json(manifest_path, manifest)
+        self.assertIn("status must be 'candidate'", self.errors())
+
+    def test_unlisted_vector_file_is_rejected(self) -> None:
+        source = self.root / "vectors/core-00/WEXP-CORE-00-V0001.json"
+        value = json.loads(source.read_text(encoding="utf-8"))
+        value["vector_id"] = "WEXP-CORE-00-V0099"
+        self.write_json("vectors/core-00/WEXP-CORE-00-V0099.json", value)
+        self.assertIn("unlisted vector file", self.errors())
+
+    def test_core_vector_filename_must_match_vector_id(self) -> None:
+        source = self.root / "vectors/core-00/WEXP-CORE-00-V0001.json"
+        destination = self.root / "vectors/core-00/misnamed.json"
+        source.rename(destination)
+        self.assertIn("path must match its revision-scoped vector ID", self.errors())
+
+    def test_invalid_envelope_schema_is_reported_without_crashing(self) -> None:
+        schema_path = "schema/vector.schema.json"
+        schema = self.load_json(schema_path)
         schema["type"] = "not-a-json-schema-type"
-        self.write_json("schema/vector.schema.json", schema)
-        self.assertIn("invalid JSON Schema", "\n".join(self.errors()))
+        self.write_json(schema_path, schema)
+        self.assertIn("invalid JSON Schema", self.errors())
+
+    def test_invalid_harness_schema_is_reported_without_crashing(self) -> None:
+        schema_path = "schema/core-00-test-harness.schema.json"
+        schema = self.load_json(schema_path)
+        schema["type"] = "not-a-json-schema-type"
+        self.write_json(schema_path, schema)
+        self.assertIn("invalid JSON Schema", self.errors())
 
 
 if __name__ == "__main__":

@@ -1,11 +1,22 @@
 {
-  "manifest_version": 1,
+  "manifest_version": 2,
   "manifest_kind": "wexp-vector-integrity-index",
-  "repository_version": "0.1.0",
-  "release_status": "public-infrastructure-only",
-  "schema": {
-    "path": "schema/vector.schema.json",
-    "sha256": "4a60b38d0a0a72cc955abe937a419ea11a7266fc2c30fa0d709f590dbbee241d"
+  "repository_version": "0.2.0",
+  "release_status": "candidate",
+  "vector_category": "specification-derived-test-vectors",
+  "schemas": {
+    "vector_envelope": {
+      "path": "schema/vector.schema.json",
+      "sha256": "043b4a7f18b09bc27b00d2503416656187c36d15573c630b9053af59f7566110"
+    },
+    "core_00_test_harness": {
+      "path": "schema/core-00-test-harness.schema.json",
+      "sha256": "fc0c75b0796d1bd3829c103fa9c84114ba9cbc177fd4ac6d15034979e7460c7e"
+    }
+  },
+  "requirements": {
+    "path": "requirements/core-00.json",
+    "sha256": "74c7db7e81af0eb7e76dc233f2df23c8aafa245372b291e4419ac56324b43639"
   },
   "vectors": [
     {
@@ -14,6 +25,55 @@
       "classification": "non-normative-schema-example",
       "status": "non-normative-schema-example",
       "sha256": "8d9d5074e38e6cf8b07ffe20f1fa1b2b41c7c9665e410b90f220a6ccea4573cc"
+    },
+    {
+      "path": "vectors/core-00/WEXP-CORE-00-V0001.json",
+      "vector_id": "WEXP-CORE-00-V0001",
+      "classification": "positive",
+      "status": "candidate",
+      "sha256": "9b1e458576b8595b0a56634e047e14babf07bfff104df4b150c198945f69dbf2"
+    },
+    {
+      "path": "vectors/core-00/WEXP-CORE-00-V0002.json",
+      "vector_id": "WEXP-CORE-00-V0002",
+      "classification": "boundary",
+      "status": "candidate",
+      "sha256": "e1c6eef106845d8a97c6c922c558742a93eaee2bb81da5b3ab1af4bf95d28be5"
+    },
+    {
+      "path": "vectors/core-00/WEXP-CORE-00-V0003.json",
+      "vector_id": "WEXP-CORE-00-V0003",
+      "classification": "boundary",
+      "status": "candidate",
+      "sha256": "e35db4909a2ce089bc3d49b33b561f260e54bc04a9e0a53354d4592747ee4e01"
+    },
+    {
+      "path": "vectors/core-00/WEXP-CORE-00-V0004.json",
+      "vector_id": "WEXP-CORE-00-V0004",
+      "classification": "negative",
+      "status": "candidate",
+      "sha256": "e4b4063192610ae7afce66209dcba48bc1aa8bc634ba405ae0306c74ef51eab3"
+    },
+    {
+      "path": "vectors/core-00/WEXP-CORE-00-V0005.json",
+      "vector_id": "WEXP-CORE-00-V0005",
+      "classification": "negative",
+      "status": "candidate",
+      "sha256": "d4cb39d930885451e8a45629a695e2aac530227cd4afe4d4224c5c2237d7114d"
+    },
+    {
+      "path": "vectors/core-00/WEXP-CORE-00-V0006.json",
+      "vector_id": "WEXP-CORE-00-V0006",
+      "classification": "negative",
+      "status": "candidate",
+      "sha256": "cc14b2d5149e7eeff08a7343d99944dee69e4febb252ea29180cb411fa9b20a8"
+    },
+    {
+      "path": "vectors/core-00/WEXP-CORE-00-V0007.json",
+      "vector_id": "WEXP-CORE-00-V0007",
+      "classification": "negative",
+      "status": "candidate",
+      "sha256": "17de6bb14086b73200b65345fcdea4e64fcb54c49ba7c66e138edef2080644a6"
     }
   ]
 }
