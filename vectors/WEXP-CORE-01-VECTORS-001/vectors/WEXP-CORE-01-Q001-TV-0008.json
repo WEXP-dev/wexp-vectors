@@ -1,0 +1,121 @@
+{
+  "candidate_id": "WEXP-CORE-01-VECTORS-001",
+  "classification": "support-negative",
+  "derivation": "Expected appraisal transcribed from draft-sergeev-wexp-core-01 (XML sha256 84c0a16467585c29925339a10dd287c2e67bfe21ed592826254bf424dc24f56d), section 'Normative Semantic Test Vectors', fixture C08; never from engine output.",
+  "expected": {
+    "asserted_claim": {
+      "base": "observation",
+      "qualifiers": []
+    },
+    "asserted_claim_supported": false,
+    "boundary_ceiling": "observation",
+    "boundary_grounding": "attributed",
+    "counter_evidence": [
+      {
+        "affected_claims": [],
+        "basis_refs": [],
+        "limitations": [],
+        "reasons": [],
+        "status": "not-supplied"
+      }
+    ],
+    "evaluation_context": {
+      "id": "C"
+    },
+    "evaluation_gap_entries": [],
+    "evaluation_gaps": [],
+    "evaluation_scope": {
+      "authenticity": "evaluated",
+      "boundary-grounding": "evaluated",
+      "carrier-mapping": "evaluated",
+      "composition": "evaluated",
+      "counter-evidence": "evaluated",
+      "execution-support": "evaluated",
+      "independent-verification": "evaluated",
+      "intent-support": "evaluated",
+      "invocation-support": "evaluated",
+      "observation-support": "evaluated",
+      "provenance-support": "evaluated",
+      "target-binding": "evaluated"
+    },
+    "fatal_reasons": [],
+    "inherited_limitations": [],
+    "maximal_supported_claims": [],
+    "recorder_relations": [],
+    "semantics_version": "wexp-core-1",
+    "substantive_reasons": [
+      "E_MISSING_REQUIRED_EVIDENCE"
+    ],
+    "support_entries": [],
+    "support_relations": [],
+    "supported_claims": [],
+    "target": "T",
+    "verdict": "downgrade"
+  },
+  "expected_code": "E_MISSING_REQUIRED_EVIDENCE",
+  "harness_representation": "WEXP Core-01 vector harness 001",
+  "input": {
+    "asserted_claim": {
+      "base": "observation",
+      "qualifiers": []
+    },
+    "base_findings": [],
+    "boundary_finding": {
+      "basis_refs": [
+        "bd"
+      ],
+      "ceiling_base": "observation",
+      "evaluation_context_ref": "C",
+      "grounding": "attributed",
+      "limitations": [],
+      "reasons": [],
+      "status": "supported",
+      "target": "T",
+      "target_binding": "supported"
+    },
+    "counter_evidence": [
+      {
+        "affected_claims": [],
+        "basis_refs": [],
+        "limitations": [],
+        "reasons": [],
+        "status": "not-supplied"
+      }
+    ],
+    "evaluation_context": {
+      "id": "C"
+    },
+    "evaluation_scope": {
+      "authenticity": "evaluated",
+      "boundary-grounding": "evaluated",
+      "carrier-mapping": "evaluated",
+      "composition": "evaluated",
+      "counter-evidence": "evaluated",
+      "execution-support": "evaluated",
+      "independent-verification": "evaluated",
+      "intent-support": "evaluated",
+      "invocation-support": "evaluated",
+      "observation-support": "evaluated",
+      "provenance-support": "evaluated",
+      "target-binding": "evaluated"
+    },
+    "fatal_conditions": [],
+    "inherited_limitations": [],
+    "profile_evaluation_gaps": [],
+    "qualifier_findings": [],
+    "recorder_relations": [],
+    "representation": "core-01-qualification-001-harness",
+    "semantics_version": "wexp-core-1",
+    "target": "T"
+  },
+  "purpose": "With no base findings, the asserted observation claim is unsupported and downgraded.",
+  "requirement_ids": [
+    "WEXP-CORE-01-Q001-REQ-0008"
+  ],
+  "snapshot": {
+    "id": "draft-sergeev-wexp-core-01",
+    "xml_sha256": "84c0a16467585c29925339a10dd287c2e67bfe21ed592826254bf424dc24f56d"
+  },
+  "source_fixture": "C08",
+  "vector_id": "WEXP-CORE-01-Q001-TV-0008"
+}

@@ -1,0 +1,123 @@
+{
+  "authority": {
+    "published_specification": true,
+    "snapshot_id": "draft-sergeev-wexp-core-01",
+    "snapshot_path": "spec/draft-sergeev-wexp-core-01.xml",
+    "xml_bytes": 103095,
+    "xml_sha256": "84c0a16467585c29925339a10dd287c2e67bfe21ed592826254bf424dc24f56d"
+  },
+  "bound_files": [
+    {
+      "bytes": 4364,
+      "kind": "test-vector",
+      "path": "vectors/WEXP-CORE-01-Q001-TV-0001.json",
+      "sha256": "ac035baffb2a2a219461a3350e2cfdb53bcea8f7b30fdb6ce7cae12d774af4cc"
+    },
+    {
+      "bytes": 4499,
+      "kind": "test-vector",
+      "path": "vectors/WEXP-CORE-01-Q001-TV-0002.json",
+      "sha256": "bcccddf9104da6b8e48e1152ad10e128b22ac54aecb2f0f28d2e9f54361e36e4"
+    },
+    {
+      "bytes": 5357,
+      "kind": "test-vector",
+      "path": "vectors/WEXP-CORE-01-Q001-TV-0003.json",
+      "sha256": "be126c2a1f49df5c1f7b373c8b8ea096bc6b76deff57192439a1ff183f09bf9e"
+    },
+    {
+      "bytes": 5342,
+      "kind": "test-vector",
+      "path": "vectors/WEXP-CORE-01-Q001-TV-0004.json",
+      "sha256": "18ac6140aeaccdf443ec30388846a575416a87b9f9dd520409b400b56b3a761b"
+    },
+    {
+      "bytes": 5233,
+      "kind": "test-vector",
+      "path": "vectors/WEXP-CORE-01-Q001-TV-0005.json",
+      "sha256": "ce7dd34632482e752c98b0a8f75d7f0e52b3ad883a3ad6b81b1b7de2ad796021"
+    },
+    {
+      "bytes": 6186,
+      "kind": "test-vector",
+      "path": "vectors/WEXP-CORE-01-Q001-TV-0006.json",
+      "sha256": "0be241ec42aa754abebaaec2188e58cd4474f2e4a9dc333f91b31f94bc2217e9"
+    },
+    {
+      "bytes": 4011,
+      "kind": "test-vector",
+      "path": "vectors/WEXP-CORE-01-Q001-TV-0007.json",
+      "sha256": "a3a0cdc665e085aad566cd3094a14bfdb8c45b81c8ec0ddf1c5e93a33979697d"
+    },
+    {
+      "bytes": 3676,
+      "kind": "test-vector",
+      "path": "vectors/WEXP-CORE-01-Q001-TV-0008.json",
+      "sha256": "a5d76bec592d4dbd01bbdcfb61e0a28fa13d87be95821bb0412bc393e7919dfb"
+    },
+    {
+      "bytes": 2954,
+      "kind": "test-vector",
+      "path": "vectors/WEXP-CORE-01-Q001-TV-0009.json",
+      "sha256": "916ebb5a052048072eef9c5edb10bf577ae83e06454cfafa348f411168c6971e"
+    },
+    {
+      "bytes": 4684,
+      "kind": "test-vector",
+      "path": "vectors/WEXP-CORE-01-Q001-TV-0010.json",
+      "sha256": "24619462d996c291d4ded8683b33d4578884492640e3e62492b8a717d07ec6eb"
+    },
+    {
+      "bytes": 4542,
+      "kind": "test-vector",
+      "path": "vectors/WEXP-CORE-01-Q001-TV-0011.json",
+      "sha256": "d2d5c63b23858a267bfa7ec461db20cf8d305eff3a85a82ef483280e1b74b7a7"
+    },
+    {
+      "bytes": 4703,
+      "kind": "test-vector",
+      "path": "vectors/WEXP-CORE-01-Q001-TV-0012.json",
+      "sha256": "972924421692995893032d6fdfa1d9293e482b6413b0874fb4d9d10048708371"
+    },
+    {
+      "bytes": 5226,
+      "kind": "test-vector",
+      "path": "vectors/WEXP-CORE-01-Q001-TV-0013.json",
+      "sha256": "676957a03f95f00c99c93466385969ba5e5ad3264edaebec6623c538e48ddd52"
+    },
+    {
+      "bytes": 5623,
+      "kind": "test-vector",
+      "path": "vectors/WEXP-CORE-01-Q001-TV-0014.json",
+      "sha256": "95e3c498874a9bab1ab2eda6962ffe0216e565898a48a1be4c8d95641eadaf80"
+    },
+    {
+      "bytes": 4915,
+      "kind": "test-vector",
+      "path": "vectors/WEXP-CORE-01-Q001-TV-0015.json",
+      "sha256": "5996499b11f15194b6a2028d806e4ab187e90576619a10a36040f8b61533106a"
+    },
+    {
+      "bytes": 4860,
+      "kind": "test-vector",
+      "path": "vectors/WEXP-CORE-01-Q001-TV-0016.json",
+      "sha256": "0cb691434ec2ee06f057a89928e6eae1f08fd1d798058a778bef66c28eb73a31"
+    }
+  ],
+  "candidate_id": "WEXP-CORE-01-VECTORS-001",
+  "counts": {
+    "requirements": 16,
+    "vectors": 16
+  },
+  "descriptor_version": 1,
+  "non_claims": [
+    "Expected appraisals are transcribed from the published Internet-Draft's normative fixtures C01-C16, never derived from engine output.",
+    "An implementation passing this set is not certified, conformant, or endorsed."
+  ],
+  "profile": {
+    "path": "profile.json",
+    "sha256": "677d5ad4ea80410261a6f20eecd2644d071188088c30ca65779d4810473b39f8"
+  },
+  "release_status": "published-specification-derived",
+  "status": "WEXP-CORE-01-PUBLIC-VECTOR-SET"
+}

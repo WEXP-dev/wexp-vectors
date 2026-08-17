@@ -1,0 +1,202 @@
+{
+  "candidate_id": "WEXP-CORE-01-VECTORS-001",
+  "classification": "profile-gap-positive",
+  "derivation": "Expected appraisal transcribed from draft-sergeev-wexp-core-01 (XML sha256 84c0a16467585c29925339a10dd287c2e67bfe21ed592826254bf424dc24f56d), section 'Normative Semantic Test Vectors', fixture C13; never from engine output.",
+  "expected": {
+    "asserted_claim": {
+      "base": "execution",
+      "qualifiers": []
+    },
+    "asserted_claim_supported": true,
+    "boundary_ceiling": "execution",
+    "boundary_grounding": "attributed",
+    "counter_evidence": [
+      {
+        "affected_claims": [],
+        "basis_refs": [],
+        "limitations": [],
+        "reasons": [],
+        "status": "not-supplied"
+      }
+    ],
+    "evaluation_context": {
+      "id": "C"
+    },
+    "evaluation_gap_entries": [
+      {
+        "affected_claims": [
+          {
+            "base": "execution",
+            "qualifiers": []
+          }
+        ],
+        "basis_refs": [
+          "u1"
+        ],
+        "evaluation_context_ref": "C",
+        "limitations": [
+          "L-upstream"
+        ],
+        "target": "T",
+        "token": "E_IV_NOT_EVALUATED"
+      }
+    ],
+    "evaluation_gaps": [
+      "E_IV_NOT_EVALUATED"
+    ],
+    "evaluation_scope": {
+      "authenticity": "evaluated",
+      "boundary-grounding": "evaluated",
+      "carrier-mapping": "evaluated",
+      "composition": "evaluated",
+      "counter-evidence": "evaluated",
+      "execution-support": "evaluated",
+      "independent-verification": "evaluated",
+      "intent-support": "evaluated",
+      "invocation-support": "evaluated",
+      "observation-support": "evaluated",
+      "provenance-support": "evaluated",
+      "target-binding": "evaluated"
+    },
+    "fatal_reasons": [],
+    "inherited_limitations": [
+      "L-upstream"
+    ],
+    "maximal_supported_claims": [
+      {
+        "base": "execution",
+        "qualifiers": []
+      }
+    ],
+    "recorder_relations": [],
+    "semantics_version": "wexp-core-1",
+    "substantive_reasons": [],
+    "support_entries": [
+      {
+        "basis_refs": [
+          "bd",
+          "execution"
+        ],
+        "claim": {
+          "base": "execution",
+          "qualifiers": []
+        },
+        "limitations": []
+      }
+    ],
+    "support_relations": [
+      {
+        "relation": "equal",
+        "supported_claim": {
+          "base": "execution",
+          "qualifiers": []
+        }
+      }
+    ],
+    "supported_claims": [
+      {
+        "base": "execution",
+        "qualifiers": []
+      }
+    ],
+    "target": "T",
+    "verdict": "accept"
+  },
+  "expected_code": "E_IV_NOT_EVALUATED",
+  "harness_representation": "WEXP Core-01 vector harness 001",
+  "input": {
+    "asserted_claim": {
+      "base": "execution",
+      "qualifiers": []
+    },
+    "base_findings": [
+      {
+        "base": "execution",
+        "basis_refs": [
+          "execution"
+        ],
+        "evaluation_context_ref": "C",
+        "limitations": [],
+        "reasons": [],
+        "semantic_validation": "supported",
+        "target": "T",
+        "target_binding": "supported"
+      }
+    ],
+    "boundary_finding": {
+      "basis_refs": [
+        "bd"
+      ],
+      "ceiling_base": "execution",
+      "evaluation_context_ref": "C",
+      "grounding": "attributed",
+      "limitations": [],
+      "reasons": [],
+      "status": "supported",
+      "target": "T",
+      "target_binding": "supported"
+    },
+    "counter_evidence": [
+      {
+        "affected_claims": [],
+        "basis_refs": [],
+        "limitations": [],
+        "reasons": [],
+        "status": "not-supplied"
+      }
+    ],
+    "evaluation_context": {
+      "id": "C"
+    },
+    "evaluation_scope": {
+      "authenticity": "evaluated",
+      "boundary-grounding": "evaluated",
+      "carrier-mapping": "evaluated",
+      "composition": "evaluated",
+      "counter-evidence": "evaluated",
+      "execution-support": "evaluated",
+      "independent-verification": "evaluated",
+      "intent-support": "evaluated",
+      "invocation-support": "evaluated",
+      "observation-support": "evaluated",
+      "provenance-support": "evaluated",
+      "target-binding": "evaluated"
+    },
+    "fatal_conditions": [],
+    "inherited_limitations": [],
+    "profile_evaluation_gaps": [
+      {
+        "affected_claims": [
+          {
+            "base": "execution",
+            "qualifiers": []
+          }
+        ],
+        "basis_refs": [
+          "u1"
+        ],
+        "evaluation_context_ref": "C",
+        "limitations": [
+          "L-upstream"
+        ],
+        "target": "T",
+        "token": "E_IV_NOT_EVALUATED"
+      }
+    ],
+    "qualifier_findings": [],
+    "recorder_relations": [],
+    "representation": "core-01-qualification-001-harness",
+    "semantics_version": "wexp-core-1",
+    "target": "T"
+  },
+  "purpose": "An affecting inherited profile gap is projected exactly and its limitation is inherited; it does not block acceptance.",
+  "requirement_ids": [
+    "WEXP-CORE-01-Q001-REQ-0013"
+  ],
+  "snapshot": {
+    "id": "draft-sergeev-wexp-core-01",
+    "xml_sha256": "84c0a16467585c29925339a10dd287c2e67bfe21ed592826254bf424dc24f56d"
+  },
+  "source_fixture": "C13",
+  "vector_id": "WEXP-CORE-01-Q001-TV-0013"
+}

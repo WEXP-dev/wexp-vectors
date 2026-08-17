@@ -29,5 +29,8 @@ jobs:
       - name: Validate schema, vectors, and manifest
         run: python scripts/validate_vectors.py
 
+      - name: Validate Core-01 vector set
+        run: python scripts/validate_core01_vectors.py
+
       - name: Run validator tests
         run: python -m unittest discover -s tests -v

@@ -1,0 +1,116 @@
+{
+  "manifest_version": 1,
+  "manifest_kind": "wexp-core-01-vector-set-index",
+  "vector_set_id": "WEXP-CORE-01-VECTORS-001",
+  "vector_set_sha256": "e315b6055148dbf05c6104c57feb991104b1ae6a47741a99cde5eb50d1900daf",
+  "specification": {
+    "draft": "draft-sergeev-wexp-core-01",
+    "datatracker_url": "https://datatracker.ietf.org/doc/draft-sergeev-wexp-core/01/",
+    "xml_sha256": "84c0a16467585c29925339a10dd287c2e67bfe21ed592826254bf424dc24f56d",
+    "xml_bytes": 103095,
+    "authoritative_source": "https://github.com/WEXP-dev/wexp-spec"
+  },
+  "status": "specification-derived-test-vectors",
+  "schemas": {
+    "descriptor": {
+      "path": "schema/core-01-descriptor.schema.json",
+      "sha256": "68ba652c578b0ab8599c4f31728b68bab6abf89bfa2980577fb05f400f38e503"
+    },
+    "profile": {
+      "path": "schema/core-01-profile.schema.json",
+      "sha256": "4209985e2f394cd075c9adeeb6eccbf7d9f8ae9a9add3d79154423e73b0a89bb"
+    },
+    "vector": {
+      "path": "schema/core-01-vector.schema.json",
+      "sha256": "db2c3e31bbaaf9e1ac599654771ab3c25668b6c3d581baadc5876f6f8e2f8c4e"
+    }
+  },
+  "artifacts": [
+    {
+      "path": "vectors/WEXP-CORE-01-VECTORS-001/descriptor.json",
+      "sha256": "4857b7f9dfe42f590972ac0ddda2b3d5ffe7812801128e84060a9e55036699ce"
+    },
+    {
+      "path": "vectors/WEXP-CORE-01-VECTORS-001/profile.json",
+      "sha256": "677d5ad4ea80410261a6f20eecd2644d071188088c30ca65779d4810473b39f8"
+    },
+    {
+      "path": "vectors/WEXP-CORE-01-VECTORS-001/spec/draft-sergeev-wexp-core-01.xml",
+      "sha256": "84c0a16467585c29925339a10dd287c2e67bfe21ed592826254bf424dc24f56d"
+    },
+    {
+      "path": "vectors/WEXP-CORE-01-VECTORS-001/vectors/WEXP-CORE-01-Q001-TV-0001.json",
+      "sha256": "ac035baffb2a2a219461a3350e2cfdb53bcea8f7b30fdb6ce7cae12d774af4cc"
+    },
+    {
+      "path": "vectors/WEXP-CORE-01-VECTORS-001/vectors/WEXP-CORE-01-Q001-TV-0002.json",
+      "sha256": "bcccddf9104da6b8e48e1152ad10e128b22ac54aecb2f0f28d2e9f54361e36e4"
+    },
+    {
+      "path": "vectors/WEXP-CORE-01-VECTORS-001/vectors/WEXP-CORE-01-Q001-TV-0003.json",
+      "sha256": "be126c2a1f49df5c1f7b373c8b8ea096bc6b76deff57192439a1ff183f09bf9e"
+    },
+    {
+      "path": "vectors/WEXP-CORE-01-VECTORS-001/vectors/WEXP-CORE-01-Q001-TV-0004.json",
+      "sha256": "18ac6140aeaccdf443ec30388846a575416a87b9f9dd520409b400b56b3a761b"
+    },
+    {
+      "path": "vectors/WEXP-CORE-01-VECTORS-001/vectors/WEXP-CORE-01-Q001-TV-0005.json",
+      "sha256": "ce7dd34632482e752c98b0a8f75d7f0e52b3ad883a3ad6b81b1b7de2ad796021"
+    },
+    {
+      "path": "vectors/WEXP-CORE-01-VECTORS-001/vectors/WEXP-CORE-01-Q001-TV-0006.json",
+      "sha256": "0be241ec42aa754abebaaec2188e58cd4474f2e4a9dc333f91b31f94bc2217e9"
+    },
+    {
+      "path": "vectors/WEXP-CORE-01-VECTORS-001/vectors/WEXP-CORE-01-Q001-TV-0007.json",
+      "sha256": "a3a0cdc665e085aad566cd3094a14bfdb8c45b81c8ec0ddf1c5e93a33979697d"
+    },
+    {
+      "path": "vectors/WEXP-CORE-01-VECTORS-001/vectors/WEXP-CORE-01-Q001-TV-0008.json",
+      "sha256": "a5d76bec592d4dbd01bbdcfb61e0a28fa13d87be95821bb0412bc393e7919dfb"
+    },
+    {
+      "path": "vectors/WEXP-CORE-01-VECTORS-001/vectors/WEXP-CORE-01-Q001-TV-0009.json",
+      "sha256": "916ebb5a052048072eef9c5edb10bf577ae83e06454cfafa348f411168c6971e"
+    },
+    {
+      "path": "vectors/WEXP-CORE-01-VECTORS-001/vectors/WEXP-CORE-01-Q001-TV-0010.json",
+      "sha256": "24619462d996c291d4ded8683b33d4578884492640e3e62492b8a717d07ec6eb"
+    },
+    {
+      "path": "vectors/WEXP-CORE-01-VECTORS-001/vectors/WEXP-CORE-01-Q001-TV-0011.json",
+      "sha256": "d2d5c63b23858a267bfa7ec461db20cf8d305eff3a85a82ef483280e1b74b7a7"
+    },
+    {
+      "path": "vectors/WEXP-CORE-01-VECTORS-001/vectors/WEXP-CORE-01-Q001-TV-0012.json",
+      "sha256": "972924421692995893032d6fdfa1d9293e482b6413b0874fb4d9d10048708371"
+    },
+    {
+      "path": "vectors/WEXP-CORE-01-VECTORS-001/vectors/WEXP-CORE-01-Q001-TV-0013.json",
+      "sha256": "676957a03f95f00c99c93466385969ba5e5ad3264edaebec6623c538e48ddd52"
+    },
+    {
+      "path": "vectors/WEXP-CORE-01-VECTORS-001/vectors/WEXP-CORE-01-Q001-TV-0014.json",
+      "sha256": "95e3c498874a9bab1ab2eda6962ffe0216e565898a48a1be4c8d95641eadaf80"
+    },
+    {
+      "path": "vectors/WEXP-CORE-01-VECTORS-001/vectors/WEXP-CORE-01-Q001-TV-0015.json",
+      "sha256": "5996499b11f15194b6a2028d806e4ab187e90576619a10a36040f8b61533106a"
+    },
+    {
+      "path": "vectors/WEXP-CORE-01-VECTORS-001/vectors/WEXP-CORE-01-Q001-TV-0016.json",
+      "sha256": "0cb691434ec2ee06f057a89928e6eae1f08fd1d798058a778bef66c28eb73a31"
+    }
+  ],
+  "claims": [
+    "Every listed file matches its declared SHA-256 digest.",
+    "Expected appraisals are transcribed from the published Internet-Draft's normative fixtures C01-C16.",
+    "The bundled specification copy is byte-identical to the XML the IETF serves for revision 01."
+  ],
+  "non_claims": [
+    "Passing this set does not make an implementation certified, conformant, or endorsed.",
+    "This set does not define the specification; the Internet-Draft does.",
+    "Reference implementation behaviour is never the source of an expected outcome."
+  ]
+}

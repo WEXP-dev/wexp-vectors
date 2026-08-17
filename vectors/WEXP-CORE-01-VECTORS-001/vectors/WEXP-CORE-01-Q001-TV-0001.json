@@ -1,0 +1,162 @@
+{
+  "candidate_id": "WEXP-CORE-01-VECTORS-001",
+  "classification": "support-positive",
+  "derivation": "Expected appraisal transcribed from draft-sergeev-wexp-core-01 (XML sha256 84c0a16467585c29925339a10dd287c2e67bfe21ed592826254bf424dc24f56d), section 'Normative Semantic Test Vectors', fixture C01; never from engine output.",
+  "expected": {
+    "asserted_claim": {
+      "base": "intent",
+      "qualifiers": []
+    },
+    "asserted_claim_supported": true,
+    "boundary_ceiling": "intent",
+    "boundary_grounding": "attributed",
+    "counter_evidence": [
+      {
+        "affected_claims": [],
+        "basis_refs": [],
+        "limitations": [],
+        "reasons": [],
+        "status": "not-supplied"
+      }
+    ],
+    "evaluation_context": {
+      "id": "C"
+    },
+    "evaluation_gap_entries": [],
+    "evaluation_gaps": [],
+    "evaluation_scope": {
+      "authenticity": "evaluated",
+      "boundary-grounding": "evaluated",
+      "carrier-mapping": "evaluated",
+      "composition": "evaluated",
+      "counter-evidence": "evaluated",
+      "execution-support": "evaluated",
+      "independent-verification": "evaluated",
+      "intent-support": "evaluated",
+      "invocation-support": "evaluated",
+      "observation-support": "evaluated",
+      "provenance-support": "evaluated",
+      "target-binding": "evaluated"
+    },
+    "fatal_reasons": [],
+    "inherited_limitations": [],
+    "maximal_supported_claims": [
+      {
+        "base": "intent",
+        "qualifiers": []
+      }
+    ],
+    "recorder_relations": [],
+    "semantics_version": "wexp-core-1",
+    "substantive_reasons": [],
+    "support_entries": [
+      {
+        "basis_refs": [
+          "bd",
+          "intent"
+        ],
+        "claim": {
+          "base": "intent",
+          "qualifiers": []
+        },
+        "limitations": []
+      }
+    ],
+    "support_relations": [
+      {
+        "relation": "equal",
+        "supported_claim": {
+          "base": "intent",
+          "qualifiers": []
+        }
+      }
+    ],
+    "supported_claims": [
+      {
+        "base": "intent",
+        "qualifiers": []
+      }
+    ],
+    "target": "T",
+    "verdict": "accept"
+  },
+  "expected_code": null,
+  "harness_representation": "WEXP Core-01 vector harness 001",
+  "input": {
+    "asserted_claim": {
+      "base": "intent",
+      "qualifiers": []
+    },
+    "base_findings": [
+      {
+        "base": "intent",
+        "basis_refs": [
+          "intent"
+        ],
+        "evaluation_context_ref": "C",
+        "limitations": [],
+        "reasons": [],
+        "semantic_validation": "supported",
+        "target": "T",
+        "target_binding": "supported"
+      }
+    ],
+    "boundary_finding": {
+      "basis_refs": [
+        "bd"
+      ],
+      "ceiling_base": "intent",
+      "evaluation_context_ref": "C",
+      "grounding": "attributed",
+      "limitations": [],
+      "reasons": [],
+      "status": "supported",
+      "target": "T",
+      "target_binding": "supported"
+    },
+    "counter_evidence": [
+      {
+        "affected_claims": [],
+        "basis_refs": [],
+        "limitations": [],
+        "reasons": [],
+        "status": "not-supplied"
+      }
+    ],
+    "evaluation_context": {
+      "id": "C"
+    },
+    "evaluation_scope": {
+      "authenticity": "evaluated",
+      "boundary-grounding": "evaluated",
+      "carrier-mapping": "evaluated",
+      "composition": "evaluated",
+      "counter-evidence": "evaluated",
+      "execution-support": "evaluated",
+      "independent-verification": "evaluated",
+      "intent-support": "evaluated",
+      "invocation-support": "evaluated",
+      "observation-support": "evaluated",
+      "provenance-support": "evaluated",
+      "target-binding": "evaluated"
+    },
+    "fatal_conditions": [],
+    "inherited_limitations": [],
+    "profile_evaluation_gaps": [],
+    "qualifier_findings": [],
+    "recorder_relations": [],
+    "representation": "core-01-qualification-001-harness",
+    "semantics_version": "wexp-core-1",
+    "target": "T"
+  },
+  "purpose": "Exact intent support under an intent ceiling is accepted with relation equal.",
+  "requirement_ids": [
+    "WEXP-CORE-01-Q001-REQ-0001"
+  ],
+  "snapshot": {
+    "id": "draft-sergeev-wexp-core-01",
+    "xml_sha256": "84c0a16467585c29925339a10dd287c2e67bfe21ed592826254bf424dc24f56d"
+  },
+  "source_fixture": "C01",
+  "vector_id": "WEXP-CORE-01-Q001-TV-0001"
+}
