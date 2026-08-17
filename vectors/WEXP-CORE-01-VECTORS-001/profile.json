@@ -1,0 +1,229 @@
+{
+  "harness": {
+    "harness_schema_id": "urn:wexp:core-01:vectors-001:harness",
+    "label": "WEXP Core-01 vector harness 001",
+    "vector_schema_id": "urn:wexp:core-01:vectors-001:vector"
+  },
+  "non_claims": [
+    "Profile vocabulary restates the frozen CORE-01 snapshot registries for qualification only."
+  ],
+  "orderings": {
+    "base": [
+      "observation",
+      "intent",
+      "invocation",
+      "execution"
+    ],
+    "qualifier": [
+      "PROV",
+      "IV"
+    ]
+  },
+  "profile_id": "wexp-core-01-vectors-001-profile",
+  "profile_version": 1,
+  "qualifier_admissibility": {
+    "PROV": [
+      "execution"
+    ]
+  },
+  "qualifier_independence": {
+    "IV": "supported",
+    "PROV": "not-applicable"
+  },
+  "representation": "core-01-qualification-001-harness",
+  "scope_keys": [
+    "carrier-mapping",
+    "authenticity",
+    "target-binding",
+    "boundary-grounding",
+    "observation-support",
+    "intent-support",
+    "invocation-support",
+    "execution-support",
+    "provenance-support",
+    "independent-verification",
+    "composition",
+    "counter-evidence"
+  ],
+  "semantics_version": "wexp-core-1",
+  "status_domains": {
+    "assessment": [
+      "supported",
+      "unsupported",
+      "not-evaluated"
+    ],
+    "boundary-grounding": [
+      "asserted-only",
+      "attributed",
+      "attested",
+      "not-evaluated"
+    ],
+    "counter-evidence": [
+      "not-supplied",
+      "not-evaluated",
+      "resolved-no-defeat",
+      "unresolved-material",
+      "defeating"
+    ],
+    "independence": [
+      "supported",
+      "unsupported",
+      "not-evaluated",
+      "not-applicable"
+    ]
+  },
+  "token_registry": {
+    "classes": {
+      "fatal": [
+        "E_UNKNOWN_CRITICAL_SEMANTIC",
+        "E_CLAIM_OUT_OF_DOMAIN"
+      ],
+      "gap": [
+        "E_IV_NOT_EVALUATED",
+        "E_COUNTER_EVIDENCE_NOT_EVALUATED"
+      ],
+      "substantive": [
+        "E_BASE_EXCEEDS_BOUNDARY",
+        "E_MISSING_REQUIRED_EVIDENCE",
+        "E_COUNTER_EVIDENCE_UNRESOLVED",
+        "P_COUNTER_FAIL"
+      ]
+    },
+    "foreign_rejected": [],
+    "roles": {
+      "base_exceeds_boundary": "E_BASE_EXCEEDS_BOUNDARY",
+      "claim_out_of_domain": "E_CLAIM_OUT_OF_DOMAIN",
+      "counter_evidence_not_evaluated": "E_COUNTER_EVIDENCE_NOT_EVALUATED",
+      "counter_evidence_unresolved": "E_COUNTER_EVIDENCE_UNRESOLVED",
+      "missing_required_evidence": "E_MISSING_REQUIRED_EVIDENCE",
+      "qualifier_not_evaluated": "E_IV_NOT_EVALUATED",
+      "unknown_critical": "E_UNKNOWN_CRITICAL_SEMANTIC"
+    }
+  },
+  "vector_bindings": {
+    "WEXP-CORE-01-Q001-TV-0001": {
+      "classification": "support-positive",
+      "requirement_ids": [
+        "WEXP-CORE-01-Q001-REQ-0001"
+      ],
+      "source_fixture": "C01"
+    },
+    "WEXP-CORE-01-Q001-TV-0002": {
+      "classification": "support-above-claim-negative",
+      "requirement_ids": [
+        "WEXP-CORE-01-Q001-REQ-0002"
+      ],
+      "source_fixture": "C02"
+    },
+    "WEXP-CORE-01-Q001-TV-0003": {
+      "classification": "qualifier-mismatch-negative",
+      "requirement_ids": [
+        "WEXP-CORE-01-Q001-REQ-0003"
+      ],
+      "source_fixture": "C03"
+    },
+    "WEXP-CORE-01-Q001-TV-0004": {
+      "classification": "qualifier-mismatch-negative",
+      "requirement_ids": [
+        "WEXP-CORE-01-Q001-REQ-0004"
+      ],
+      "source_fixture": "C04"
+    },
+    "WEXP-CORE-01-Q001-TV-0005": {
+      "classification": "qualifier-positive",
+      "requirement_ids": [
+        "WEXP-CORE-01-Q001-REQ-0005"
+      ],
+      "source_fixture": "C05"
+    },
+    "WEXP-CORE-01-Q001-TV-0006": {
+      "classification": "support-below-claim-negative",
+      "requirement_ids": [
+        "WEXP-CORE-01-Q001-REQ-0006"
+      ],
+      "source_fixture": "C06"
+    },
+    "WEXP-CORE-01-Q001-TV-0007": {
+      "classification": "boundary-negative",
+      "requirement_ids": [
+        "WEXP-CORE-01-Q001-REQ-0007"
+      ],
+      "source_fixture": "C07"
+    },
+    "WEXP-CORE-01-Q001-TV-0008": {
+      "classification": "support-negative",
+      "requirement_ids": [
+        "WEXP-CORE-01-Q001-REQ-0008"
+      ],
+      "source_fixture": "C08"
+    },
+    "WEXP-CORE-01-Q001-TV-0009": {
+      "classification": "claim-domain-fatal",
+      "requirement_ids": [
+        "WEXP-CORE-01-Q001-REQ-0009"
+      ],
+      "source_fixture": "C09"
+    },
+    "WEXP-CORE-01-Q001-TV-0010": {
+      "classification": "counter-evidence-negative",
+      "requirement_ids": [
+        "WEXP-CORE-01-Q001-REQ-0010"
+      ],
+      "source_fixture": "C10"
+    },
+    "WEXP-CORE-01-Q001-TV-0011": {
+      "classification": "composition-positive",
+      "requirement_ids": [
+        "WEXP-CORE-01-Q001-REQ-0011"
+      ],
+      "source_fixture": "C11"
+    },
+    "WEXP-CORE-01-Q001-TV-0012": {
+      "classification": "composition-limitation-positive",
+      "requirement_ids": [
+        "WEXP-CORE-01-Q001-REQ-0012"
+      ],
+      "source_fixture": "C12"
+    },
+    "WEXP-CORE-01-Q001-TV-0013": {
+      "classification": "profile-gap-positive",
+      "requirement_ids": [
+        "WEXP-CORE-01-Q001-REQ-0013"
+      ],
+      "source_fixture": "C13"
+    },
+    "WEXP-CORE-01-Q001-TV-0014": {
+      "classification": "counter-evidence-gap-negative",
+      "requirement_ids": [
+        "WEXP-CORE-01-Q001-REQ-0014"
+      ],
+      "source_fixture": "C14"
+    },
+    "WEXP-CORE-01-Q001-TV-0015": {
+      "classification": "counter-evidence-reason-negative",
+      "requirement_ids": [
+        "WEXP-CORE-01-Q001-REQ-0015"
+      ],
+      "source_fixture": "C15"
+    },
+    "WEXP-CORE-01-Q001-TV-0016": {
+      "classification": "profile-gap-unrelated-positive",
+      "requirement_ids": [
+        "WEXP-CORE-01-Q001-REQ-0016"
+      ],
+      "source_fixture": "C16"
+    }
+  },
+  "verdict_rules": {
+    "precedence": [
+      "fatal",
+      "substantive",
+      "default"
+    ],
+    "verdicts": {
+      "default": "accept",
+      "fatal": "reject",
+      "substantive": "downgrade"
+    }
+  }
+}

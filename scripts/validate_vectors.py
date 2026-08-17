@@ -33,6 +33,13 @@ REQUIREMENTS_PATH = PurePosixPath("requirements/core-00.json")
 EXAMPLE_PATH = PurePosixPath("examples/non-normative-schema-example.json")
 VECTOR_ROOTS = (PurePosixPath("vectors"), PurePosixPath("examples"))
 
+# Roots are still guarded against symlink substitution in full, but only these
+# subtrees are swept for vectors. The Core-00 envelope is closed and describes
+# one vector shape; other sets carry their own schemas and their own validator,
+# so sweeping all of `vectors/` would make this script fail on a set it does not
+# describe. Any path here that does not exist is simply skipped.
+VECTOR_SCAN_ROOTS = (PurePosixPath("vectors/core-00"), PurePosixPath("examples"))
+
 CORE_DOCUMENT = "draft-sergeev-wexp-core"
 CORE_REVISION = "00"
 CORE_XML_SHA256 = (
@@ -177,13 +184,24 @@ def _discover_vectors(root: Path, report: ValidationReport) -> list[Path]:
             continue
         if not directory.is_dir():
             continue
-        for path in directory.rglob("*.json"):
-            if path.is_symlink():
-                report.errors.append(
-                    f"vector must not be a symbolic link: {path.relative_to(root)}"
-                )
-            elif path.is_file():
-                files.append(path)
+        if not any(
+            relative_root == scan or scan.is_relative_to(relative_root)
+            for scan in VECTOR_SCAN_ROOTS
+        ):
+            continue
+        for scan_root in VECTOR_SCAN_ROOTS:
+            if not scan_root.is_relative_to(relative_root):
+                continue
+            scan_directory = root / scan_root
+            if not scan_directory.is_dir():
+                continue
+            for path in scan_directory.rglob("*.json"):
+                if path.is_symlink():
+                    report.errors.append(
+                        f"vector must not be a symbolic link: {path.relative_to(root)}"
+                    )
+                elif path.is_file():
+                    files.append(path)
     return sorted(files, key=lambda item: item.relative_to(root).as_posix())
 
 
