@@ -38,8 +38,17 @@ except ImportError:  # pragma: no cover - dependency is declared in requirements
     raise SystemExit(2)
 
 ROOT = Path(__file__).resolve().parents[1]
-SET_ROOT = ROOT / "vectors" / "WEXP-CORE-01-VECTORS-001"
 SCHEMA_ROOT = ROOT / "schema"
+
+
+def set_roots() -> list[Path]:
+    """Every Core-01 set present, discovered rather than listed.
+
+    A successor set is added by materialising its directory, not by editing this
+    script, so a set can never be published while silently unvalidated here.
+    """
+
+    return sorted(p for p in (ROOT / "vectors").glob("WEXP-CORE-01-VECTORS-*") if p.is_dir())
 
 
 def canonical_sha256(value: object) -> str:
@@ -53,17 +62,10 @@ def load(path: Path) -> tuple[dict, str]:
     return json.loads(buffer.decode("utf-8")), hashlib.sha256(buffer).hexdigest()
 
 
-def main() -> int:
-    errors: list[str] = []
-
+def validate_set(SET_ROOT: Path, schemas: dict, errors: list[str]) -> list[str] | None:
     def check(condition: bool, message: str) -> None:
         if not condition:
-            errors.append(message)
-
-    schemas = {}
-    for name in ("descriptor", "profile", "vector"):
-        schemas[name] = json.loads((SCHEMA_ROOT / f"core-01-{name}.schema.json").read_bytes())
-        Draft202012Validator.check_schema(schemas[name])
+            errors.append(f"{SET_ROOT.name}: {message}")
 
     descriptor, _ = load(SET_ROOT / "descriptor.json")
     profile, profile_sha = load(SET_ROOT / "profile.json")
@@ -136,15 +138,40 @@ def main() -> int:
                 )
         entries.append([vector["vector_id"], vector_sha])
 
+    return [
+        f"PASS: {len(entries)} vector(s) in {descriptor['candidate_id']}",
+        f"  specification   {authority['snapshot_id']} sha256={authority['xml_sha256']}",
+        f"  profile         {profile['profile_id']} sha256={profile_sha}",
+        f"  vector set      {canonical_sha256(entries)}",
+    ]
+
+
+def main() -> int:
+    errors: list[str] = []
+
+    schemas = {}
+    for name in ("descriptor", "profile", "vector"):
+        schemas[name] = json.loads((SCHEMA_ROOT / f"core-01-{name}.schema.json").read_bytes())
+        Draft202012Validator.check_schema(schemas[name])
+
+    roots = set_roots()
+    if not roots:
+        print("FAIL: no Core-01 vector set found", file=sys.stderr)
+        return 1
+
+    report: list[str] = []
+    for root in roots:
+        lines = validate_set(root, schemas, errors)
+        if lines:
+            report.extend(lines)
+
     if errors:
         for message in errors:
             print(f"FAIL: {message}", file=sys.stderr)
         return 1
 
-    print(f"PASS: {len(entries)} vector(s) in {descriptor['candidate_id']}")
-    print(f"  specification   {authority['snapshot_id']} sha256={authority['xml_sha256']}")
-    print(f"  profile         {profile['profile_id']} sha256={profile_sha}")
-    print(f"  vector set      {canonical_sha256(entries)}")
+    for line in report:
+        print(line)
     return 0
 
 
