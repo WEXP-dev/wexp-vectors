@@ -23,12 +23,18 @@ repository does not import, execute, or depend on it.
 | Set | Specification | Vectors | Status |
 |---|---|---|---|
 | [`vectors/WEXP-CORE-01-VECTORS-001/`](vectors/WEXP-CORE-01-VECTORS-001/) | `draft-sergeev-wexp-core-01` (posted) | 16 | specification-derived |
+| [`vectors/WEXP-CORE-01-VECTORS-002/`](vectors/WEXP-CORE-01-VECTORS-002/) | `draft-sergeev-wexp-core-01` (posted) | 9 | specification-derived |
 | [`vectors/core-00/`](vectors/core-00/) | `draft-sergeev-wexp-core-00` | 7 | candidate |
 | [`examples/`](examples/) | none | 1 | non-normative schema example |
 
 **No set here is a released conformance suite.** Passing them means an
-implementation agreed with transcribed expectations; it is not certification,
-conformance, interoperability, or IETF acceptance.
+implementation agreed with expectations this repository derived; it is not
+certification, conformance, interoperability, or IETF acceptance.
+
+Set 002 widens coverage; it does not change that. Whether a corpus can support a
+conformance claim is a question about Core-01 §12 and has to be settled against
+§12 on its own terms, not inferred from a vector count. Until it is, the
+limitation above stands as written.
 
 ## Core-01 vector set
 
@@ -59,6 +65,43 @@ Schemas are
 [`core-01-profile`](schema/core-01-profile.schema.json) and
 [`core-01-vector`](schema/core-01-vector.schema.json). They are separate from the
 Core-00 envelope, which is closed and describes a different vector shape.
+
+## Core-01 vector set 002
+
+Nine vectors covering Core-01 behaviour that the C01-C16 fixtures leave
+untested: multi-qualifier support states, the narrowed boundary-exceeded row and
+its control, counter-evidence that is targeted, untargeted and aimed at every
+admissible claim, a targeted entry whose status does not block, the two distinct
+Section 6.2 rejection paths, and a downgrade whose only diagnostic is a gap.
+
+    vector set      8b2dfd5ac6f983201f8869c331b58936e3378f382a3a989b9a63c8d85791facf
+    specification   84c0a16467585c29925339a10dd287c2e67bfe21ed592826254bf424dc24f56d
+
+This set extends 001; it does not replace it. `WEXP-CORE-01-VECTORS-001` is
+unchanged and its set digest is still
+`e315b6055148dbf05c6104c57feb991104b1ae6a47741a99cde5eb50d1900daf`.
+
+Unlike 001, whose expectations are transcribed from fixtures the draft states
+outright, these seven had to be *derived* from normative text that never spells
+the case out. That derivation is the artifact under review, so it is published
+in full, corrections included:
+
+**[Expectation derivation record](docs/core-01-vector-derivation-002.md)** —
+per-vector reasoning, the section each expectation rests on, the expectation
+digests, and what the set deliberately leaves out.
+
+**[First engine run](docs/core-01-set-002-first-run.md)** — what the two
+`wexp-ref` engines produced when they were first run against the seven vectors
+frozen at that point. Six reproduced the expectation exactly; on the seventh both
+engines agreed with each other and differed from the specification. The
+expectation was left alone and the engines were corrected instead. The two
+counter-evidence vectors were added afterwards under the same rule and frozen
+before either engine saw them.
+
+Every expected result was frozen, with those digests, before either engine in
+`wexp-ref` was run against the set. The freeze is what makes "derived from the
+specification" checkable rather than merely asserted: expectations that were
+recorded first cannot have been fitted to an implementation afterwards.
 
 ## Core-00 candidate slice
 
@@ -112,7 +155,8 @@ revision-scoped IDs, reviewed requirement status and use, Core-00 source
 identity, and every manifest path, digest, classification and candidate status.
 
 [`scripts/validate_core01_vectors.py`](scripts/validate_core01_vectors.py) checks
-the Core-01 schemas, every bound-file digest and size, the profile digest, the
+every Core-01 set present — it discovers them rather than listing them, so a set
+cannot be added without being validated — covering the Core-01 schemas, every bound-file digest and size, the profile digest, the
 bundled specification copy against the digest the descriptor declares, and the
 agreement between each vector, the descriptor and its profile binding.
 
@@ -122,7 +166,9 @@ agreement between each vector, the descriptor and its profile binding.
 and binds `VERSION`, both Core-00 schema digests, the reviewed requirement
 registry, and every Core-00 vector path, ID, classification, status and digest.
 [`manifests/core-01-vectors.json`](manifests/core-01-vectors.json) is the Core-01
-index and binds the set identity, its schemas, and every artifact digest.
+index and binds the set identity, its schemas, and every artifact digest;
+[`manifests/core-01-vectors-002.json`](manifests/core-01-vectors-002.json) does
+the same for set 002 and additionally binds its expectation freeze.
 
 Neither is a conformance or publication attestation. Adding or changing a file
 covered by an index requires updating that index in the same change.
