@@ -23,7 +23,7 @@ repository does not import, execute, or depend on it.
 | Set | Specification | Vectors | Status |
 |---|---|---|---|
 | [`vectors/WEXP-CORE-01-VECTORS-001/`](vectors/WEXP-CORE-01-VECTORS-001/) | `draft-sergeev-wexp-core-01` (posted) | 16 | specification-derived |
-| [`vectors/WEXP-CORE-01-VECTORS-002/`](vectors/WEXP-CORE-01-VECTORS-002/) | `draft-sergeev-wexp-core-01` (posted) | 7 | specification-derived |
+| [`vectors/WEXP-CORE-01-VECTORS-002/`](vectors/WEXP-CORE-01-VECTORS-002/) | `draft-sergeev-wexp-core-01` (posted) | 9 | specification-derived |
 | [`vectors/core-00/`](vectors/core-00/) | `draft-sergeev-wexp-core-00` | 7 | candidate |
 | [`examples/`](examples/) | none | 1 | non-normative schema example |
 
@@ -63,12 +63,13 @@ Core-00 envelope, which is closed and describes a different vector shape.
 
 ## Core-01 vector set 002
 
-Seven vectors covering Core-01 behaviour that the C01-C16 fixtures leave
+Nine vectors covering Core-01 behaviour that the C01-C16 fixtures leave
 untested: multi-qualifier support states, the narrowed boundary-exceeded row and
-its control, non-targeted counter-evidence, the two distinct Section 6.2
-rejection paths, and a downgrade whose only diagnostic is a gap.
+its control, counter-evidence that is targeted, untargeted and aimed at every
+admissible claim, a targeted entry whose status does not block, the two distinct
+Section 6.2 rejection paths, and a downgrade whose only diagnostic is a gap.
 
-    vector set      aeaa790dfe37d47880b6d7c35863aedbaf9f3328f010b21db05373d8a1a9f21f
+    vector set      8b2dfd5ac6f983201f8869c331b58936e3378f382a3a989b9a63c8d85791facf
     specification   84c0a16467585c29925339a10dd287c2e67bfe21ed592826254bf424dc24f56d
 
 This set extends 001; it does not replace it. `WEXP-CORE-01-VECTORS-001` is
@@ -85,9 +86,12 @@ per-vector reasoning, the section each expectation rests on, the expectation
 digests, and what the set deliberately leaves out.
 
 **[First engine run](docs/core-01-set-002-first-run.md)** — what the two
-`wexp-ref` engines produced when they were finally run against that record. Six
-of the seven reproduce it exactly; on the seventh both engines agree with each
-other and differ from the specification, and the expectation was left alone.
+`wexp-ref` engines produced when they were first run against the seven vectors
+frozen at that point. Six reproduced the expectation exactly; on the seventh both
+engines agreed with each other and differed from the specification. The
+expectation was left alone and the engines were corrected instead. The two
+counter-evidence vectors were added afterwards under the same rule and frozen
+before either engine saw them.
 
 Every expected result was frozen, with those digests, before either engine in
 `wexp-ref` was run against the set. The freeze is what makes "derived from the

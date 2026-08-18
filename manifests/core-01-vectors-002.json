@@ -2,7 +2,7 @@
   "manifest_version": 1,
   "manifest_kind": "wexp-core-01-vector-set-index",
   "vector_set_id": "WEXP-CORE-01-VECTORS-002",
-  "vector_set_sha256": "aeaa790dfe37d47880b6d7c35863aedbaf9f3328f010b21db05373d8a1a9f21f",
+  "vector_set_sha256": "8b2dfd5ac6f983201f8869c331b58936e3378f382a3a989b9a63c8d85791facf",
   "predecessor": {
     "vector_set_id": "WEXP-CORE-01-VECTORS-001",
     "vector_set_sha256": "e315b6055148dbf05c6104c57feb991104b1ae6a47741a99cde5eb50d1900daf",
@@ -17,9 +17,13 @@
   },
   "status": "specification-derived-test-vectors",
   "expectation_freeze": {
-    "id": "WEXP-CORE-01-V002-EXPECTATION-FREEZE-001",
-    "derivation_bundle_sha256": "18f6f8ebd0a58ea585e3bc407eb6d86a5f9e00fa50ef206d80fa5c6aaaccbf89",
-    "record": "docs/core-01-vector-derivation-002.md"
+    "id": "WEXP-CORE-01-V002-EXPECTATION-FREEZE-002",
+    "derivation_bundle_sha256": "7ca8c2320a5f9edb77910d9431d7442b4be7bfc6cdb4dddd4b5b362190536ff5",
+    "record": "docs/core-01-vector-derivation-002.md",
+    "supersedes": {
+      "id": "WEXP-CORE-01-V002-EXPECTATION-FREEZE-001",
+      "note": "the same seven expectations, extended by two; every earlier per-expectation digest is unchanged"
+    }
   },
   "schemas": {
     "descriptor": {
@@ -38,11 +42,11 @@
   "artifacts": [
     {
       "path": "vectors/WEXP-CORE-01-VECTORS-002/descriptor.json",
-      "sha256": "194e19e91c15335e86cb91be959288d2281e1dc18dd16d47232b118b0c05813d"
+      "sha256": "22b8da70ed8bb7bd569922c8cd6fe9a5956457612e75037c79709913f313819c"
     },
     {
       "path": "vectors/WEXP-CORE-01-VECTORS-002/profile.json",
-      "sha256": "1cb19dbe2f27ee95ba83aa37e82e8880eef43354c9c2f25c2b2857a38a4398f9"
+      "sha256": "af73146bd8d4050a56ed5a449e6d3afa069dc5ef2234ae31bf48a3fd793a719f"
     },
     {
       "path": "vectors/WEXP-CORE-01-VECTORS-002/spec/draft-sergeev-wexp-core-01.xml",
@@ -61,6 +65,10 @@
       "sha256": "02b62368ce675efe9994dc3985f07a380894795d032519dba0c9f0813c2b326b"
     },
     {
+      "path": "vectors/WEXP-CORE-01-VECTORS-002/vectors/WEXP-CORE-01-V002-TV-2004.json",
+      "sha256": "1564550bb8d65d1e7f7d5b46e8d093f61d7cd54796d151f00726f9d0ef9aa5af"
+    },
+    {
       "path": "vectors/WEXP-CORE-01-VECTORS-002/vectors/WEXP-CORE-01-V002-TV-2005.json",
       "sha256": "a1a7ba7ac8ece2892226c8e0a72ab6fa207917fd2657e44a53fb61a5be06e868"
     },
@@ -77,8 +85,12 @@
       "sha256": "05f4f0ad676d598aefa4e9196d2276c6b94ef3148dee4809c81b76890217625b"
     },
     {
+      "path": "vectors/WEXP-CORE-01-VECTORS-002/vectors/WEXP-CORE-01-V002-TV-2009.json",
+      "sha256": "0a6e255d65044784abadd8e0db6640b34aac5d7f2f7a4f1674dab000df29d320"
+    },
+    {
       "path": "vectors/WEXP-CORE-01-VECTORS-002/SHA256SUMS",
-      "sha256": "4bef711c3008e8c9c5a9e1433894c9dc38d15a44f6bcf51bc9e6d452b3aac215"
+      "sha256": "edfb5a227f78694ba8fd2221b95972adfcc05bcfa84688fb401b44d9039b6e52"
     }
   ],
   "claims": [

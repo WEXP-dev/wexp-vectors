@@ -14,6 +14,10 @@ when the two `wexp-ref` engines were first run against them, afterwards.
 
     QUALIFICATION FAIL
 
+That run covered the seven vectors frozen at the time. Two counter-evidence
+vectors were added later, derived and frozen under the same rule before either
+engine saw them; they are not part of the run described here.
+
 Six of the seven reproduce the frozen expectation byte for byte, from both
 engines independently. The seventh is `WEXP-CORE-01-V002-TV-2008`, where the two
 engines agree with each other and both differ from the derivation.

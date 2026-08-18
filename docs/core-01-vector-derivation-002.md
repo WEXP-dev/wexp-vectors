@@ -8,12 +8,12 @@ the expectation, that is presumed wrong until the derivation is shown to be.
 
 ## Freeze
 
-    EXPECTATION-FREEZE ID       WEXP-CORE-01-V002-EXPECTATION-FREEZE-001
-    derivation bundle sha256    18f6f8ebd0a58ea585e3bc407eb6d86a5f9e00fa50ef206d80fa5c6aaaccbf89
+    EXPECTATION-FREEZE ID       WEXP-CORE-01-V002-EXPECTATION-FREEZE-002
+    derivation bundle sha256    7ca8c2320a5f9edb77910d9431d7442b4be7bfc6cdb4dddd4b5b362190536ff5
     vector set                  WEXP-CORE-01-VECTORS-002
-    vector set sha256           aeaa790dfe37d47880b6d7c35863aedbaf9f3328f010b21db05373d8a1a9f21f
-    descriptor sha256           194e19e91c15335e86cb91be959288d2281e1dc18dd16d47232b118b0c05813d
-    profile sha256              1cb19dbe2f27ee95ba83aa37e82e8880eef43354c9c2f25c2b2857a38a4398f9
+    vector set sha256           8b2dfd5ac6f983201f8869c331b58936e3378f382a3a989b9a63c8d85791facf
+    descriptor sha256           22b8da70ed8bb7bd569922c8cd6fe9a5956457612e75037c79709913f313819c
+    profile sha256              af73146bd8d4050a56ed5a449e6d3afa069dc5ef2234ae31bf48a3fd793a719f
     manifest                    manifests/core-01-vectors-002.json
 
 Derived only from:
@@ -26,6 +26,15 @@ Derived only from:
 Not derived from `wexp-ref`, from any external implementation, or from any
 private qualification candidate. The per-vector expectation digests below fix
 that claim to specific bytes.
+
+This freeze supersedes `WEXP-CORE-01-V002-EXPECTATION-FREEZE-001`, which covered
+the first seven vectors. Every one of those seven keeps the expectation digest it
+was frozen with; the two counter-evidence vectors were added afterwards under the
+same rule, derived and frozen before either engine saw them. In particular
+`TV-2008` still carries
+`8ef4e6d2c451eb5b10c383d3782edb5582a0eeca7327360efac3f8f33dead179`, the
+expectation both engines contradicted before the Section 8.6 remediation and both
+reproduce after it.
 
 ## Vectors
 
@@ -76,6 +85,22 @@ ceiling `intent`.
 **Purpose.** The asserted execution claim is itself deeper than the intent ceiling, so the boundary-exceeded row applies and the claim is not supported.
 
 **Derivation.** Section 8.6: a present asserted-base aggregate whose base is deeper than the ceiling produces E_BASE_EXCEEDS_BOUNDARY, and consequently not E_MISSING_REQUIRED_EVIDENCE. Section 8.2: the asserted claim is admissible but not exactly supported, so the verdict is downgrade. Control for TV-2002: proves the row was narrowed, not disabled. Never derived from an engine.
+
+### WEXP-CORE-01-V002-TV-2004 — counter-evidence-all-admissible-negative
+
+    expectation sha256   a8451b663c0e1b9e42690e2d6361319d4afd98ffd4d86ae3876c3aff4bf36128
+    verdict              downgrade
+    asserted supported   true
+    substantive          ["E_COUNTER_EVIDENCE_UNRESOLVED"]
+    gaps                 []
+    fatal                []
+
+**Input.** Asserted claim `{"base": "invocation", "qualifiers": []}`, boundary
+ceiling `invocation`.
+
+**Purpose.** A blocking counter-evidence entry names no individual claim but the all-admissible-claims sentinel, so it reaches the asserted claim and blocks acceptance even though the claim is exactly supported.
+
+**Derivation.** Section 8.2: counter-evidence blocks when an entry has status not-evaluated, unresolved-material or defeating and its affected_claims contains the claim or all-admissible-claims. The sentinel is the second of those two routes and no published fixture uses it. Section 8.6 gives E_COUNTER_EVIDENCE_UNRESOLVED for an applicable entry with status unresolved-material. Section 8.2 makes accept conditional on exact support and non-blocking counter-evidence, so a supported claim still downgrades. Section 8.1 unions the limitations of a counter-evidence entry whose affected claims include all-admissible-claims into inherited_limitations. Never derived from an engine.
 
 ### WEXP-CORE-01-V002-TV-2005 — counter-evidence-non-targeted-positive
 
@@ -141,6 +166,22 @@ ceiling `invocation`.
 
 **Derivation.** Section 8.1 admits IV only when independence_validation is supported, so IV is absent from Q(invocation) and (invocation,{IV}) is not in SupportedClaims. Section 8.6 gives exactly one row, the gap E_IV_NOT_EVALUATED for an asserted IV independence assessment that is not-evaluated; no substantive row applies because the aggregate is present, bound and semantically supported. Section 8.2 makes accept conditional on exact membership and non-blocking counter-evidence alone, so an empty substantive set does not make this accept. This separates the Core-derived gap path from published fixture C13, whose identical token is a profile-supplied gap on a claim that remains supported. Never derived from an engine.
 
+### WEXP-CORE-01-V002-TV-2009 — counter-evidence-resolved-positive
+
+    expectation sha256   fece9b2360055ddbbe51657bf4b6d29ce655a1ae1105ee744cffe0cc6f056e34
+    verdict              accept
+    asserted supported   true
+    substantive          []
+    gaps                 []
+    fatal                []
+
+**Input.** Asserted claim `{"base": "invocation", "qualifiers": []}`, boundary
+ceiling `invocation`.
+
+**Purpose.** A counter-evidence entry aimed squarely at the asserted claim carries a status that does not block, so acceptance survives. Targeting alone is not blocking.
+
+**Derivation.** Section 8.2: "not-supplied and resolved-no-defeat entries do not block by themselves." The entry names the asserted claim exactly, so this isolates the status test from the targeting test that TV-2005 covers from the other side. Section 8.6 assigns Core counter rows only to not-evaluated, unresolved-material and defeating, so a resolved entry produces no token at all. No published fixture uses resolved-no-defeat. Never derived from an engine.
+
 ## Derivation findings
 
 Three expectations were wrong when first drafted and were corrected against the
@@ -175,6 +216,34 @@ comparison — it was found by reading Section 8.5 against the emitted shape.
 The last of these is the reason the freeze happens before any engine runs and
 not after. Had the engines been consulted first, agreement between them on a
 wrongly shaped projection would have looked like confirmation.
+
+## What a frozen expectation is evidence of
+
+    specification derivation
+            |
+        frozen expectation
+            |
+    implementation A     implementation B
+            |
+     differential comparison
+
+The two answer different questions, and it is worth being exact about which.
+
+Engine agreement is evidence against some implementation-specific coding faults.
+It is not evidence that the implementations share the correct reading of the
+specification. Where they share a misreading, the differential comparison
+correctly reports agreement while both are wrong against the frozen expectation.
+
+`TV-2008` is the public instance. The frozen expectation gives
+`E_IV_NOT_EVALUATED`; before the remediation both the reference and the
+independent engine gave `E_MISSING_REQUIRED_EVIDENCE`; engine-to-engine was
+AGREE and engine-to-expectation was MISMATCH.
+
+This does not make a frozen expectation correct by construction. Every one
+remains a derivation open to review, and this record exists so that it can be
+reviewed. The narrower claim is the whole claim: freezing an expectation before
+observing what an implementation does prevents the implementation from quietly
+becoming its own oracle.
 
 ## What this set deliberately leaves out
 

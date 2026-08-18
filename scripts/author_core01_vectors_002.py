@@ -226,6 +226,36 @@ add("WEXP-CORE-01-V002-TV-2006","F2006","supplied-fatal-rejection",
     "Section 6.2: if the structurally usable input has a non-empty valid fatal_conditions set, Core returns that complete set through the fixed rejection projection; this check precedes the inadmissible-claim check. E_UNKNOWN_CRITICAL_SEMANTIC is one of the Core-defined supplied fatal members and is registered by the applied profile. Section 8.4 gives the projection, whose input-derived components carry unavailable, represented as JSON null per R-001. Distinguishes ingress check 5 from check 6, which published fixture C09 covers. Never derived from an engine.",
     i, fixed_rejection(["E_UNKNOWN_CRITICAL_SEMANTIC"]), code="E_UNKNOWN_CRITICAL_SEMANTIC")
 
+# ---- H: counter-evidence aimed at every admissible claim ----------------
+counter = [{"affected_claims": "all-admissible-claims", "basis_refs": ["ce-all"],
+            "limitations": ["L-counter-all"], "reasons": [], "status": "unresolved-material"}]
+i = make_input({"base":"invocation","qualifiers":[]}, "invocation",
+               [base_finding("invocation")], counter=counter)
+sc = [{"base":"invocation","qualifiers":[]}]
+se = [support_entry(sc[0], ["bd","invocation"])]
+add("WEXP-CORE-01-V002-TV-2004","H2004","counter-evidence-all-admissible-negative",
+    "A blocking counter-evidence entry names no individual claim but the all-admissible-claims sentinel, so it reaches the asserted claim and blocks acceptance even though the claim is exactly supported.",
+    "Section 8.2: counter-evidence blocks when an entry has status not-evaluated, unresolved-material or defeating and its affected_claims contains the claim or all-admissible-claims. The sentinel is the second of those two routes and no published fixture uses it. Section 8.6 gives E_COUNTER_EVIDENCE_UNRESOLVED for an applicable entry with status unresolved-material. Section 8.2 makes accept conditional on exact support and non-blocking counter-evidence, so a supported claim still downgrades. Section 8.1 unions the limitations of a counter-evidence entry whose affected claims include all-admissible-claims into inherited_limitations. Never derived from an engine.",
+    i, expected(i, verdict="downgrade", supported_claims=sc, support_entries=se,
+                asserted_supported=True, ceiling="invocation", grounding="attributed",
+                substantive=["E_COUNTER_EVIDENCE_UNRESOLVED"], inherited=["L-counter-all"],
+                relations=relations(i["asserted_claim"], sc)),
+    code="E_COUNTER_EVIDENCE_UNRESOLVED")
+
+# ---- H: a targeted entry whose status does not block ---------------------
+counter = [{"affected_claims": [{"base":"invocation","qualifiers":[]}], "basis_refs": ["ce-resolved"],
+            "limitations": [], "reasons": [], "status": "resolved-no-defeat"}]
+i = make_input({"base":"invocation","qualifiers":[]}, "invocation",
+               [base_finding("invocation")], counter=counter)
+sc = [{"base":"invocation","qualifiers":[]}]
+se = [support_entry(sc[0], ["bd","invocation"])]
+add("WEXP-CORE-01-V002-TV-2009","H2009","counter-evidence-resolved-positive",
+    "A counter-evidence entry aimed squarely at the asserted claim carries a status that does not block, so acceptance survives. Targeting alone is not blocking.",
+    "Section 8.2: \"not-supplied and resolved-no-defeat entries do not block by themselves.\" The entry names the asserted claim exactly, so this isolates the status test from the targeting test that TV-2005 covers from the other side. Section 8.6 assigns Core counter rows only to not-evaluated, unresolved-material and defeating, so a resolved entry produces no token at all. No published fixture uses resolved-no-defeat. Never derived from an engine.",
+    i, expected(i, verdict="accept", supported_claims=sc, support_entries=se,
+                asserted_supported=True, ceiling="invocation", grounding="attributed",
+                relations=relations(i["asserted_claim"], sc)))
+
 V.sort(key=lambda x: x["vector_id"])
 print(f"  total: {len(V)} vector(s)")
 for v in V:
@@ -260,7 +290,7 @@ ensure(OUT / "seed-002.json").write_text(json.dumps(seed, indent=2, sort_keys=Tr
 
 def canon(o):
     return json.dumps(o, sort_keys=True, separators=(",", ":"), ensure_ascii=False).encode() + b"\n"
-freeze = {"expectation_freeze": "WEXP-CORE-01-V002-EXPECTATION-FREEZE-001",
+freeze = {"expectation_freeze": "WEXP-CORE-01-V002-EXPECTATION-FREEZE-002",
           "derived_from": ["draft-sergeev-wexp-core-01 84c0a164…",
                            "CORE-01-KNOWN-ISSUES-001", "CORE-01-REPRESENTATION-CONTRACT-001"],
           "derived_from_engines": False,
