@@ -28,8 +28,13 @@ repository does not import, execute, or depend on it.
 | [`examples/`](examples/) | none | 1 | non-normative schema example |
 
 **No set here is a released conformance suite.** Passing them means an
-implementation agreed with transcribed expectations; it is not certification,
-conformance, interoperability, or IETF acceptance.
+implementation agreed with expectations this repository derived; it is not
+certification, conformance, interoperability, or IETF acceptance.
+
+Set 002 widens coverage; it does not change that. Whether a corpus can support a
+conformance claim is a question about Core-01 §12 and has to be settled against
+§12 on its own terms, not inferred from a vector count. Until it is, the
+limitation above stands as written.
 
 ## Core-01 vector set
 
