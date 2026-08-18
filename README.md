@@ -84,6 +84,11 @@ in full, corrections included:
 per-vector reasoning, the section each expectation rests on, the expectation
 digests, and what the set deliberately leaves out.
 
+**[First engine run](docs/core-01-set-002-first-run.md)** — what the two
+`wexp-ref` engines produced when they were finally run against that record. Six
+of the seven reproduce it exactly; on the seventh both engines agree with each
+other and differ from the specification, and the expectation was left alone.
+
 Every expected result was frozen, with those digests, before either engine in
 `wexp-ref` was run against the set. The freeze is what makes "derived from the
 specification" checkable rather than merely asserted: expectations that were
