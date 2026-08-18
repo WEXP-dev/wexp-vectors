@@ -194,7 +194,7 @@ add("WEXP-CORE-01-V002-TV-2008","H2008","gap-only-downgrade",
                 relations=relations(i["asserted_claim"], sc)),
     code="E_IV_NOT_EVALUATED")
 
-print(f"  авторовано векторов: {len(V)}")
+print(f"  authored: {len(V)} vector(s)")
 for v in V:
     print(f"    {v['vector_id']}  {v['classification']}  -> {v['expected_code'] or '(no token)'}")
 
@@ -227,7 +227,7 @@ add("WEXP-CORE-01-V002-TV-2006","F2006","supplied-fatal-rejection",
     i, fixed_rejection(["E_UNKNOWN_CRITICAL_SEMANTIC"]), code="E_UNKNOWN_CRITICAL_SEMANTIC")
 
 V.sort(key=lambda x: x["vector_id"])
-print(f"  итого векторов: {len(V)}")
+print(f"  total: {len(V)} vector(s)")
 for v in V:
     assert v["expected"] is not None, v["vector_id"]
     print(f"    {v['vector_id']}  {v['expected']['verdict']:9} {v['expected_code'] or ''}")
