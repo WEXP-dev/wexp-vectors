@@ -66,6 +66,31 @@ class TamperTest(unittest.TestCase):
         spec.write_bytes(spec.read_bytes() + b"<!-- -->")
         self._rejects()
 
+    def test_one_byte_mutation_is_rejected(self) -> None:
+        vector = self.set_root / "vectors" / "WEXP-CORE-01-Q001-TV-0001.json"
+        original = vector.read_bytes()
+        indentation = original.index(b"\n  ") + 1
+        mutated = original[:indentation] + b"\t" + original[indentation + 1 :]
+        self.assertEqual(len(original), len(mutated))
+        self.assertEqual(1, sum(left != right for left, right in zip(original, mutated)))
+        vector.write_bytes(mutated)
+
+        result = run(self.root)
+        self.assertEqual(result.returncode, 1, result.stdout)
+        self.assertIn("digest mismatch", result.stderr)
+
+    def test_line_ending_only_change_is_rejected(self) -> None:
+        vector = self.set_root / "vectors" / "WEXP-CORE-01-Q001-TV-0001.json"
+        original = vector.read_bytes()
+        self.assertNotIn(b"\r\n", original)
+        mutated = original.replace(b"\n", b"\r\n")
+        self.assertNotEqual(original, mutated)
+        vector.write_bytes(mutated)
+
+        result = run(self.root)
+        self.assertEqual(result.returncode, 1, result.stdout)
+        self.assertIn("digest mismatch", result.stderr)
+
     def test_removed_vector_is_rejected(self) -> None:
         (self.set_root / "vectors" / "WEXP-CORE-01-Q001-TV-0001.json").unlink()
         self._rejects()
