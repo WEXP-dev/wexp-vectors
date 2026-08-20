@@ -1,0 +1,9 @@
+# Repository blobs are the authority for integrity-bearing and evidence bytes.
+# Disable checkout/check-in text conversion only for those proven paths.
+/manifests/*.json -text
+/requirements/core-00.json -text
+/schema/*.json -text
+/examples/non-normative-schema-example.json -text
+/vectors/** -text
+/evidence/core-01-set-002/*.json -text
+/provenance/PUBLIC-GENESIS.json -text

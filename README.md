@@ -137,11 +137,62 @@ These preserve two distinctions: WEXP verification semantics are distinct from
 any particular record representation, and structural validity of a record does
 not by itself establish semantic support for the claim it carries.
 
-## Validate locally
+## Clone and validate locally
 
 Python 3.12 or newer is recommended.
 
+### Windows PowerShell 5.1
+
+These commands are native PowerShell commands; Git Bash, WSL, and a translated
+Unix path are not required.
+
+```powershell
+git clone https://github.com/WEXP-dev/wexp-vectors.git
+Set-Location .\wexp-vectors
+python -m venv .venv
+& .\.venv\Scripts\python.exe -m pip install --disable-pip-version-check -r requirements-validator.txt
+& .\.venv\Scripts\python.exe scripts\validate_vectors.py
+& .\.venv\Scripts\python.exe scripts\validate_core01_vectors.py
+& .\.venv\Scripts\python.exe -m unittest discover -s tests -v
+```
+
+Inspect a vector and the repository identities used by these instructions:
+
+```powershell
+$Root = (Get-Location).Path
+$VectorPath = Join-Path $Root "vectors\WEXP-CORE-01-VECTORS-001\vectors\WEXP-CORE-01-Q001-TV-0001.json"
+$Vector = Get-Content -LiteralPath $VectorPath -Raw | ConvertFrom-Json
+$Vector | Select-Object vector_id, candidate_id, source_fixture
+
+git rev-parse HEAD
+git rev-parse 'HEAD^{tree}'
+$Set001 = Get-Content -LiteralPath (Join-Path $Root "manifests\core-01-vectors.json") -Raw | ConvertFrom-Json
+$Set002 = Get-Content -LiteralPath (Join-Path $Root "manifests\core-01-vectors-002.json") -Raw | ConvertFrom-Json
+$Set001 | Select-Object vector_set_id, vector_set_sha256
+$Set002 | Select-Object vector_set_id, vector_set_sha256
+```
+
+An ordinary Git for Windows clone is supported when
+`core.autocrlf=true`. Repository attributes disable line-ending conversion for
+the byte-bound artifacts and integrity/evidence controls, so users do not need
+to set `core.autocrlf=false` as an installation step. The validator still hashes
+the observed bytes and fails closed if any artifact is changed. If a digest
+mismatch occurs, inspect the effective rule with, for example:
+
+```powershell
+git config --show-origin --get core.autocrlf
+git check-attr text -- vectors/WEXP-CORE-01-VECTORS-001/vectors/WEXP-CORE-01-Q001-TV-0001.json
+```
+
+The second command must report `text: unset`. See the
+[canonical byte policy](docs/canonical-byte-policy.md) for the complete,
+extension-independent inventory.
+
+### POSIX shells
+
 ```sh
+git clone https://github.com/WEXP-dev/wexp-vectors.git
+cd wexp-vectors
 python3 -m venv .venv
 .venv/bin/python -m pip install -r requirements-validator.txt
 .venv/bin/python scripts/validate_vectors.py            # Core-00 slice and examples
