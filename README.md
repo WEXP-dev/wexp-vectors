@@ -18,6 +18,9 @@ WEXP specifications -> requirements -> vectors -> implementations
 `wexp-ref` is an optional executable interpretation and test vehicle. This
 repository does not import, execute, or depend on it.
 
+Building your own implementation? Start at
+**[`IMPLEMENTING.md`](IMPLEMENTING.md)**.
+
 ## What is here
 
 | Set | Specification | Vectors | Status |
