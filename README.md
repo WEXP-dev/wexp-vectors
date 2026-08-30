@@ -24,7 +24,7 @@ repository does not import, execute, or depend on it.
 |---|---|---|---|
 | [`vectors/WEXP-CORE-01-VECTORS-001/`](vectors/WEXP-CORE-01-VECTORS-001/) | `draft-sergeev-wexp-core-01` (posted) | 16 | specification-derived |
 | [`vectors/WEXP-CORE-01-VECTORS-002/`](vectors/WEXP-CORE-01-VECTORS-002/) | `draft-sergeev-wexp-core-01` (posted) | 9 | specification-derived |
-| [`vectors/WEXP-CORE-01-VECTORS-003/`](vectors/WEXP-CORE-01-VECTORS-003/) | `draft-sergeev-wexp-core-01` (posted) | 6 | specification-derived |
+| [`vectors/WEXP-CORE-01-VECTORS-003/`](vectors/WEXP-CORE-01-VECTORS-003/) | `draft-sergeev-wexp-core-01` (posted) | 7 | specification-derived |
 | [`vectors/core-00/`](vectors/core-00/) | `draft-sergeev-wexp-core-00` | 7 | candidate |
 | [`examples/`](examples/) | none | 1 | non-normative schema example |
 
@@ -106,11 +106,13 @@ recorded first cannot have been fitted to an implementation afterwards.
 
 ## Core-01 vector set 003
 
-Six vectors covering one requirement family: a finding contributes to
-supported-claim construction only when it names the same target and evaluation
-context as the appraisal input.
+Seven vectors covering one requirement family: the normalized input's cross-field
+contract that every aggregate names the same target and evaluation context as the
+appraisal itself. §6.2 places the check among the ordered rejection checks, so a
+foreign-scoped aggregate makes the whole input contract-invalid and Core returns a
+fatal `E_PROFILE_MAPPING_INVALID` before any claim is appraised.
 
-    vector set      272cd71cf9d2fb049b1a00d626004342362f16aa67480ade5231919b0e7063ff
+    vector set      338b14cffdb846ca2aec4574ad9e52dd3615e15c8de7861d922e4323989440cd
     specification   84c0a16467585c29925339a10dd287c2e67bfe21ed592826254bf424dc24f56d
 
 **[Scope identity — derivation and freeze](docs/core-01-scope-identity-003.md)**
