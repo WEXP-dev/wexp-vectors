@@ -24,6 +24,7 @@ repository does not import, execute, or depend on it.
 |---|---|---|---|
 | [`vectors/WEXP-CORE-01-VECTORS-001/`](vectors/WEXP-CORE-01-VECTORS-001/) | `draft-sergeev-wexp-core-01` (posted) | 16 | specification-derived |
 | [`vectors/WEXP-CORE-01-VECTORS-002/`](vectors/WEXP-CORE-01-VECTORS-002/) | `draft-sergeev-wexp-core-01` (posted) | 9 | specification-derived |
+| [`vectors/WEXP-CORE-01-VECTORS-003/`](vectors/WEXP-CORE-01-VECTORS-003/) | `draft-sergeev-wexp-core-01` (posted) | 7 | specification-derived |
 | [`vectors/core-00/`](vectors/core-00/) | `draft-sergeev-wexp-core-00` | 7 | candidate |
 | [`examples/`](examples/) | none | 1 | non-normative schema example |
 
@@ -102,6 +103,28 @@ Every expected result was frozen, with those digests, before either engine in
 `wexp-ref` was run against the set. The freeze is what makes "derived from the
 specification" checkable rather than merely asserted: expectations that were
 recorded first cannot have been fitted to an implementation afterwards.
+
+## Core-01 vector set 003
+
+Seven vectors covering one requirement family: the normalized input's cross-field
+contract that every aggregate names the same target and evaluation context as the
+appraisal itself. §6.2 places the check among the ordered rejection checks, so a
+foreign-scoped aggregate makes the whole input contract-invalid and Core returns a
+fatal `E_PROFILE_MAPPING_INVALID` before any claim is appraised.
+
+    vector set      338b14cffdb846ca2aec4574ad9e52dd3615e15c8de7861d922e4323989440cd
+    specification   84c0a16467585c29925339a10dd287c2e67bfe21ed592826254bf424dc24f56d
+
+**[Scope identity — derivation and freeze](docs/core-01-scope-identity-003.md)**
+
+The requirement appears three times in the specification and no published vector
+exercised it. Across sets 001 and 002 every finding uses the same target and the
+same evaluation context, so nothing could distinguish an implementation that
+checks scope from one that does not — and a corpus that never varies a dimension
+cannot measure it, however many vectors it contains.
+
+Sets 001 and 002 are unchanged and stand alongside this one. None of the three is
+a conformance suite.
 
 ## Core-00 candidate slice
 
@@ -219,7 +242,9 @@ registry, and every Core-00 vector path, ID, classification, status and digest.
 [`manifests/core-01-vectors.json`](manifests/core-01-vectors.json) is the Core-01
 index and binds the set identity, its schemas, and every artifact digest;
 [`manifests/core-01-vectors-002.json`](manifests/core-01-vectors-002.json) does
-the same for set 002 and additionally binds its expectation freeze.
+the same for set 002 and additionally binds its expectation freeze;
+[`manifests/core-01-vectors-003.json`](manifests/core-01-vectors-003.json) does
+the same for set 003.
 
 Neither is a conformance or publication attestation. Adding or changing a file
 covered by an index requires updating that index in the same change.
