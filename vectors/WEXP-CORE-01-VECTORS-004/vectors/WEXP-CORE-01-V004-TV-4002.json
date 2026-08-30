@@ -1,0 +1,108 @@
+{
+  "candidate_id": "WEXP-CORE-01-VECTORS-004",
+  "classification": "boundary-grounding-pairing-fatal",
+  "derivation": "Section 6: 'A supported boundary has a grounding value of asserted-only, attributed, or attested that the evaluation context accepts. grounding = not-evaluated is valid only with status = not-evaluated; either field paired differently produces E_PROFILE_MAPPING_INVALID.' Section 6.2 places a well-typed input that violates a cross-field invariant at position 4, which precedes both a supplied fatal set and an inadmissible asserted claim. Section 8.4 returns the fixed rejection projection for every rejection branch: verdict reject, the single derived fatal token, every derived set empty and every input-derived component unavailable, carried as null under the public representation contract. Note that evaluation_scope['boundary-grounding'] is not-evaluated here because Section 12 governs that capability by boundary status, binding and grounding; setting it evaluated would violate a second, different invariant and would not isolate the pairing rule.",
+  "expected": {
+    "asserted_claim": null,
+    "asserted_claim_supported": false,
+    "boundary_ceiling": null,
+    "boundary_grounding": null,
+    "counter_evidence": null,
+    "evaluation_context": null,
+    "evaluation_gap_entries": [],
+    "evaluation_gaps": [],
+    "evaluation_scope": null,
+    "fatal_reasons": [
+      "E_PROFILE_MAPPING_INVALID"
+    ],
+    "inherited_limitations": null,
+    "maximal_supported_claims": [],
+    "recorder_relations": null,
+    "semantics_version": "wexp-core-1",
+    "substantive_reasons": [],
+    "support_entries": [],
+    "support_relations": [],
+    "supported_claims": [],
+    "target": null,
+    "verdict": "reject"
+  },
+  "expected_code": "E_PROFILE_MAPPING_INVALID",
+  "harness_representation": "WEXP Core-01 vector harness 004",
+  "input": {
+    "asserted_claim": {
+      "base": "execution",
+      "qualifiers": []
+    },
+    "base_findings": [
+      {
+        "base": "execution",
+        "basis_refs": [
+          "execution-T"
+        ],
+        "evaluation_context_ref": "C",
+        "limitations": [],
+        "reasons": [],
+        "semantic_validation": "supported",
+        "target": "T",
+        "target_binding": "supported"
+      }
+    ],
+    "boundary_finding": {
+      "basis_refs": [
+        "bd"
+      ],
+      "ceiling_base": "execution",
+      "evaluation_context_ref": "C",
+      "grounding": "not-evaluated",
+      "limitations": [],
+      "reasons": [],
+      "status": "supported",
+      "target": "T",
+      "target_binding": "supported"
+    },
+    "counter_evidence": [
+      {
+        "affected_claims": [],
+        "basis_refs": [],
+        "limitations": [],
+        "reasons": [],
+        "status": "not-supplied"
+      }
+    ],
+    "evaluation_context": {
+      "id": "C"
+    },
+    "evaluation_scope": {
+      "authenticity": "evaluated",
+      "boundary-grounding": "not-evaluated",
+      "carrier-mapping": "evaluated",
+      "composition": "evaluated",
+      "counter-evidence": "evaluated",
+      "execution-support": "evaluated",
+      "independent-verification": "evaluated",
+      "intent-support": "evaluated",
+      "invocation-support": "evaluated",
+      "observation-support": "evaluated",
+      "provenance-support": "evaluated",
+      "target-binding": "evaluated"
+    },
+    "fatal_conditions": [],
+    "inherited_limitations": [],
+    "profile_evaluation_gaps": [],
+    "qualifier_findings": [],
+    "recorder_relations": [],
+    "representation": "core-01-qualification-001-harness",
+    "semantics_version": "wexp-core-1",
+    "target": "T"
+  },
+  "purpose": "A boundary finding cannot be supported while its grounding was never evaluated. The input is well typed and every aggregate is correctly scoped, so it fails only the cross-field pairing between boundary status and boundary grounding, at ordered check 4, before any claim is appraised.",
+  "requirement_ids": [
+    "WEXP-CORE-01-V004-REQ-S4002"
+  ],
+  "snapshot": {
+    "id": "draft-sergeev-wexp-core-01",
+    "xml_sha256": "84c0a16467585c29925339a10dd287c2e67bfe21ed592826254bf424dc24f56d"
+  },
+  "source_fixture": "S4002",
+  "vector_id": "WEXP-CORE-01-V004-TV-4002"
+}
