@@ -100,3 +100,12 @@ This set does **not** claim that an independently derived implementation fails,
 that Section 6.2 position 4 is completely covered, that the specification is
 defective, or that any implementation is certified or conformant. Sets 001, 002
 and 003 are unchanged and remain published.
+
+## Subsequent requirements review
+
+The three revision-specific requirement mappings and complete pinned expectations
+were accepted on 2026-09-15. See the [reviewed registry and decision scope](core-01-grounding-status-004-requirements-001.md),
+registered on 2026-09-18. This later review is distinct from the original
+pre-reveal expectation freeze and does not authorize merge, release, engine repair,
+or successor routing. The vector payload, profile, descriptor and bundled
+specification are unchanged.
