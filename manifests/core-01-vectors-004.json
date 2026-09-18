@@ -1,0 +1,103 @@
+{
+  "manifest_version": 1,
+  "manifest_kind": "wexp-core-01-vector-set-index",
+  "vector_set_id": "WEXP-CORE-01-VECTORS-004",
+  "vector_set_sha256": "94cc33ac7758878924ffef451a41f92a71c15e5656df5b8f84dc4d40b655f848",
+  "predecessors": [
+    {
+      "vector_set_id": "WEXP-CORE-01-VECTORS-001",
+      "vector_set_sha256": "e315b6055148dbf05c6104c57feb991104b1ae6a47741a99cde5eb50d1900daf"
+    },
+    {
+      "vector_set_id": "WEXP-CORE-01-VECTORS-002",
+      "vector_set_sha256": "8b2dfd5ac6f983201f8869c331b58936e3378f382a3a989b9a63c8d85791facf"
+    },
+    {
+      "vector_set_id": "WEXP-CORE-01-VECTORS-003",
+      "vector_set_sha256": "338b14cffdb846ca2aec4574ad9e52dd3615e15c8de7861d922e4323989440cd"
+    }
+  ],
+  "relationship": "coverage successor; all three predecessors are unchanged and remain published",
+  "specification": {
+    "draft": "draft-sergeev-wexp-core-01",
+    "datatracker_url": "https://datatracker.ietf.org/doc/draft-sergeev-wexp-core/01/",
+    "xml_sha256": "84c0a16467585c29925339a10dd287c2e67bfe21ed592826254bf424dc24f56d",
+    "xml_bytes": 103095,
+    "authoritative_source": "https://github.com/WEXP-dev/wexp-spec"
+  },
+  "status": "specification-derived-test-vectors",
+  "expectation_freeze": {
+    "id": "WEXP-CORE-01-GROUNDING-STATUS-EXPECTATION-FREEZE-002",
+    "derivation_bundle_sha256": "646e0c6442890dffab44490d6c25cc51f0eb09ab106698629909e8022a7ec9f7",
+    "record": "docs/core-01-grounding-status-004.md",
+    "frozen_before_implementation_reveal": true,
+    "derived_from_public_engines": false,
+    "derived_from_private_repaired_engines": false,
+    "derived_from_differential_agreement": false,
+    "note": "Derived in an isolated context from the published specification bytes alone, then committed and round-trip verified before any implementation was inspected or run. The derivation bundle digest above identifies those exact frozen bytes."
+  },
+  "schemas": {
+    "descriptor": {
+      "path": "schema/core-01-descriptor.schema.json",
+      "sha256": "68ba652c578b0ab8599c4f31728b68bab6abf89bfa2980577fb05f400f38e503"
+    },
+    "profile": {
+      "path": "schema/core-01-profile.schema.json",
+      "sha256": "4209985e2f394cd075c9adeeb6eccbf7d9f8ae9a9add3d79154423e73b0a89bb"
+    },
+    "vector": {
+      "path": "schema/core-01-vector.schema.json",
+      "sha256": "db2c3e31bbaaf9e1ac599654771ab3c25668b6c3d581baadc5876f6f8e2f8c4e"
+    }
+  },
+  "artifacts": [
+    {
+      "path": "vectors/WEXP-CORE-01-VECTORS-004/descriptor.json",
+      "sha256": "7588c33304650f6839e0ac410bfe2a79126fa1ef4ff6928a9cf90b26a853c71a",
+      "bytes": 1698
+    },
+    {
+      "path": "vectors/WEXP-CORE-01-VECTORS-004/profile.json",
+      "sha256": "64059dfa697a8ecc131195195a3735b571a6d7b5d806e4d63b4c8cbc3880b806",
+      "bytes": 3972
+    },
+    {
+      "path": "vectors/WEXP-CORE-01-VECTORS-004/spec/draft-sergeev-wexp-core-01.xml",
+      "sha256": "84c0a16467585c29925339a10dd287c2e67bfe21ed592826254bf424dc24f56d",
+      "bytes": 103095
+    },
+    {
+      "path": "vectors/WEXP-CORE-01-VECTORS-004/vectors/WEXP-CORE-01-V004-TV-4001.json",
+      "sha256": "3efef9dae5b2b023ed5669121ba15a8ff4be1f3446ecbbcd58f91e32a9851a60",
+      "bytes": 5388
+    },
+    {
+      "path": "vectors/WEXP-CORE-01-VECTORS-004/vectors/WEXP-CORE-01-V004-TV-4002.json",
+      "sha256": "196275fd0392911cf82200bd7792e1242733b21b1727c31e658bf1180b424ce9",
+      "bytes": 4209
+    },
+    {
+      "path": "vectors/WEXP-CORE-01-VECTORS-004/vectors/WEXP-CORE-01-V004-TV-4003.json",
+      "sha256": "aab0574708ac7f1164c5743d86a4b9d65a86f891daa5395380d4ef05cac210e5",
+      "bytes": 3907
+    },
+    {
+      "path": "vectors/WEXP-CORE-01-VECTORS-004/SHA256SUMS",
+      "sha256": "3bd3c3294c68ebdc8a43bd8b4828c51cdc0a432ff672fb344c9c22c07a1079cd",
+      "bytes": 578
+    }
+  ],
+  "claims": [
+    "Every listed file matches its declared SHA-256 digest.",
+    "Every expected result is derived from the published Internet-Draft and was frozen before any implementation was run against it.",
+    "The bundled specification copy is byte-identical to the XML the IETF serves for revision 01.",
+    "No case in this set depends on a profile-level or evaluation-context predicate that this representation cannot carry."
+  ],
+  "non_claims": [
+    "Passing this set does not make an implementation certified, conformant, or endorsed.",
+    "This set does not define the specification; the Internet-Draft does.",
+    "Reference implementation behaviour is never the source of an expected outcome.",
+    "This set covers one cross-field invariant. It does not establish that the rest of the Core-01 surface, or the rest of the Section 6.2 position-4 surface, is covered.",
+    "It does not supersede WEXP-CORE-01-VECTORS-001, 002 or 003; all four stand together."
+  ]
+}

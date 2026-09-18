@@ -1,0 +1,47 @@
+{
+  "authority": {
+    "published_specification": true,
+    "snapshot_id": "draft-sergeev-wexp-core-01",
+    "snapshot_path": "spec/draft-sergeev-wexp-core-01.xml",
+    "xml_bytes": 103095,
+    "xml_sha256": "84c0a16467585c29925339a10dd287c2e67bfe21ed592826254bf424dc24f56d"
+  },
+  "bound_files": [
+    {
+      "bytes": 5388,
+      "kind": "test-vector",
+      "path": "vectors/WEXP-CORE-01-V004-TV-4001.json",
+      "sha256": "3efef9dae5b2b023ed5669121ba15a8ff4be1f3446ecbbcd58f91e32a9851a60"
+    },
+    {
+      "bytes": 4209,
+      "kind": "test-vector",
+      "path": "vectors/WEXP-CORE-01-V004-TV-4002.json",
+      "sha256": "196275fd0392911cf82200bd7792e1242733b21b1727c31e658bf1180b424ce9"
+    },
+    {
+      "bytes": 3907,
+      "kind": "test-vector",
+      "path": "vectors/WEXP-CORE-01-V004-TV-4003.json",
+      "sha256": "aab0574708ac7f1164c5743d86a4b9d65a86f891daa5395380d4ef05cac210e5"
+    }
+  ],
+  "candidate_id": "WEXP-CORE-01-VECTORS-004",
+  "counts": {
+    "requirements": 3,
+    "vectors": 3
+  },
+  "descriptor_version": 1,
+  "non_claims": [
+    "Expected results are derived from the published Internet-Draft, never from any implementation.",
+    "This set covers one cross-field invariant; it is not a conformance suite and passing it is not certification.",
+    "It does not establish that the rest of the Section 6.2 position-4 surface is covered.",
+    "It does not supersede WEXP-CORE-01-VECTORS-001, 002 or 003; all four stand together."
+  ],
+  "profile": {
+    "path": "profile.json",
+    "sha256": "64059dfa697a8ecc131195195a3735b571a6d7b5d806e4d63b4c8cbc3880b806"
+  },
+  "release_status": "published-specification-derived",
+  "status": "WEXP-CORE-01-PUBLIC-VECTOR-SET"
+}

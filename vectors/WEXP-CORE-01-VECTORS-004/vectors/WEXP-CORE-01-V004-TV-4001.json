@@ -1,0 +1,162 @@
+{
+  "candidate_id": "WEXP-CORE-01-VECTORS-004",
+  "classification": "boundary-grounding-attested-control",
+  "derivation": "Section 6: 'A supported boundary has a grounding value of asserted-only, attributed, or attested that the evaluation context accepts.' Section 7 requires the result to preserve the boundary grounding status. Section 8.4's admission predicate tests target, evaluation context, target binding, semantic validation, boundary status, boundary target binding and the ceiling comparison, and names no grounding value; Section 8.6 is exhaustive for Core-derived non-fatal diagnostics and contains no grounding-keyed row. Section 12 governs boundary-grounding scope by boundary status, binding and grounding, none of which is not-evaluated here, so the capability is evaluated. Accept follows from Section 8.2 exact membership with non-blocking counter-evidence.",
+  "expected": {
+    "asserted_claim": {
+      "base": "execution",
+      "qualifiers": []
+    },
+    "asserted_claim_supported": true,
+    "boundary_ceiling": "execution",
+    "boundary_grounding": "attested",
+    "counter_evidence": [
+      {
+        "affected_claims": [],
+        "basis_refs": [],
+        "limitations": [],
+        "reasons": [],
+        "status": "not-supplied"
+      }
+    ],
+    "evaluation_context": {
+      "id": "C"
+    },
+    "evaluation_gap_entries": [],
+    "evaluation_gaps": [],
+    "evaluation_scope": {
+      "authenticity": "evaluated",
+      "boundary-grounding": "evaluated",
+      "carrier-mapping": "evaluated",
+      "composition": "evaluated",
+      "counter-evidence": "evaluated",
+      "execution-support": "evaluated",
+      "independent-verification": "evaluated",
+      "intent-support": "evaluated",
+      "invocation-support": "evaluated",
+      "observation-support": "evaluated",
+      "provenance-support": "evaluated",
+      "target-binding": "evaluated"
+    },
+    "fatal_reasons": [],
+    "inherited_limitations": [],
+    "maximal_supported_claims": [
+      {
+        "base": "execution",
+        "qualifiers": []
+      }
+    ],
+    "recorder_relations": [],
+    "semantics_version": "wexp-core-1",
+    "substantive_reasons": [],
+    "support_entries": [
+      {
+        "basis_refs": [
+          "bd",
+          "execution-T"
+        ],
+        "claim": {
+          "base": "execution",
+          "qualifiers": []
+        },
+        "limitations": []
+      }
+    ],
+    "support_relations": [
+      {
+        "relation": "equal",
+        "supported_claim": {
+          "base": "execution",
+          "qualifiers": []
+        }
+      }
+    ],
+    "supported_claims": [
+      {
+        "base": "execution",
+        "qualifiers": []
+      }
+    ],
+    "target": "T",
+    "verdict": "accept"
+  },
+  "expected_code": null,
+  "harness_representation": "WEXP Core-01 vector harness 004",
+  "input": {
+    "asserted_claim": {
+      "base": "execution",
+      "qualifiers": []
+    },
+    "base_findings": [
+      {
+        "base": "execution",
+        "basis_refs": [
+          "execution-T"
+        ],
+        "evaluation_context_ref": "C",
+        "limitations": [],
+        "reasons": [],
+        "semantic_validation": "supported",
+        "target": "T",
+        "target_binding": "supported"
+      }
+    ],
+    "boundary_finding": {
+      "basis_refs": [
+        "bd"
+      ],
+      "ceiling_base": "execution",
+      "evaluation_context_ref": "C",
+      "grounding": "attested",
+      "limitations": [],
+      "reasons": [],
+      "status": "supported",
+      "target": "T",
+      "target_binding": "supported"
+    },
+    "counter_evidence": [
+      {
+        "affected_claims": [],
+        "basis_refs": [],
+        "limitations": [],
+        "reasons": [],
+        "status": "not-supplied"
+      }
+    ],
+    "evaluation_context": {
+      "id": "C"
+    },
+    "evaluation_scope": {
+      "authenticity": "evaluated",
+      "boundary-grounding": "evaluated",
+      "carrier-mapping": "evaluated",
+      "composition": "evaluated",
+      "counter-evidence": "evaluated",
+      "execution-support": "evaluated",
+      "independent-verification": "evaluated",
+      "intent-support": "evaluated",
+      "invocation-support": "evaluated",
+      "observation-support": "evaluated",
+      "provenance-support": "evaluated",
+      "target-binding": "evaluated"
+    },
+    "fatal_conditions": [],
+    "inherited_limitations": [],
+    "profile_evaluation_gaps": [],
+    "qualifier_findings": [],
+    "recorder_relations": [],
+    "representation": "core-01-qualification-001-harness",
+    "semantics_version": "wexp-core-1",
+    "target": "T"
+  },
+  "purpose": "A supported boundary grounded attested is admitted, and the grounding class changes nothing else. Section 6 admits asserted-only, attributed and attested beside a supported status; Section 8.4 names no grounding value in the base admission predicate and Section 8.6 keys no diagnostic row on one, so the appraisal must be identical to the same input grounded attributed except for the preserved boundary_grounding. Without this control the set would show only that inputs are refused, not that refusal is selective.",
+  "requirement_ids": [
+    "WEXP-CORE-01-V004-REQ-S4001"
+  ],
+  "snapshot": {
+    "id": "draft-sergeev-wexp-core-01",
+    "xml_sha256": "84c0a16467585c29925339a10dd287c2e67bfe21ed592826254bf424dc24f56d"
+  },
+  "source_fixture": "S4001",
+  "vector_id": "WEXP-CORE-01-V004-TV-4001"
+}
