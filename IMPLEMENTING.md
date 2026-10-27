@@ -9,13 +9,16 @@ from it, and a way to report what your implementation did.
 
 ## 1. Read the specification, not this repository
 
-The current specification state is
-[`draft-sergeev-wexp-core-01`](https://datatracker.ietf.org/doc/draft-sergeev-wexp-core/01/),
-an Internet-Draft. It is not an Internet Standard, it has not been adopted by an
-IETF working group, and being posted is neither of those things.
+This guide and the Core-01 corpus below are bound to
+[`draft-sergeev-wexp-core-01`](https://datatracker.ietf.org/doc/draft-sergeev-wexp-core/01/).
+The current published Core revision is
+[Core-02](https://datatracker.ietf.org/doc/draft-sergeev-wexp-core/02/);
+publication of that revision does not change the corpus's specification binding.
+Both are individual Internet-Drafts, not Internet Standards or working-group
+adoptions. Use the exact revision a test set identifies.
 
-The authoritative artifact is the XML, published unchanged in
-[`wexp-spec`](https://github.com/WEXP-dev/wexp-spec):
+The authoritative Core-01 artifact is the XML, published unchanged in
+[`wexp-appraisal-core-spec`](https://github.com/WEXP-dev/wexp-appraisal-core-spec):
 
     draft-sergeev-wexp-core-01.xml
     sha256  84c0a16467585c29925339a10dd287c2e67bfe21ed592826254bf424dc24f56d
@@ -24,7 +27,7 @@ Each Core-01 vector set binds that exact digest in its `descriptor.json`, so you
 can check offline that the expectations you are running were derived from the
 specification you are reading.
 
-`wexp-spec` also carries a project-maintained known-issues record for `-01`. It
+`wexp-appraisal-core-spec` also carries a project-maintained known-issues record for `-01`. It
 is not an RFC Editor erratum and changes no published byte, but an implementer
 should read it before concluding that a disagreement is theirs.
 
@@ -104,7 +107,7 @@ If you want a result to be usable by anyone else, publish:
   refute from specification text: open an issue in this repository. Cite the
   section. A defect report that names the text beats one that names an
   implementation.
-- A specification defect: `wexp-spec`.
+- A Core specification defect: `wexp-appraisal-core-spec`.
 - A question about how your system's evidence maps to a bounded WEXP claim:
   that is an interoperability question, and it goes to
   [`interop-test-lab`](https://github.com/WEXP-dev/interop-test-lab/blob/main/START-HERE.md).
