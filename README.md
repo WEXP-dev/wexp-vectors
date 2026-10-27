@@ -18,18 +18,20 @@ WEXP specifications -> requirements -> vectors -> implementations
 `wexp-ref` is an optional executable interpretation and test vehicle. This
 repository does not import, execute, or depend on it.
 
-Building your own implementation? Start at
-**[`IMPLEMENTING.md`](IMPLEMENTING.md)**.
+Building your own implementation? Start with the revision you intend to implement:
+[Core-02 corpus and representation](vectors/WEXP-CORE-02-VECTORS-001/README.md), or
+[the historical Core-01 implementation guide](IMPLEMENTING.md).
 
 The current published Core revision is [Core-02](https://datatracker.ietf.org/doc/draft-sergeev-wexp-core/02/),
 maintained in [wexp-appraisal-core-spec](https://github.com/WEXP-dev/wexp-appraisal-core-spec).
-The corpora below remain bound to Core-01/Core-00. The repository rename and
-publication of Core-02 do not requalify them for a different revision.
+The new Core-02 corpus is a separate package. Historical Core-01/Core-00 corpora
+retain their original bindings; publication of Core-02 does not requalify them.
 
 ## What is here
 
 | Set | Specification | Vectors | Status |
 |---|---|---|---|
+| [`vectors/WEXP-CORE-02-VECTORS-001/`](vectors/WEXP-CORE-02-VECTORS-001/) | `draft-sergeev-wexp-core-02` (posted) | 89 | source-encoded; 16 normative transcriptions and 73 derived controls |
 | [`vectors/WEXP-CORE-01-VECTORS-001/`](vectors/WEXP-CORE-01-VECTORS-001/) | `draft-sergeev-wexp-core-01` (posted) | 16 | specification-derived |
 | [`vectors/WEXP-CORE-01-VECTORS-002/`](vectors/WEXP-CORE-01-VECTORS-002/) | `draft-sergeev-wexp-core-01` (posted) | 9 | specification-derived |
 | [`vectors/WEXP-CORE-01-VECTORS-003/`](vectors/WEXP-CORE-01-VECTORS-003/) | `draft-sergeev-wexp-core-01` (posted) | 7 | specification-derived |
@@ -40,10 +42,27 @@ publication of Core-02 do not requalify them for a different revision.
 implementation agreed with expectations this repository derived; it is not
 certification, conformance, interoperability, or IETF acceptance.
 
-Set 002 widens coverage; it does not change that. Whether a corpus can support a
-conformance claim is a question about Core-01 §12 and has to be settled against
-§12 on its own terms, not inferred from a vector count. Until it is, the
-limitation above stands as written.
+Core-01 Set 002 widens its tested surface; it does not change that. Whether a
+corpus can support a conformance claim must be settled against the selected
+specification revision, not inferred from a vector count.
+
+## Core-02 source-encoded corpus
+
+[WEXP-CORE-02-VECTORS-001](vectors/WEXP-CORE-02-VECTORS-001/README.md) expands
+frozen source-authored expectations into complete logical inputs and all twenty
+expected appraisal components. It does not import or invoke an appraiser.
+The manifest pins the posted XML, source files, representation and expanded bytes.
+
+```sh
+python vectors/WEXP-CORE-02-VECTORS-001/verify.py
+python vectors/WEXP-CORE-02-VECTORS-001/corpus.py --check --output build/core02-vectors.json
+```
+
+Use a new output path for each expansion. The expanded corpus SHA-256 is
+`d5d2c9d54185f04ac59ac2b5642853a6ebd00c3d28a3239d62682186f5df323f`.
+The separate [Core-02 CI](.github/workflows/core02-corpus.yml) checks Python 3.12
+and 3.13, normal/optimized expansion, and exact public XML bytes. A corpus-integrity
+PASS is not an appraiser run. Core-02 tests do not cover Coverage-00 or an AAC mapping.
 
 ## Core-01 vector set
 
@@ -170,7 +189,9 @@ not by itself establish semantic support for the claim it carries.
 
 ## Clone and validate locally
 
-Python 3.12 or newer is recommended.
+Python 3.12 or newer is recommended. The following existing commands validate
+the historical Core-00/Core-01 packages. Run the separate Core-02 commands above
+for its source-encoded corpus; one revision's checks do not validate another.
 
 ### Windows PowerShell 5.1
 
@@ -252,9 +273,11 @@ index and binds the set identity, its schemas, and every artifact digest;
 [`manifests/core-01-vectors-002.json`](manifests/core-01-vectors-002.json) does
 the same for set 002 and additionally binds its expectation freeze;
 [`manifests/core-01-vectors-003.json`](manifests/core-01-vectors-003.json) does
-the same for set 003.
+the same for set 003. The separate
+[Core-02 manifest](vectors/WEXP-CORE-02-VECTORS-001/manifest.json) binds its
+source-encoded corpus and expanded bytes without changing those historical indexes.
 
-Neither is a conformance or publication attestation. Adding or changing a file
+None is a conformance or publication attestation. Adding or changing a file
 covered by an index requires updating that index in the same change.
 
 Repository versions use SemVer independently from IETF document revisions; the
