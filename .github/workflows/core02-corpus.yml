@@ -26,7 +26,8 @@ jobs:
           persist-credentials: false
       - name: Verify pinned source, frozen corpus and optimized-mode expansion
         run: |
-          python vectors/WEXP-CORE-02-VECTORS-001/verify.py --source-xml build/specification/drafts/core/02/draft-sergeev-wexp-core-02.xml
+          python vectors/WEXP-CORE-02-VECTORS-001/verify.py --rebuild --source-xml build/specification/drafts/core/02/draft-sergeev-wexp-core-02.xml
+          python -O vectors/WEXP-CORE-02-VECTORS-001/verify.py --rebuild --source-xml build/specification/drafts/core/02/draft-sergeev-wexp-core-02.xml
           python vectors/WEXP-CORE-02-VECTORS-001/corpus.py --check --output build/core02-normal.json
           python -O vectors/WEXP-CORE-02-VECTORS-001/corpus.py --check --output build/core02-optimized.json
           cmp build/core02-normal.json build/core02-optimized.json

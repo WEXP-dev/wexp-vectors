@@ -1,0 +1,40 @@
+{
+  "schema": "wexp-bounded-material-compatibility/1",
+  "not_normative": true,
+  "core02": {
+    "document": "draft-sergeev-wexp-core-02",
+    "semantics_version": "wexp-core-2",
+    "specification_sha256": "de983051a1c6ea51ea9b7f965fe9eabf2d97af92ab2f074781bd44e3f99c8782",
+    "corpus": "vectors/WEXP-CORE-02-VECTORS-001",
+    "manifest_sha256": "b802781f9c551988c452556ab975df6e17a98b9791f378c76b04056042eec4ae",
+    "frozen_corpus_sha256": "d5d2c9d54185f04ac59ac2b5642853a6ebd00c3d28a3239d62682186f5df323f",
+    "cases": 89,
+    "qualification": "bounded; see an exact implementation/run record",
+    "full_conformance_established": false,
+    "new_interop_result": false,
+    "package_revision": 2,
+    "frozen_data": "vectors/WEXP-CORE-02-VECTORS-001/corpus.json"
+  },
+  "coverage00": {
+    "document": "draft-sergeev-wexp-coverage-00",
+    "rule_set": "coverage/0.2.0",
+    "specification_commit": "WEXP-dev/wexp-coverage-spec@90e0faec458f63fe7f2faa8a100c805cca66ede0",
+    "specification_sha256": "a2bc01d01527e1ca9e867c11341ff259b0788a941b3d1aef979f8937b82cfe62",
+    "package": "vectors/WEXP-COVERAGE-00-LOGIC-001",
+    "manifest_sha256": "0219c013766f02fc51b84f9132d1e7387881dfbc265d940b27f0c1a62979bf08",
+    "cases_sha256": "3a32521559a20ceb43b694fbb83a5fe5bce73afd39cc2d7e8bc89011616e8fec",
+    "model_sha256": "97f5ecff4b6de0fb2ec1642dec1b6e4f1c7bf52224c4d2d954a604f0bd74d292",
+    "examples": 12,
+    "kind": "bounded finite-predicate model",
+    "finite_world_is_test_oracle": true,
+    "full_evaluator": false,
+    "pg_ledger_0_2_0_runtime": false,
+    "new_interop_result": false
+  },
+  "historical_materials": {
+    "core01_corpora": "unchanged; do not relabel",
+    "core00_corpora": "unchanged; do not relabel",
+    "emilia_and_wimse_packages": "unchanged; no new run established"
+  },
+  "rule": "A readable source package or successful repository check is not proof of full conformance, independent interoperability or production readiness."
+}
