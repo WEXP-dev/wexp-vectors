@@ -21,6 +21,11 @@ repository does not import, execute, or depend on it.
 Building your own implementation? Start at
 **[`IMPLEMENTING.md`](IMPLEMENTING.md)**.
 
+The current published Core revision is [Core-02](https://datatracker.ietf.org/doc/draft-sergeev-wexp-core/02/),
+maintained in [wexp-appraisal-core-spec](https://github.com/WEXP-dev/wexp-appraisal-core-spec).
+The corpora below remain bound to Core-01/Core-00. The repository rename and
+publication of Core-02 do not requalify them for a different revision.
+
 ## What is here
 
 | Set | Specification | Vectors | Status |
@@ -59,7 +64,7 @@ Contents of the set:
 - [`vectors/`](vectors/WEXP-CORE-01-VECTORS-001/vectors/) — the sixteen vectors
 - [`spec/draft-sergeev-wexp-core-01.xml`](vectors/WEXP-CORE-01-VECTORS-001/spec/draft-sergeev-wexp-core-01.xml)
   — byte-identical copy of the published XML, so the binding is checkable
-  offline. `wexp-spec` and the IETF remain authoritative; this copy exists to be
+  offline. `wexp-appraisal-core-spec` and the IETF remain authoritative; this copy exists to be
   verified, not to be cited.
 - [`SHA256SUMS`](vectors/WEXP-CORE-01-VECTORS-001/SHA256SUMS) and
   [`manifests/core-01-vectors.json`](manifests/core-01-vectors.json)
@@ -257,8 +262,10 @@ two are different namespaces.
 
 ## WEXP repositories
 
-- [Specifications — `wexp-spec`](https://github.com/WEXP-dev/wexp-spec) —
-  published WEXP specifications and their provenance. **Authoritative.**
+- [Appraisal Core — `wexp-appraisal-core-spec`](https://github.com/WEXP-dev/wexp-appraisal-core-spec) —
+  published WEXP Core revisions and their provenance. **Core specification authority.**
+- [Coverage — `wexp-coverage-spec`](https://github.com/WEXP-dev/wexp-coverage-spec) —
+  the separate Coverage specification; not qualified by the Core corpora here.
 - [Test vectors — `wexp-vectors`](https://github.com/WEXP-dev/wexp-vectors) —
   this repository: vectors derived from those specifications.
 - [Reference implementation — `wexp-ref`](https://github.com/WEXP-dev/wexp-ref) —
