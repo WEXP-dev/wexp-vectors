@@ -13,7 +13,7 @@ specification -> reviewed requirements -> frozen expectations -> implementation 
 
 | Package | Exact contract | What is available |
 |---|---|---|
-| [WEXP-CORE-02-VECTORS-001](vectors/WEXP-CORE-02-VECTORS-001/README.md) | Core-02 / `wexp-core-2` | 89 complete logical inputs and twenty-component expectations: 16 normative transcriptions, 73 derived controls |
+| [WEXP-CORE-02-VECTORS-001](vectors/WEXP-CORE-02-VECTORS-001/README.md) | Core-02 / `wexp-core-2` | 89 complete logical inputs and twenty-component expectations (frozen `corpus.json`): 16 normative transcriptions, 73 derived controls |
 | [WEXP-COVERAGE-00-LOGIC-001](vectors/WEXP-COVERAGE-00-LOGIC-001/README.md) | Coverage-00 / `coverage/0.2.0` | 12 known-finite-world examples plus bounded relation, delivery and aggregation checks; **not the full Coverage evaluator** |
 | [Core-01 sets 001-003](CORE-CORPORA.md#core-01-vector-set) | Core-01 | Historical sets of 16, 9 and 7 cases, unchanged |
 | [Core-00 slice](CORE-CORPORA.md#core-00-candidate-slice) | Core-00 | Seven historical candidate cases, unchanged |
@@ -27,14 +27,20 @@ Counts identify tested cases; they are not maturity scores.
 
 ```sh
 python vectors/WEXP-CORE-02-VECTORS-001/verify.py
-python vectors/WEXP-CORE-02-VECTORS-001/corpus.py --check --output build/core02-vectors.json
+python vectors/WEXP-CORE-02-VECTORS-001/verify.py --rebuild
 ```
 
-Python 3.12 or newer; use a new output path. The source-encoded corpus expands
-without invoking an appraiser. Its manifest binds exact source files, representation,
-posted XML and expanded JSON digest. Follow its README for full-result comparison
-and optional source-byte verification. The [dedicated workflow](.github/workflows/core02-corpus.yml)
-checks the pinned public XML and normal/optimized expansion on Python 3.12 and 3.13.
+Python 3.12 or newer. By default `verify.py` checks the manifest and source hashes
+and reads the frozen data-only `corpus.json` **without executing the expectation
+generators**; consumers need only that file. `--rebuild` explicitly re-executes the
+hash-checked generators and requires byte equality with `corpus.json`. Neither mode
+invokes an appraiser. The manifest (package revision 2) binds exact source files,
+representation, posted XML and the frozen corpus digest. `corpus.py --check --output
+<new path>` still writes a separate expansion. Follow the corpus README for
+full-result comparison and optional `--source-xml` verification. The
+[dedicated workflow](.github/workflows/core02-corpus.yml) checks the pinned public
+XML and normal/optimized rebuilds on Python 3.12 and 3.13. Exact identities are
+recorded in [COMPATIBILITY.json](COMPATIBILITY.json).
 
 ## Coverage-00
 
