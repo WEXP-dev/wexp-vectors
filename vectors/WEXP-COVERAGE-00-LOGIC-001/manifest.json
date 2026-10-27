@@ -1,0 +1,25 @@
+{
+  "schema": "wexp-coverage00-finite-package/1",
+  "package_id": "WEXP-COVERAGE-00-LOGIC-001",
+  "specification": {
+    "document": "draft-sergeev-wexp-coverage-00",
+    "repository": "WEXP-dev/wexp-coverage-spec",
+    "commit": "90e0faec458f63fe7f2faa8a100c805cca66ede0",
+    "path": "drafts/coverage/00/draft-sergeev-wexp-coverage-00.xml",
+    "xml_sha256": "a2bc01d01527e1ca9e867c11341ff259b0788a941b3d1aef979f8937b82cfe62"
+  },
+  "rule_set": "coverage/0.2.0",
+  "case_count": 12,
+  "cases_sha256": "3a32521559a20ceb43b694fbb83a5fe5bce73afd39cc2d7e8bc89011616e8fec",
+  "files": {
+    "logic.py": "97f5ecff4b6de0fb2ec1642dec1b6e4f1c7bf52224c4d2d954a604f0bd74d292",
+    "cases.py": "588b949440e53ab3b508fcb0ffc4c8a36c7aafc97cf40a3396a3a0bca78998dd",
+    "cases.json": "3a32521559a20ceb43b694fbb83a5fe5bce73afd39cc2d7e8bc89011616e8fec",
+    "check.py": "a820dd2c66c3c0f43f9af935dbf7cc8ad8af566fd0790e94e1504fae5b65de32",
+    "README.md": "a81eca2fc363391da49e227d412c075738587fa8292cad04dc5fee9cbdea3929"
+  },
+  "scope": "Known finite predicate worlds and aggregation of already usable derivations only",
+  "full_rule_evaluator": false,
+  "pg02_runtime_validation": false,
+  "external_independent_validation": false
+}
