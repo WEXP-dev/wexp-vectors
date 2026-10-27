@@ -21,7 +21,7 @@
     "final_contract_cases.py": "23f2b42aff636c97355d42254457f221ef091a1a9503a51238e5ba514c3d4a57",
     "normative_cases.py": "5b49f557bf3d08ac5e4a1ecd4ce5f6433b0ea421ae21af7018020fe0f223fa48",
     "review_cases.py": "77fdd1f80bf1693899f89ddf18f0d059ee329f9cdf1283842a162d98c6185d25",
-    "verify.py": "0d3c91c168d76f61d47de79b85e1c947d511c979050d3a7b273923f5085e62db"
+    "verify.py": "8a825cc76c03cef0299e4b0cddff3fa0a9f93bdb1baf8f76b321d75ff6ab3a8d"
   },
   "expectation_origin": "Source-authored tables and derivations; no appraiser output used. Same-project work, not independent external review.",
   "conformance_suite_claimed": false,
@@ -29,7 +29,13 @@
   "harness_representation": {
     "id": "wexp-core02-source-json-harness/1",
     "path": "README.md",
-    "sha256": "981372450eae5bd1d8ae2315707007ed7a12f4d2682c69872090d4926816a391",
+    "sha256": "975ac3a65cb4a53870869ba650478157dac615f2fc8567f168123e50d47e6ca0",
     "decoded_inputs": "Complete Core logical values; encoding constraints are not a standardized WEXP carrier"
+  },
+  "package_revision": 2,
+  "frozen_data": {
+    "path": "corpus.json",
+    "bytes": 296485,
+    "sha256": "d5d2c9d54185f04ac59ac2b5642853a6ebd00c3d28a3239d62682186f5df323f"
   }
 }

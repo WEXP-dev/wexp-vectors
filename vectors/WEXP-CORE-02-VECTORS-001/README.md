@@ -15,19 +15,21 @@ identities. This package does not requalify their results.
 registry and expanded corpus digest. `normative_cases.py`, `review_cases.py` and
 `final_contract_cases.py` encode expectations from the specification, without
 importing or invoking an appraiser. `corpus.py` expands them to complete inputs
-and all twenty expected logical result components. The source representation is
-the committed corpus; the reproducible expanded JSON is not checked in a second
-time. Changing either representation requires a new reviewed package identity.
+and all twenty expected logical result components. `corpus.json` is the frozen data-only expansion; consumers can read it without
+executing a generator. CI checks byte equality between this data and the frozen
+source definitions. Neither representation is regenerated from appraiser output.
+Changing either requires a new reviewed package revision.
 
 Run from the repository root with Python 3.12 or newer:
 
 ```sh
-python vectors/WEXP-CORE-02-VECTORS-001/verify.py
+python vectors/WEXP-CORE-02-VECTORS-001/verify.py --rebuild
 python vectors/WEXP-CORE-02-VECTORS-001/corpus.py --check --output build/core02-vectors.json
 ```
 
-The output path must not already exist. Integrity verification does not run an
-appraiser or establish correctness of expectations. To check source bytes, use:
+The output path must not already exist. Default integrity verification reads data and source hashes without importing
+expectation generators. `--rebuild` explicitly executes the hash-checked generator.
+Neither mode runs an appraiser or establishes correctness of expectations. To check source bytes, use:
 
 ```sh
 python vectors/WEXP-CORE-02-VECTORS-001/verify.py --source-xml path/to/draft-sergeev-wexp-core-02.xml
