@@ -1,0 +1,32 @@
+name: Verify posted Core-02 corpus
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  core02-corpus:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      matrix:
+        python: ['3.12', '3.13']
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: ${{ matrix.python }}
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          repository: WEXP-dev/wexp-appraisal-core-spec
+          ref: 8e93013418ee578ac5e522ca7a8d86346b4e2a99
+          path: build/specification
+          persist-credentials: false
+      - name: Verify pinned source, frozen corpus and optimized-mode expansion
+        run: |
+          python vectors/WEXP-CORE-02-VECTORS-001/verify.py --source-xml build/specification/drafts/core/02/draft-sergeev-wexp-core-02.xml
+          python vectors/WEXP-CORE-02-VECTORS-001/corpus.py --check --output build/core02-normal.json
+          python -O vectors/WEXP-CORE-02-VECTORS-001/corpus.py --check --output build/core02-optimized.json
+          cmp build/core02-normal.json build/core02-optimized.json
