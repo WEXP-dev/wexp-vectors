@@ -1,0 +1,46 @@
+name: Coverage-00 bounded logical checks
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  coverage00:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      matrix:
+        python: ['3.12', '3.13']
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: ${{ matrix.python }}
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          repository: WEXP-dev/wexp-coverage-spec
+          ref: 90e0faec458f63fe7f2faa8a100c805cca66ede0
+          path: build/coverage-specification
+          persist-credentials: false
+      - name: Verify exact source and run bounded model in both modes
+        run: |
+          python -B vectors/WEXP-COVERAGE-00-LOGIC-001/check.py --source-xml build/coverage-specification/drafts/coverage/00/draft-sergeev-wexp-coverage-00.xml --output build/coverage00-normal.json
+          python -B -O vectors/WEXP-COVERAGE-00-LOGIC-001/check.py --source-xml build/coverage-specification/drafts/coverage/00/draft-sergeev-wexp-coverage-00.xml --output build/coverage00-optimized.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          a = json.loads(Path('build/coverage00-normal.json').read_text())
+          b = json.loads(Path('build/coverage00-optimized.json').read_text())
+          a.pop('optimized'); b.pop('optimized')
+          if a != b or not a['source_xml_bytes_checked'] or len(a['frozen_cases']) != 12:
+              raise SystemExit('Incomplete or differing finite-model results')
+          PY
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        if: always()
+        with:
+          name: coverage00-logic-${{ matrix.python }}
+          path: build/coverage00-*.json
+          if-no-files-found: warn
+          retention-days: 90
