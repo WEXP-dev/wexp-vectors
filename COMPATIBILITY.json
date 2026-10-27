@@ -15,6 +15,22 @@
     "package_revision": 2,
     "frozen_data": "vectors/WEXP-CORE-02-VECTORS-001/corpus.json"
   },
+  "coverage00": {
+    "document": "draft-sergeev-wexp-coverage-00",
+    "rule_set": "coverage/0.2.0",
+    "specification_commit": "WEXP-dev/wexp-coverage-spec@90e0faec458f63fe7f2faa8a100c805cca66ede0",
+    "specification_sha256": "a2bc01d01527e1ca9e867c11341ff259b0788a941b3d1aef979f8937b82cfe62",
+    "package": "vectors/WEXP-COVERAGE-00-LOGIC-001",
+    "manifest_sha256": "0219c013766f02fc51b84f9132d1e7387881dfbc265d940b27f0c1a62979bf08",
+    "cases_sha256": "3a32521559a20ceb43b694fbb83a5fe5bce73afd39cc2d7e8bc89011616e8fec",
+    "model_sha256": "97f5ecff4b6de0fb2ec1642dec1b6e4f1c7bf52224c4d2d954a604f0bd74d292",
+    "examples": 12,
+    "kind": "bounded finite-predicate model",
+    "finite_world_is_test_oracle": true,
+    "full_evaluator": false,
+    "pg_ledger_0_2_0_runtime": false,
+    "new_interop_result": false
+  },
   "historical_materials": {
     "core01_corpora": "unchanged; do not relabel",
     "core00_corpora": "unchanged; do not relabel",
