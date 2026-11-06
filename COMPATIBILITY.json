@@ -15,6 +15,23 @@
     "package_revision": 2,
     "frozen_data": "vectors/WEXP-CORE-02-VECTORS-001/corpus.json"
   },
+  "core02_set002": {
+    "document": "draft-sergeev-wexp-core-02",
+    "semantics_version": "wexp-core-2",
+    "specification_sha256": "de983051a1c6ea51ea9b7f965fe9eabf2d97af92ab2f074781bd44e3f99c8782",
+    "corpus": "vectors/WEXP-CORE-02-VECTORS-002",
+    "manifest_sha256": "3961528fd349b584285d181ce466e0447d4e9f69a223ab33a4a70b1d6fdff8cb",
+    "frozen_corpus_sha256": "9e301333bfdaa4a96068fe44adc0cde3f8eb63bc08f77f164d1d568f609a8bc0",
+    "cases": 35,
+    "kind": "section 7 boundary matrix controls; extends core02 revision 2 without changing it",
+    "predecessor_lock_commit": "d6827a5e08fdf0aabecee5c025c369273c438db5",
+    "expectation_freeze": "WEXP-CORE-02-V002-EXPECTATION-FREEZE-001",
+    "qualification": "bounded; see docs/core-02-boundary-matrix-002.md for the recorded run",
+    "full_conformance_established": false,
+    "new_interop_result": false,
+    "package_revision": 1,
+    "frozen_data": "vectors/WEXP-CORE-02-VECTORS-002/corpus.json"
+  },
   "coverage00": {
     "document": "draft-sergeev-wexp-coverage-00",
     "rule_set": "coverage/0.2.0",
