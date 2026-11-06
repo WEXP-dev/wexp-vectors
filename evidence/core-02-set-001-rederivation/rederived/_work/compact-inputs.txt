@@ -1,0 +1,1301 @@
+===== C01 top-keys: ['id', 'input']
+  asserted_claim: {"base":"intent","qualifiers":[]}
+  base_findings: [{"base":"intent","basis_refs":["F1:I"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"intent","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: <12 std evaluated>
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== C02 top-keys: ['id', 'input']
+  asserted_claim: {"base":"intent","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: <12 std evaluated>
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== C03 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":["IV"]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: <12 std evaluated>
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: [{"basis_refs":["F1:P(E)"],"evaluation_context_ref":"C","independence_validation":"not-applicable","limitations":[],"qualified_base":"execution","qualifier":"PROV","reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== C04 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":["PROV"]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: <12 std evaluated>
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: [{"basis_refs":["F1:V(E)"],"evaluation_context_ref":"C","independence_validation":"supported","limitations":[],"qualified_base":"execution","qualifier":"IV","reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== C05 top-keys: ['id', 'input']
+  asserted_claim: {"base":"invocation","qualifiers":["IV"]}
+  base_findings: [{"base":"invocation","basis_refs":["F1:N"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"invocation","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: <12 std evaluated>
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: [{"basis_refs":["F1:V(N)"],"evaluation_context_ref":"C","independence_validation":"supported","limitations":[],"qualified_base":"invocation","qualifier":"IV","reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== C06 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":["IV"]}
+  base_findings: [{"base":"invocation","basis_refs":["F1:N"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"},{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: <12 std evaluated>
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: [{"basis_refs":["F1:V(N)"],"evaluation_context_ref":"C","independence_validation":"supported","limitations":[],"qualified_base":"invocation","qualifier":"IV","reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== C07 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"invocation","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: <12 std evaluated>
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== C08 top-keys: ['id', 'input']
+  asserted_claim: {"base":"observation","qualifiers":[]}
+  base_findings: []
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"observation","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: <12 std evaluated>
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== C09 top-keys: ['id', 'input']
+  asserted_claim: {"base":"intent","qualifiers":["PROV"]}
+  base_findings: []
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: <12 std evaluated>
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== C10 top-keys: ['id', 'input']
+  asserted_claim: {"base":"intent","qualifiers":[]}
+  base_findings: [{"base":"intent","basis_refs":["F1:I"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"intent","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[{"base":"intent","qualifiers":[]}],"basis_refs":[],"limitations":[],"reasons":[],"status":"unresolved-material"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: <12 std evaluated>
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== C11 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:s1","F1:s2","F1:adj","F1:w"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: <12 std evaluated>
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== C12 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:s1","F1:s2","F1:adj","F1:w"],"evaluation_context_ref":"C","limitations":["F1:L-boundary"],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":["F1:L-boundary"],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: n=12 names=["carrier-mapping","authenticity","target-binding","boundary-grounding","observation-support","intent-support","invocation-support","execution-support","provenance-support","independent-verification","composition","counter-evidence"]
+     dev: {"capability":"independent-verification","status":"not-evaluated"}
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== C13 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: <12 std evaluated>
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: [{"affected_claims":[{"base":"execution","qualifiers":[]}],"basis_refs":["F1:u1"],"evaluation_context_ref":"C","limitations":["F1:L-upstream"],"target":"T","token":"E_IV_NOT_EVALUATED"}]
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== C14 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[{"base":"intent","qualifiers":[]}],"basis_refs":[],"limitations":[],"reasons":[],"status":"defeating"},{"affected_claims":[{"base":"execution","qualifiers":[]}],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-evaluated"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: <12 std evaluated>
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== C15 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[{"base":"execution","qualifiers":[]}],"basis_refs":["F1:p1"],"limitations":[],"reasons":["P_COUNTER_FAIL"],"status":"unresolved-material"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: <12 std evaluated>
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== C16 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: <12 std evaluated>
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: [{"affected_claims":[{"base":"invocation","qualifiers":["IV"]}],"basis_refs":["F1:u2"],"evaluation_context_ref":"C","limitations":["F1:L-unrelated"],"target":"T","token":"E_IV_NOT_EVALUATED"}]
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== P01 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: n=13 names=["carrier-mapping","authenticity","target-binding","boundary-grounding","observation-support","intent-support","invocation-support","execution-support","provenance-support","independent-verification","composition","counter-evidence",[]]
+     dev: {"capability":[],"status":"evaluated"}
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== P02 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: n=13 names=["carrier-mapping","authenticity","target-binding","boundary-grounding","observation-support","intent-support","invocation-support","execution-support","provenance-support","independent-verification","composition","counter-evidence",["wexp-core02-test-profile/extension-1"]]
+     dev: {"capability":["wexp-core02-test-profile/extension-1"],"status":"evaluated"}
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== P03 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: n=13 names=["carrier-mapping","authenticity","target-binding","boundary-grounding","observation-support","intent-support","invocation-support","execution-support","provenance-support","independent-verification","composition","counter-evidence",["wexp-core02-test-profile/extension-1","audit-window","extra"]]
+     dev: {"capability":["wexp-core02-test-profile/extension-1","audit-window","extra"],"status":"evaluated"}
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== P04 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: n=13 names=["carrier-mapping","authenticity","target-binding","boundary-grounding","observation-support","intent-support","invocation-support","execution-support","provenance-support","independent-verification","composition","counter-evidence",["wexp-core02-test-profile/extension-1",""]]
+     dev: {"capability":["wexp-core02-test-profile/extension-1",""],"status":"evaluated"}
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== P05 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: n=13 names=["carrier-mapping","authenticity","target-binding","boundary-grounding","observation-support","intent-support","invocation-support","execution-support","provenance-support","independent-verification","composition","counter-evidence",["","audit-window"]]
+     dev: {"capability":["","audit-window"],"status":"evaluated"}
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== P06 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: n=13 names=["carrier-mapping","authenticity","target-binding","boundary-grounding","observation-support","intent-support","invocation-support","execution-support","provenance-support","independent-verification","composition","counter-evidence",["wexp-core02-test-profile/extension-1",0]]
+     dev: {"capability":["wexp-core02-test-profile/extension-1",0],"status":"evaluated"}
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== P07 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: n=13 names=["carrier-mapping","authenticity","target-binding","boundary-grounding","observation-support","intent-support","invocation-support","execution-support","provenance-support","independent-verification","composition","counter-evidence",["wexp-core02-test-profile/extension-1",null]]
+     dev: {"capability":["wexp-core02-test-profile/extension-1",null],"status":"evaluated"}
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== P08 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: n=13 names=["carrier-mapping","authenticity","target-binding","boundary-grounding","observation-support","intent-support","invocation-support","execution-support","provenance-support","independent-verification","composition","counter-evidence",["wexp-core02-test-profile/extension-1","\ud800"]]
+     dev: {"capability":["wexp-core02-test-profile/extension-1","\ud800"],"status":"evaluated"}
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== P09 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"foreign","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: n=13 names=["carrier-mapping","authenticity","target-binding","boundary-grounding","observation-support","intent-support","invocation-support","execution-support","provenance-support","independent-verification","composition","counter-evidence",[]]
+     dev: {"capability":[],"status":"evaluated"}
+  fatal_conditions: ["E_INTEGRITY_INVALID"]
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== P10 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: n=13 names=["carrier-mapping","authenticity","target-binding","boundary-grounding","observation-support","intent-support","invocation-support","execution-support","provenance-support","independent-verification","composition","counter-evidence",["wexp-core02-test-profile/extension-1","audit-window"]]
+     dev: {"capability":["wexp-core02-test-profile/extension-1","audit-window"],"status":"evaluated"}
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== P11 top-keys: ['id', 'input', 'profiles']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":"F1:wexp-core02-test-profile/extension-1","trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: n=13 names=["carrier-mapping","authenticity","target-binding","boundary-grounding","observation-support","intent-support","invocation-support","execution-support","provenance-support","independent-verification","composition","counter-evidence",["wexp-core02-test-profile/extension-1","audit-window"]]
+     dev: {"capability":["wexp-core02-test-profile/extension-1","audit-window"],"status":"evaluated"}
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+  PROFILES: {"draft-sergeev-wexp-core-02/fixture-1":{"relation_tokens":[],"scope_names":[],"tokens":{"P_COUNTER_FAIL":{"category":"substantive"}}},"wexp-core02-test-profile/extension-1":{"relation_tokens":["same-controller"],"scope_names":["audit-window"],"tokens":{"P_AUTH_GAP":{"category":"evaluation-gap","current_scope_capability":"authenticity"}}}}
+===== P12 top-keys: ['id', 'input', 'profiles']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":"F1:wexp-core02-test-profile/extension-1","trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: n=13 names=["carrier-mapping","authenticity","target-binding","boundary-grounding","observation-support","intent-support","invocation-support","execution-support","provenance-support","independent-verification","composition","counter-evidence",["wexp-core02-test-profile/extension-1","audit-window"]]
+     dev: {"capability":["wexp-core02-test-profile/extension-1","audit-window"],"status":"not-evaluated"}
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+  PROFILES: {"draft-sergeev-wexp-core-02/fixture-1":{"relation_tokens":[],"scope_names":[],"tokens":{"P_COUNTER_FAIL":{"category":"substantive"}}},"wexp-core02-test-profile/extension-1":{"relation_tokens":["same-controller"],"scope_names":["audit-window"],"tokens":{"P_AUTH_GAP":{"category":"evaluation-gap","current_scope_capability":"authenticity"}}}}
+===== P13 top-keys: ['id', 'input', 'profiles']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":"F1:wexp-core02-test-profile/extension-1","trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: n=14 names=["carrier-mapping","authenticity","target-binding","boundary-grounding","observation-support","intent-support","invocation-support","execution-support","provenance-support","independent-verification","composition","counter-evidence",["wexp-core02-test-profile/extension-1","audit-window"],["wexp-core02-test-profile/extension-1","audit-window"]]
+     dev: {"capability":["wexp-core02-test-profile/extension-1","audit-window"],"status":"not-evaluated"}
+     dev: {"capability":["wexp-core02-test-profile/extension-1","audit-window"],"status":"not-evaluated"}
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+  PROFILES: {"draft-sergeev-wexp-core-02/fixture-1":{"relation_tokens":[],"scope_names":[],"tokens":{"P_COUNTER_FAIL":{"category":"substantive"}}},"wexp-core02-test-profile/extension-1":{"relation_tokens":["same-controller"],"scope_names":["audit-window"],"tokens":{"P_AUTH_GAP":{"category":"evaluation-gap","current_scope_capability":"authenticity"}}}}
+===== P14 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":["PROV","IV"]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: <12 std evaluated>
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: [{"basis_refs":["F1:P(E)"],"evaluation_context_ref":"C","independence_validation":"not-applicable","limitations":[],"qualified_base":"execution","qualifier":"PROV","reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"},{"basis_refs":["F1:V(E)"],"evaluation_context_ref":"C","independence_validation":"supported","limitations":[],"qualified_base":"execution","qualifier":"IV","reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== P15 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"asserted-only","limitations":["F1:L-boundary"],"reasons":[],"status":"unsupported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: <12 std evaluated>
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== P16 top-keys: ['id', 'input', 'profiles']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":"F1:wexp-core02-test-profile/extension-1","trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: n=12 names=["carrier-mapping","authenticity","target-binding","boundary-grounding","observation-support","intent-support","invocation-support","execution-support","provenance-support","independent-verification","composition","counter-evidence"]
+     dev: {"capability":"authenticity","status":"not-evaluated"}
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: [{"affected_claims":[{"base":"execution","qualifiers":[]}],"basis_refs":["F1:auth-basis"],"current_scope_capability":"authenticity","evaluation_context_ref":"C","limitations":["F1:L-auth"],"target":"T","token":"P_AUTH_GAP"}]
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+  PROFILES: {"draft-sergeev-wexp-core-02/fixture-1":{"relation_tokens":[],"scope_names":[],"tokens":{"P_COUNTER_FAIL":{"category":"substantive"}}},"wexp-core02-test-profile/extension-1":{"relation_tokens":["same-controller"],"scope_names":["audit-window"],"tokens":{"P_AUTH_GAP":{"category":"evaluation-gap","current_scope_capability":"authenticity"}}}}
+===== P17 top-keys: ['id', 'input', 'profiles']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":"F1:wexp-core02-test-profile/extension-1","trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: n=12 names=["carrier-mapping","authenticity","target-binding","boundary-grounding","observation-support","intent-support","invocation-support","execution-support","provenance-support","independent-verification","composition","counter-evidence"]
+     dev: {"capability":"authenticity","status":"not-evaluated"}
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: [{"affected_claims":[{"base":"execution","qualifiers":[]}],"basis_refs":["F1:auth-basis"],"current_scope_capability":"composition","evaluation_context_ref":"C","limitations":["F1:L-auth"],"target":"T","token":"P_AUTH_GAP"}]
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+  PROFILES: {"draft-sergeev-wexp-core-02/fixture-1":{"relation_tokens":[],"scope_names":[],"tokens":{"P_COUNTER_FAIL":{"category":"substantive"}}},"wexp-core02-test-profile/extension-1":{"relation_tokens":["same-controller"],"scope_names":["audit-window"],"tokens":{"P_AUTH_GAP":{"category":"evaluation-gap","current_scope_capability":"authenticity"}}}}
+===== P18 top-keys: ['id', 'input', 'profiles']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":"F1:wexp-core02-test-profile/extension-1","trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: n=12 names=["carrier-mapping","authenticity","target-binding","boundary-grounding","observation-support","intent-support","invocation-support","execution-support","provenance-support","independent-verification","composition","counter-evidence"]
+     dev: {"capability":"authenticity","status":"not-evaluated"}
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: [{"affected_claims":[{"base":"execution","qualifiers":[]}],"basis_refs":["F1:auth-basis"],"current_scope_capability":"execution-support","evaluation_context_ref":"C","limitations":["F1:L-auth"],"target":"T","token":"P_AUTH_GAP"}]
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+  PROFILES: {"draft-sergeev-wexp-core-02/fixture-1":{"relation_tokens":[],"scope_names":[],"tokens":{"P_COUNTER_FAIL":{"category":"substantive"}}},"wexp-core02-test-profile/extension-1":{"relation_tokens":["same-controller"],"scope_names":["audit-window"],"tokens":{"P_AUTH_GAP":{"category":"evaluation-gap","current_scope_capability":"authenticity"}}}}
+===== P19 top-keys: ['id', 'input', 'profiles']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":"F1:wexp-core02-test-profile/extension-1","trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: n=12 names=["carrier-mapping","authenticity","target-binding","boundary-grounding","observation-support","intent-support","invocation-support","execution-support","provenance-support","independent-verification","composition","counter-evidence"]
+     dev: {"capability":"authenticity","status":"not-evaluated"}
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: [{"affected_claims":[{"base":"execution","qualifiers":[]}],"basis_refs":["F1:auth-basis"],"current_scope_capability":"unknown-capability","evaluation_context_ref":"C","limitations":["F1:L-auth"],"target":"T","token":"P_AUTH_GAP"}]
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+  PROFILES: {"draft-sergeev-wexp-core-02/fixture-1":{"relation_tokens":[],"scope_names":[],"tokens":{"P_COUNTER_FAIL":{"category":"substantive"}}},"wexp-core02-test-profile/extension-1":{"relation_tokens":["same-controller"],"scope_names":["audit-window"],"tokens":{"P_AUTH_GAP":{"category":"evaluation-gap","current_scope_capability":"authenticity"}}}}
+===== P20 top-keys: ['id', 'input', 'profiles']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":"F1:wexp-core02-test-profile/extension-1","trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: n=12 names=["carrier-mapping","authenticity","target-binding","boundary-grounding","observation-support","intent-support","invocation-support","execution-support","provenance-support","independent-verification","composition","counter-evidence"]
+     dev: {"capability":"authenticity","status":"not-evaluated"}
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: [{"affected_claims":[{"base":"execution","qualifiers":[]}],"basis_refs":["F1:auth-basis"],"current_scope_capability":"authenticity","evaluation_context_ref":"C","limitations":["F1:L-auth"],"target":"T"}]
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+  PROFILES: {"draft-sergeev-wexp-core-02/fixture-1":{"relation_tokens":[],"scope_names":[],"tokens":{"P_COUNTER_FAIL":{"category":"substantive"}}},"wexp-core02-test-profile/extension-1":{"relation_tokens":["same-controller"],"scope_names":["audit-window"],"tokens":{"P_AUTH_GAP":{"category":"evaluation-gap","current_scope_capability":"authenticity"}}}}
+===== P21 top-keys: ['id', 'input', 'profiles']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":"F1:wexp-core02-test-profile/extension-1","trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: n=12 names=["carrier-mapping","authenticity","target-binding","boundary-grounding","observation-support","intent-support","invocation-support","execution-support","provenance-support","independent-verification","composition","counter-evidence"]
+     dev: {"capability":"authenticity","status":"not-evaluated"}
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: [{"affected_claims":[],"basis_refs":["F1:auth-basis"],"current_scope_capability":"authenticity","evaluation_context_ref":"C","limitations":["F1:L-auth"],"target":"T","token":"P_AUTH_GAP"}]
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+  PROFILES: {"draft-sergeev-wexp-core-02/fixture-1":{"relation_tokens":[],"scope_names":[],"tokens":{"P_COUNTER_FAIL":{"category":"substantive"}}},"wexp-core02-test-profile/extension-1":{"relation_tokens":["same-controller"],"scope_names":["audit-window"],"tokens":{"P_AUTH_GAP":{"category":"evaluation-gap","current_scope_capability":"authenticity"}}}}
+===== P22 top-keys: ['id', 'input', 'profiles']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":"F1:wexp-core02-test-profile/extension-1","trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: n=12 names=["carrier-mapping","authenticity","target-binding","boundary-grounding","observation-support","intent-support","invocation-support","execution-support","provenance-support","independent-verification","composition","counter-evidence"]
+     dev: {"capability":"authenticity","status":"not-evaluated"}
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: [{"affected_claims":[{"base":"execution","qualifiers":[]}],"basis_refs":["F1:auth-basis"],"current_scope_capability":"authenticity","evaluation_context_ref":"C","limitations":["F1:L-auth"],"target":"T","token":"E_INTEGRITY_INVALID"}]
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+  PROFILES: {"draft-sergeev-wexp-core-02/fixture-1":{"relation_tokens":[],"scope_names":[],"tokens":{"P_COUNTER_FAIL":{"category":"substantive"}}},"wexp-core02-test-profile/extension-1":{"relation_tokens":["same-controller"],"scope_names":["audit-window"],"tokens":{"P_AUTH_GAP":{"category":"evaluation-gap","current_scope_capability":"authenticity"}}}}
+===== P23 top-keys: ['id', 'input', 'profiles']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":"F1:wexp-core02-test-profile/extension-1","trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: <12 std evaluated>
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: [{"basis_refs":[["wexp-core02-test-profile/extension-1","binding"]],"limitations":[],"object_ref":["wexp-core02-test-profile/extension-1","b"],"profile_identifier":"wexp-core02-test-profile/extension-1","relation_token":"same-controller","subject_ref":["wexp-core02-test-profile/extension-1","a"]}]
+  semantics_version: "wexp-core-2"
+  target: "T"
+  PROFILES: {"draft-sergeev-wexp-core-02/fixture-1":{"relation_tokens":[],"scope_names":[],"tokens":{"P_COUNTER_FAIL":{"category":"substantive"}}},"wexp-core02-test-profile/extension-1":{"relation_tokens":["same-controller"],"scope_names":["audit-window"],"tokens":{"P_AUTH_GAP":{"category":"evaluation-gap","current_scope_capability":"authenticity"}}}}
+===== P24 top-keys: ['id', 'input', 'profiles']
+  asserted_claim: {"base":"execution","qualifiers":["IV"]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":"F1:wexp-core02-test-profile/extension-1","trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: <12 std evaluated>
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: [{"basis_refs":[["wexp-core02-test-profile/extension-1","binding"]],"limitations":[],"object_ref":["wexp-core02-test-profile/extension-1","b"],"profile_identifier":"wexp-core02-test-profile/extension-1","relation_token":"same-controller","subject_ref":["wexp-core02-test-profile/extension-1","a"]}]
+  semantics_version: "wexp-core-2"
+  target: "T"
+  PROFILES: {"draft-sergeev-wexp-core-02/fixture-1":{"relation_tokens":[],"scope_names":[],"tokens":{"P_COUNTER_FAIL":{"category":"substantive"}}},"wexp-core02-test-profile/extension-1":{"relation_tokens":["same-controller"],"scope_names":["audit-window"],"tokens":{"P_AUTH_GAP":{"category":"evaluation-gap","current_scope_capability":"authenticity"}}}}
+===== P25 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"e\u0301","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"\u00e9","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: <12 std evaluated>
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "\u00e9"
+===== R01 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[{"base":"intent","qualifiers":[]}],"basis_refs":[],"limitations":[],"reasons":[],"status":"defeating"},{"affected_claims":[{"base":"execution","qualifiers":[]}],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-evaluated"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: n=12 names=["carrier-mapping","authenticity","target-binding","boundary-grounding","observation-support","intent-support","invocation-support","execution-support","provenance-support","independent-verification","composition","counter-evidence"]
+     dev: {"capability":"counter-evidence","status":"not-evaluated"}
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== R02 top-keys: ['id', 'input']
+  asserted_claim: {"base":"intent","qualifiers":[]}
+  base_findings: [{"base":"intent","basis_refs":["F1:I"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"},{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: n=12 names=["carrier-mapping","authenticity","target-binding","boundary-grounding","observation-support","intent-support","invocation-support","execution-support","provenance-support","independent-verification","composition","counter-evidence"]
+     dev: {"capability":"execution-support","status":"not-evaluated"}
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== R03 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: n=12 names=["carrier-mapping","authenticity","target-binding","boundary-grounding","observation-support","intent-support","invocation-support","execution-support","provenance-support","independent-verification","composition","counter-evidence"]
+     dev: {"capability":"provenance-support","status":"not-evaluated"}
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: [{"basis_refs":["F1:P(E)"],"evaluation_context_ref":"C","independence_validation":"not-applicable","limitations":[],"qualified_base":"execution","qualifier":"PROV","reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== R04 top-keys: ['id', 'input']
+  asserted_claim: {"base":"intent","qualifiers":[]}
+  base_findings: [{"base":"intent","basis_refs":["F1:I"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"},{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"not-evaluated","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: n=12 names=["carrier-mapping","authenticity","target-binding","boundary-grounding","observation-support","intent-support","invocation-support","execution-support","provenance-support","independent-verification","composition","counter-evidence"]
+     dev: {"capability":"execution-support","status":"not-evaluated"}
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== R05 top-keys: ['id', 'input']
+  asserted_claim: {"base":"invocation","qualifiers":["IV"]}
+  base_findings: [{"base":"invocation","basis_refs":["F1:N"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: n=12 names=["carrier-mapping","authenticity","target-binding","boundary-grounding","observation-support","intent-support","invocation-support","execution-support","provenance-support","independent-verification","composition","counter-evidence"]
+     dev: {"capability":"independent-verification","status":"not-evaluated"}
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: [{"basis_refs":["F1:V(N)"],"evaluation_context_ref":"C","independence_validation":"supported","limitations":[],"qualified_base":"invocation","qualifier":"IV","reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"},{"basis_refs":["F1:V(E)"],"evaluation_context_ref":"C","independence_validation":"supported","limitations":[],"qualified_base":"execution","qualifier":"IV","reasons":[],"semantic_validation":"not-evaluated","target":"T","target_binding":"supported"}]
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== R06 top-keys: ['id', 'input']
+  asserted_claim: {"base":"invocation","qualifiers":[]}
+  base_findings: [{"base":"invocation","basis_refs":["F1:N"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"},{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"not-evaluated"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: n=12 names=["carrier-mapping","authenticity","target-binding","boundary-grounding","observation-support","intent-support","invocation-support","execution-support","provenance-support","independent-verification","composition","counter-evidence"]
+     dev: {"capability":"target-binding","status":"not-evaluated"}
+     dev: {"capability":"execution-support","status":"not-evaluated"}
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== R07 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":["IV"]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: n=12 names=["carrier-mapping","authenticity","target-binding","boundary-grounding","observation-support","intent-support","invocation-support","execution-support","provenance-support","independent-verification","composition","counter-evidence"]
+     dev: {"capability":"independent-verification","status":"not-evaluated"}
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: [{"basis_refs":["F1:V(E)"],"evaluation_context_ref":"C","independence_validation":"supported","limitations":[],"qualified_base":"execution","qualifier":"IV","reasons":[],"semantic_validation":"not-evaluated","target":"T","target_binding":"supported"}]
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== R08 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":[],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":[],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[{"base":"execution","qualifiers":[]}],"basis_refs":[],"limitations":[],"reasons":["P_COUNTER_FAIL"],"status":"unresolved-material"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":[],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: <12 std evaluated>
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== R09 top-keys: ['id', 'input', 'profiles']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[{"base":"execution","qualifiers":[]}],"basis_refs":["F1:p1"],"limitations":[],"reasons":["P_COUNTER_FAIL"],"status":"unresolved-material"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: <12 std evaluated>
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+  PROFILES: {}
+===== R10 top-keys: ['id', 'input', 'profiles']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[{"base":"execution","qualifiers":[]}],"basis_refs":["F1:p1"],"limitations":[],"reasons":["P_COUNTER_FAIL"],"status":"unresolved-material"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: <12 std evaluated>
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+  PROFILES: {"draft-sergeev-wexp-core-02/fixture-1":{"relation_tokens":[],"scope_names":[],"tokens":{}}}
+===== R11 top-keys: ['id', 'input', 'profiles']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[{"base":"execution","qualifiers":[]}],"basis_refs":["F1:p1"],"limitations":[],"reasons":["P_COUNTER_FAIL"],"status":"unresolved-material"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: <12 std evaluated>
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+  PROFILES: {"draft-sergeev-wexp-core-02/fixture-1":{"relation_tokens":[],"scope_names":[],"tokens":{"P_COUNTER_FAIL":{"category":"evaluation-gap"}}}}
+===== R12 top-keys: ['id', 'input', 'profiles']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[{"base":"execution","qualifiers":[]}],"basis_refs":["F1:p1"],"limitations":[],"reasons":["P_COUNTER_FAIL"],"status":"unresolved-material"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":"F1:core02-review-ambiguous-profile-1","trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: <12 std evaluated>
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+  PROFILES: {"core02-review-ambiguous-profile-1":{"relation_tokens":[],"scope_names":[],"tokens":{"P_COUNTER_FAIL":{"category":"substantive"}}},"draft-sergeev-wexp-core-02/fixture-1":{"relation_tokens":[],"scope_names":[],"tokens":{"P_COUNTER_FAIL":{"category":"substantive"}}}}
+===== R13 top-keys: ['id', 'input', 'profiles']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[{"base":"execution","qualifiers":[]}],"basis_refs":["F1:p1"],"limitations":[],"reasons":["P_COUNTER_FAIL"],"status":"unresolved-material"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: <12 std evaluated>
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+  PROFILES: {"core02-review-ambiguous-profile-1":{"relation_tokens":[],"scope_names":[],"tokens":{"P_COUNTER_FAIL":{"category":"substantive"}}},"draft-sergeev-wexp-core-02/fixture-1":{"relation_tokens":[],"scope_names":[],"tokens":{"P_COUNTER_FAIL":{"category":"substantive"}}}}
+===== R14 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":["IV"]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"foreign","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: <12 std evaluated>
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: [{"affected_claims":[{"base":"execution","qualifiers":["IV"]}],"basis_refs":[],"evaluation_context_ref":"C","limitations":[],"target":"T","token":"E_IV_NOT_EVALUATED"}]
+  qualifier_findings: [{"basis_refs":["F1:V(E)"],"evaluation_context_ref":"C","independence_validation":"supported","limitations":[],"qualified_base":"execution","qualifier":"IV","reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== R15 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":["IV"]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"foreign","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: <12 std evaluated>
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: [{"affected_claims":[{"base":"execution","qualifiers":["IV"]}],"basis_refs":[],"evaluation_context_ref":"C","limitations":[],"target":"T","token":"E_IV_NOT_EVALUATED"}]
+  qualifier_findings: [{"basis_refs":["F1:V(E)"],"evaluation_context_ref":"C","independence_validation":"supported","limitations":[],"qualified_base":"execution","qualifier":"IV","reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== R16 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":["IV"]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"foreign","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: <12 std evaluated>
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: [{"affected_claims":[{"base":"execution","qualifiers":["IV"]}],"basis_refs":[],"evaluation_context_ref":"C","limitations":[],"target":"T","token":"E_IV_NOT_EVALUATED"}]
+  qualifier_findings: [{"basis_refs":["F1:V(E)"],"evaluation_context_ref":"C","independence_validation":"supported","limitations":[],"qualified_base":"execution","qualifier":"IV","reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== R17 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":["IV"]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"foreign","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: <12 std evaluated>
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: [{"affected_claims":[{"base":"execution","qualifiers":["IV"]}],"basis_refs":[],"evaluation_context_ref":"C","limitations":[],"target":"T","token":"E_IV_NOT_EVALUATED"}]
+  qualifier_findings: [{"basis_refs":["F1:V(E)"],"evaluation_context_ref":"C","independence_validation":"supported","limitations":[],"qualified_base":"execution","qualifier":"IV","reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== R18 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":["IV"]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: <12 std evaluated>
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: [{"affected_claims":[{"base":"execution","qualifiers":["IV"]}],"basis_refs":[],"evaluation_context_ref":"C","limitations":[],"target":"T","token":"E_IV_NOT_EVALUATED"}]
+  qualifier_findings: [{"basis_refs":["F1:V(E)"],"evaluation_context_ref":"C","independence_validation":"supported","limitations":[],"qualified_base":"execution","qualifier":"IV","reasons":[],"semantic_validation":"supported","target":"foreign","target_binding":"supported"}]
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== R19 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":["IV"]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: <12 std evaluated>
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: [{"affected_claims":[{"base":"execution","qualifiers":["IV"]}],"basis_refs":[],"evaluation_context_ref":"C","limitations":[],"target":"T","token":"E_IV_NOT_EVALUATED"}]
+  qualifier_findings: [{"basis_refs":["F1:V(E)"],"evaluation_context_ref":"foreign","independence_validation":"supported","limitations":[],"qualified_base":"execution","qualifier":"IV","reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== R20 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":["IV"]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: <12 std evaluated>
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: [{"affected_claims":[{"base":"execution","qualifiers":["IV"]}],"basis_refs":[],"evaluation_context_ref":"C","limitations":[],"target":"foreign","token":"E_IV_NOT_EVALUATED"}]
+  qualifier_findings: [{"basis_refs":["F1:V(E)"],"evaluation_context_ref":"C","independence_validation":"supported","limitations":[],"qualified_base":"execution","qualifier":"IV","reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== R21 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":["IV"]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: <12 std evaluated>
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: [{"affected_claims":[{"base":"execution","qualifiers":["IV"]}],"basis_refs":[],"evaluation_context_ref":"foreign","limitations":[],"target":"T","token":"E_IV_NOT_EVALUATED"}]
+  qualifier_findings: [{"basis_refs":["F1:V(E)"],"evaluation_context_ref":"C","independence_validation":"supported","limitations":[],"qualified_base":"execution","qualifier":"IV","reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== R22 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"},{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: <12 std evaluated>
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== R23 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: <12 std evaluated>
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== R24 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: []
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: <12 std evaluated>
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== R25 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: <12 std evaluated>
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: [{"basis_refs":["F1:V(E)"],"evaluation_context_ref":"C","independence_validation":"not-applicable","limitations":[],"qualified_base":"execution","qualifier":"IV","reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== R26 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"not-evaluated","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: <12 std evaluated>
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== R27 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: <12 std evaluated>
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-1"
+  target: "T"
+  unknown_field: true
+===== R28 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: <12 std evaluated>
+  fatal_conditions: ["E_INTEGRITY_INVALID"]
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  target: "T"
+===== R29 top-keys: ['id', 'input']
+  asserted_claim: {"base":"intent","qualifiers":["PROV"]}
+  base_findings: []
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: <12 std evaluated>
+  fatal_conditions: ["E_INTEGRITY_INVALID","E_BINDING_MISMATCH"]
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== R30 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"foreign","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: <12 std evaluated>
+  fatal_conditions: ["E_INTEGRITY_INVALID"]
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== R31 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: <12 std evaluated>
+  fatal_conditions: ["E_CLAIM_OUT_OF_DOMAIN"]
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== R32 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"unsupported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: <12 std evaluated>
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== R33 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"unsupported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: <12 std evaluated>
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== R34 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":["PROV"]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: n=12 names=["carrier-mapping","authenticity","target-binding","boundary-grounding","observation-support","intent-support","invocation-support","execution-support","provenance-support","independent-verification","composition","counter-evidence"]
+     dev: {"capability":"provenance-support","status":"not-evaluated"}
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: [{"basis_refs":["F1:P(E)"],"evaluation_context_ref":"C","independence_validation":"not-applicable","limitations":[],"qualified_base":"execution","qualifier":"PROV","reasons":[],"semantic_validation":"not-evaluated","target":"T","target_binding":"supported"}]
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== R35 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":["IV"]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: <12 std evaluated>
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: [{"basis_refs":["F1:V(E)"],"evaluation_context_ref":"C","independence_validation":"unsupported","limitations":[],"qualified_base":"execution","qualifier":"IV","reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== R36 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: <12 std evaluated>
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: [{"affected_claims":[{"base":"execution","qualifiers":[]}],"basis_refs":[],"current_scope_capability":"composition","evaluation_context_ref":"C","limitations":[],"target":"T","token":"E_COMPOSITION_NOT_EVALUATED"}]
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== R37 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: n=12 names=["carrier-mapping","authenticity","target-binding","boundary-grounding","observation-support","intent-support","invocation-support","execution-support","provenance-support","independent-verification","composition","counter-evidence"]
+     dev: {"capability":"composition","status":"not-evaluated"}
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: [{"affected_claims":[{"base":"execution","qualifiers":[]}],"basis_refs":[],"current_scope_capability":"composition","evaluation_context_ref":"C","limitations":[],"target":"T","token":"E_COMPOSITION_NOT_EVALUATED"}]
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== R38 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: n=12 names=["carrier-mapping","authenticity","target-binding","boundary-grounding","observation-support","intent-support","invocation-support","execution-support","provenance-support","independent-verification","composition","counter-evidence"]
+     dev: {"capability":"composition","status":"not-evaluated"}
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== R39 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: n=13 names=["carrier-mapping","authenticity","target-binding","boundary-grounding","observation-support","intent-support","invocation-support","execution-support","provenance-support","independent-verification","composition","counter-evidence",["unapplied-profile","x"]]
+     dev: {"capability":["unapplied-profile","x"],"status":"evaluated"}
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== R40 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[{"base":"execution","qualifiers":[]}],"basis_refs":["F1:c"],"limitations":[],"reasons":[],"status":"resolved-no-defeat"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: n=12 names=["carrier-mapping","authenticity","target-binding","boundary-grounding","observation-support","intent-support","invocation-support","execution-support","provenance-support","independent-verification","composition","counter-evidence"]
+     dev: {"capability":"counter-evidence","status":"not-evaluated"}
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== R41 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[{"base":"execution","qualifiers":[]}],"basis_refs":["F1:c"],"limitations":[],"reasons":[],"status":"not-evaluated"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: n=12 names=["carrier-mapping","authenticity","target-binding","boundary-grounding","observation-support","intent-support","invocation-support","execution-support","provenance-support","independent-verification","composition","counter-evidence"]
+     dev: {"capability":"counter-evidence","status":"not-evaluated"}
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== R42 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[{"base":"execution","qualifiers":[]}],"basis_refs":["F1:c"],"limitations":[],"reasons":[],"status":"unresolved-material"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: n=12 names=["carrier-mapping","authenticity","target-binding","boundary-grounding","observation-support","intent-support","invocation-support","execution-support","provenance-support","independent-verification","composition","counter-evidence"]
+     dev: {"capability":"counter-evidence","status":"not-evaluated"}
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== R43 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[{"base":"execution","qualifiers":[]}],"basis_refs":["F1:c"],"limitations":[],"reasons":[],"status":"defeating"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: n=12 names=["carrier-mapping","authenticity","target-binding","boundary-grounding","observation-support","intent-support","invocation-support","execution-support","provenance-support","independent-verification","composition","counter-evidence"]
+     dev: {"capability":"counter-evidence","status":"not-evaluated"}
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== R44 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[{"base":"intent","qualifiers":[]}],"basis_refs":[],"limitations":[],"reasons":[],"status":"defeating"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: <12 std evaluated>
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== R45 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"},{"base":"intent","basis_refs":["F1:I"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":["F1:L-scope"],"reasons":["E_EVIDENCE_COVERAGE_MISMATCH"],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: <12 std evaluated>
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== R46 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":["F1:L-scope"],"reasons":["E_EVIDENCE_COVERAGE_MISMATCH"],"semantic_validation":"supported","target":"T","target_binding":"supported"},{"base":"intent","basis_refs":["F1:I"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: <12 std evaluated>
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== R47 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"},{"base":"intent","basis_refs":["F1:I"],"evaluation_context_ref":"C","limitations":["F1:L-scope"],"reasons":["E_EVIDENCE_COVERAGE_MISMATCH"],"semantic_validation":"supported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: <12 std evaluated>
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"
+===== R48 top-keys: ['id', 'input']
+  asserted_claim: {"base":"execution","qualifiers":[]}
+  base_findings: [{"base":"execution","basis_refs":["F1:E"],"evaluation_context_ref":"C","limitations":[],"reasons":[],"semantic_validation":"supported","target":"T","target_binding":"supported"},{"base":"intent","basis_refs":["F1:I"],"evaluation_context_ref":"C","limitations":["F1:L-scope"],"reasons":["E_EVIDENCE_COVERAGE_MISMATCH"],"semantic_validation":"unsupported","target":"T","target_binding":"supported"}]
+  boundary_finding: {"basis_refs":["F1:bd"],"ceiling_base":"execution","evaluation_context_ref":"C","grounding":"attributed","limitations":[],"reasons":[],"status":"supported","target":"T","target_binding":"supported"}
+  counter_evidence: [{"affected_claims":[],"basis_refs":[],"limitations":[],"reasons":[],"status":"not-supplied"}]
+  evaluation_context: {"evaluated_at":"2026-10-12T00:00:00Z","id":"C","profile_identifiers":["F1"],"trust_configuration":"core02-fixture-trust-1"}
+  evaluation_scope: <12 std evaluated>
+  fatal_conditions: []
+  inherited_limitations: []
+  profile_evaluation_gaps: []
+  qualifier_findings: []
+  recorder_relations: []
+  semantics_version: "wexp-core-2"
+  target: "T"

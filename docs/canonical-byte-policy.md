@@ -20,7 +20,7 @@ the actual binding graph rather than on filename extensions.
 | `vectors/core-00/*.json`, `examples/non-normative-schema-example.json` | Raw digests are declared by `manifests/vectors.json`. |
 | `schema/vector.schema.json`, `schema/core-00-test-harness.schema.json`, `requirements/core-00.json` | Raw digests are declared by `manifests/vectors.json`. |
 | `manifests/*.json`, `vectors/**/SHA256SUMS` | Integrity controls. Set 002's `SHA256SUMS` is itself manifest-bound; all of these controls must be delivered without checkout rewriting. |
-| `evidence/core-01-set-002/*.json`, `provenance/PUBLIC-GENESIS.json` | Scoped published evidence and provenance controls. They retain repository bytes during checkout. |
+| `evidence/core-01-set-002/*.json`, `evidence/core-02-set-001-rederivation/**`, `provenance/PUBLIC-GENESIS.json` | Scoped published evidence and provenance controls. They retain repository bytes during checkout. |
 
 The `.gitattributes` rules use `-text` for these paths. That tells Git not to
 perform end-of-line conversion even when `core.autocrlf=true`. It does not
