@@ -1,0 +1,363 @@
+{
+ "cases": [
+  {
+   "id": "C01",
+   "status": "EQUAL"
+  },
+  {
+   "id": "C02",
+   "status": "EQUAL"
+  },
+  {
+   "id": "C03",
+   "status": "EQUAL"
+  },
+  {
+   "id": "C04",
+   "status": "EQUAL"
+  },
+  {
+   "id": "C05",
+   "status": "EQUAL"
+  },
+  {
+   "id": "C06",
+   "status": "EQUAL"
+  },
+  {
+   "id": "C07",
+   "status": "EQUAL"
+  },
+  {
+   "id": "C08",
+   "status": "EQUAL"
+  },
+  {
+   "id": "C09",
+   "status": "EQUAL"
+  },
+  {
+   "id": "C10",
+   "status": "EQUAL"
+  },
+  {
+   "id": "C11",
+   "status": "EQUAL"
+  },
+  {
+   "id": "C12",
+   "status": "EQUAL"
+  },
+  {
+   "id": "C13",
+   "status": "EQUAL"
+  },
+  {
+   "id": "C14",
+   "status": "EQUAL"
+  },
+  {
+   "id": "C15",
+   "status": "EQUAL"
+  },
+  {
+   "id": "C16",
+   "status": "EQUAL"
+  },
+  {
+   "id": "R01",
+   "status": "EQUAL"
+  },
+  {
+   "id": "R02",
+   "status": "EQUAL"
+  },
+  {
+   "id": "R03",
+   "status": "EQUAL"
+  },
+  {
+   "id": "R04",
+   "status": "EQUAL"
+  },
+  {
+   "id": "R05",
+   "status": "EQUAL"
+  },
+  {
+   "id": "R06",
+   "status": "EQUAL"
+  },
+  {
+   "id": "R07",
+   "status": "EQUAL"
+  },
+  {
+   "id": "R08",
+   "status": "EQUAL"
+  },
+  {
+   "id": "R09",
+   "status": "EQUAL"
+  },
+  {
+   "id": "R10",
+   "status": "EQUAL"
+  },
+  {
+   "id": "R11",
+   "status": "EQUAL"
+  },
+  {
+   "id": "R12",
+   "status": "EQUAL"
+  },
+  {
+   "id": "R13",
+   "status": "EQUAL"
+  },
+  {
+   "id": "R14",
+   "status": "EQUAL"
+  },
+  {
+   "id": "R15",
+   "status": "EQUAL"
+  },
+  {
+   "id": "R16",
+   "status": "EQUAL"
+  },
+  {
+   "id": "R17",
+   "status": "EQUAL"
+  },
+  {
+   "id": "R18",
+   "status": "EQUAL"
+  },
+  {
+   "id": "R19",
+   "status": "EQUAL"
+  },
+  {
+   "id": "R20",
+   "status": "EQUAL"
+  },
+  {
+   "id": "R21",
+   "status": "EQUAL"
+  },
+  {
+   "id": "R22",
+   "status": "EQUAL"
+  },
+  {
+   "id": "R23",
+   "status": "EQUAL"
+  },
+  {
+   "id": "R24",
+   "status": "EQUAL"
+  },
+  {
+   "id": "R25",
+   "status": "EQUAL"
+  },
+  {
+   "id": "R26",
+   "status": "EQUAL"
+  },
+  {
+   "id": "R27",
+   "status": "EQUAL"
+  },
+  {
+   "id": "R28",
+   "status": "EQUAL"
+  },
+  {
+   "id": "R29",
+   "status": "EQUAL"
+  },
+  {
+   "id": "R30",
+   "status": "EQUAL"
+  },
+  {
+   "id": "R31",
+   "status": "EQUAL"
+  },
+  {
+   "id": "R32",
+   "status": "EQUAL"
+  },
+  {
+   "id": "R33",
+   "status": "EQUAL"
+  },
+  {
+   "id": "R34",
+   "status": "EQUAL"
+  },
+  {
+   "id": "R35",
+   "status": "EQUAL"
+  },
+  {
+   "id": "R36",
+   "status": "EQUAL"
+  },
+  {
+   "id": "R37",
+   "status": "EQUAL"
+  },
+  {
+   "id": "R38",
+   "status": "EQUAL"
+  },
+  {
+   "id": "R39",
+   "status": "EQUAL"
+  },
+  {
+   "id": "R40",
+   "status": "EQUAL"
+  },
+  {
+   "id": "R41",
+   "status": "EQUAL"
+  },
+  {
+   "id": "R42",
+   "status": "EQUAL"
+  },
+  {
+   "id": "R43",
+   "status": "EQUAL"
+  },
+  {
+   "id": "R44",
+   "status": "EQUAL"
+  },
+  {
+   "id": "R45",
+   "status": "EQUAL"
+  },
+  {
+   "id": "R46",
+   "status": "EQUAL"
+  },
+  {
+   "id": "R47",
+   "status": "EQUAL"
+  },
+  {
+   "id": "R48",
+   "status": "EQUAL"
+  },
+  {
+   "id": "P01",
+   "status": "EQUAL"
+  },
+  {
+   "id": "P02",
+   "status": "EQUAL"
+  },
+  {
+   "id": "P03",
+   "status": "EQUAL"
+  },
+  {
+   "id": "P04",
+   "status": "EQUAL"
+  },
+  {
+   "id": "P05",
+   "status": "EQUAL"
+  },
+  {
+   "id": "P06",
+   "status": "EQUAL"
+  },
+  {
+   "id": "P07",
+   "status": "EQUAL"
+  },
+  {
+   "id": "P08",
+   "status": "EQUAL"
+  },
+  {
+   "id": "P09",
+   "status": "EQUAL"
+  },
+  {
+   "id": "P10",
+   "status": "EQUAL"
+  },
+  {
+   "id": "P11",
+   "status": "EQUAL"
+  },
+  {
+   "id": "P12",
+   "status": "EQUAL"
+  },
+  {
+   "id": "P13",
+   "status": "EQUAL"
+  },
+  {
+   "id": "P14",
+   "status": "EQUAL"
+  },
+  {
+   "id": "P15",
+   "status": "EQUAL"
+  },
+  {
+   "id": "P16",
+   "status": "EQUAL"
+  },
+  {
+   "id": "P17",
+   "status": "EQUAL"
+  },
+  {
+   "id": "P18",
+   "status": "EQUAL"
+  },
+  {
+   "id": "P19",
+   "status": "EQUAL"
+  },
+  {
+   "id": "P20",
+   "status": "EQUAL"
+  },
+  {
+   "id": "P21",
+   "status": "EQUAL"
+  },
+  {
+   "id": "P22",
+   "status": "EQUAL"
+  },
+  {
+   "id": "P23",
+   "status": "EQUAL"
+  },
+  {
+   "id": "P24",
+   "status": "EQUAL"
+  },
+  {
+   "id": "P25",
+   "status": "EQUAL"
+  }
+ ],
+ "compared": 89,
+ "equal": 89,
+ "unexpected_files": []
+}

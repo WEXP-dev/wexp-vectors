@@ -1,0 +1,401 @@
+[
+ {
+  "alternative_expected": {
+   "asserted_claim": null,
+   "asserted_claim_supported": false,
+   "boundary_ceiling": null,
+   "boundary_grounding": null,
+   "counter_evidence": null,
+   "evaluation_context": null,
+   "evaluation_gap_entries": [],
+   "evaluation_gaps": [],
+   "evaluation_scope": null,
+   "fatal_reasons": [
+    "E_PROFILE_MAPPING_INVALID"
+   ],
+   "inherited_limitations": null,
+   "maximal_supported_claims": [],
+   "recorder_relations": null,
+   "semantics_version": "wexp-core-2",
+   "substantive_reasons": [],
+   "support_entries": [],
+   "support_relations": [],
+   "supported_claims": [],
+   "target": null,
+   "verdict": "reject"
+  },
+  "alternative_reading": "E_PROFILE_MAPPING_INVALID (structurally valid pair whose profile 'wexp-core02-test-profile/extension-1' is not an applied profile identifier)",
+  "id": "P08",
+  "primary_reading": "E_MALFORMED_NORMALIZED_INPUT (lone surrogate is not Unicode scalar text; Section 12: 'A malformed pair or a missing, empty, or non-text atom produces E_MALFORMED_NORMALIZED_INPUT at the structural check')",
+  "question": "Is a lone surrogate (U+D800) a 'text atom'? If the atom is not valid Unicode scalar text it is a malformed atom (structural check, step 3); if the harness treats any string value as a text atom, the pair is structurally valid and fails only the cross-field profile binding (profile not in profile_identifiers)."
+ },
+ {
+  "alternative_expected": {
+   "asserted_claim": null,
+   "asserted_claim_supported": false,
+   "boundary_ceiling": null,
+   "boundary_grounding": null,
+   "counter_evidence": null,
+   "evaluation_context": null,
+   "evaluation_gap_entries": [],
+   "evaluation_gaps": [],
+   "evaluation_scope": null,
+   "fatal_reasons": [
+    "E_MALFORMED_NORMALIZED_INPUT"
+   ],
+   "inherited_limitations": null,
+   "maximal_supported_claims": [],
+   "recorder_relations": null,
+   "semantics_version": "wexp-core-2",
+   "substantive_reasons": [],
+   "support_entries": [],
+   "support_relations": [],
+   "supported_claims": [],
+   "target": null,
+   "verdict": "reject"
+  },
+  "alternative_reading": "E_MALFORMED_NORMALIZED_INPUT (the marker's logical type is the closed set {authenticity, composition}; any other value is an unknown closed-enum value at step 3)",
+  "id": "P18",
+  "primary_reading": "E_PROFILE_MAPPING_INVALID (Section 6: 'a disallowed or mismatched current-scope marker ... produces E_PROFILE_MAPPING_INVALID at the cross-field check'; Section 15: 'A marker naming a different capability ... produces E_PROFILE_MAPPING_INVALID')",
+  "question": "current_scope_capability = 'execution-support' (a real initial capability name, but not authenticity/composition): is it a 'disallowed ... current-scope marker' (cross-field, step 4) or an 'unknown closed-enum value' of a field whose comment lists only 'authenticity | composition' (structural, step 3)?"
+ },
+ {
+  "alternative_expected": {
+   "asserted_claim": null,
+   "asserted_claim_supported": false,
+   "boundary_ceiling": null,
+   "boundary_grounding": null,
+   "counter_evidence": null,
+   "evaluation_context": null,
+   "evaluation_gap_entries": [],
+   "evaluation_gaps": [],
+   "evaluation_scope": null,
+   "fatal_reasons": [
+    "E_PROFILE_MAPPING_INVALID"
+   ],
+   "inherited_limitations": null,
+   "maximal_supported_claims": [],
+   "recorder_relations": null,
+   "semantics_version": "wexp-core-2",
+   "substantive_reasons": [],
+   "support_entries": [],
+   "support_relations": [],
+   "supported_claims": [],
+   "target": null,
+   "verdict": "reject"
+  },
+  "alternative_reading": "E_PROFILE_MAPPING_INVALID (reading every marker defect, including a value naming no capability, as 'a disallowed or mismatched current-scope marker' at the cross-field check)",
+  "id": "P19",
+  "primary_reading": "E_MALFORMED_NORMALIZED_INPUT (Section 6.1: the initial evaluation-scope names are a closed enumeration; Section 6.2 step 3: 'unknown closed-enum value ... returns E_MALFORMED_NORMALIZED_INPUT')",
+  "question": "current_scope_capability = 'unknown-capability' (not any capability name): unknown closed-enum value (structural, step 3) or a 'disallowed' marker (cross-field, step 4)?"
+ },
+ {
+  "alternative_expected": {
+   "asserted_claim": {
+    "base": "execution",
+    "qualifiers": []
+   },
+   "asserted_claim_supported": true,
+   "boundary_ceiling": "execution",
+   "boundary_grounding": "attributed",
+   "counter_evidence": [
+    {
+     "affected_claims": [
+      {
+       "base": "execution",
+       "qualifiers": []
+      }
+     ],
+     "basis_refs": [
+      [
+       "draft-sergeev-wexp-core-02/fixture-1",
+       "p1"
+      ]
+     ],
+     "limitations": [],
+     "reasons": [
+      "P_COUNTER_FAIL"
+     ],
+     "status": "unresolved-material"
+    }
+   ],
+   "evaluation_context": {
+    "evaluated_at": "2026-10-12T00:00:00Z",
+    "id": "C",
+    "profile_identifiers": [
+     "draft-sergeev-wexp-core-02/fixture-1",
+     "core02-review-ambiguous-profile-1"
+    ],
+    "trust_configuration": "core02-fixture-trust-1"
+   },
+   "evaluation_gap_entries": [],
+   "evaluation_gaps": [],
+   "evaluation_scope": [
+    {
+     "capability": "carrier-mapping",
+     "status": "evaluated"
+    },
+    {
+     "capability": "authenticity",
+     "status": "evaluated"
+    },
+    {
+     "capability": "target-binding",
+     "status": "evaluated"
+    },
+    {
+     "capability": "boundary-grounding",
+     "status": "evaluated"
+    },
+    {
+     "capability": "observation-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "intent-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "invocation-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "execution-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "provenance-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "independent-verification",
+     "status": "evaluated"
+    },
+    {
+     "capability": "composition",
+     "status": "evaluated"
+    },
+    {
+     "capability": "counter-evidence",
+     "status": "evaluated"
+    }
+   ],
+   "fatal_reasons": [],
+   "inherited_limitations": [],
+   "maximal_supported_claims": [
+    {
+     "base": "execution",
+     "qualifiers": []
+    }
+   ],
+   "recorder_relations": [],
+   "semantics_version": "wexp-core-2",
+   "substantive_reasons": [
+    "E_COUNTER_EVIDENCE_UNRESOLVED",
+    "P_COUNTER_FAIL"
+   ],
+   "support_entries": [
+    {
+     "basis_refs": [
+      [
+       "draft-sergeev-wexp-core-02/fixture-1",
+       "bd"
+      ],
+      [
+       "draft-sergeev-wexp-core-02/fixture-1",
+       "E"
+      ]
+     ],
+     "claim": {
+      "base": "execution",
+      "qualifiers": []
+     },
+     "limitations": []
+    }
+   ],
+   "support_relations": [
+    {
+     "relation": "equal",
+     "supported_claim": {
+      "base": "execution",
+      "qualifiers": []
+     }
+    }
+   ],
+   "supported_claims": [
+    {
+     "base": "execution",
+     "qualifiers": []
+    }
+   ],
+   "target": "T",
+   "verdict": "downgrade"
+  },
+  "alternative_reading": "downgrade exactly as C15 (reasons {E_COUNTER_EVIDENCE_UNRESOLVED, P_COUNTER_FAIL}) with evaluation_context carrying both profile identifiers",
+  "id": "R12",
+  "primary_reading": "E_PROFILE_MAPPING_INVALID ('exactly one' registry revision; two applied revisions registering the token is ambiguity regardless of category agreement)",
+  "question": "P_COUNTER_FAIL is registered (same category) by two applied profile revisions. Section 6 requires resolution 'through exactly one immutable registry revision identified by an applied profile_identifier; absence, ambiguity, or category disagreement produces E_PROFILE_MAPPING_INVALID'. Is two concordant registrations 'ambiguity' (reject) or does category agreement make the binding unambiguous (downgrade as in C15)?"
+ },
+ {
+  "alternative_expected": {
+   "asserted_claim": {
+    "base": "execution",
+    "qualifiers": []
+   },
+   "asserted_claim_supported": true,
+   "boundary_ceiling": "execution",
+   "boundary_grounding": "attributed",
+   "counter_evidence": [
+    {
+     "affected_claims": [],
+     "basis_refs": [],
+     "limitations": [],
+     "reasons": [],
+     "status": "not-supplied"
+    }
+   ],
+   "evaluation_context": {
+    "evaluated_at": "2026-10-12T00:00:00Z",
+    "id": "C",
+    "profile_identifiers": [
+     "draft-sergeev-wexp-core-02/fixture-1"
+    ],
+    "trust_configuration": "core02-fixture-trust-1"
+   },
+   "evaluation_gap_entries": [],
+   "evaluation_gaps": [],
+   "evaluation_scope": [
+    {
+     "capability": "carrier-mapping",
+     "status": "evaluated"
+    },
+    {
+     "capability": "authenticity",
+     "status": "evaluated"
+    },
+    {
+     "capability": "target-binding",
+     "status": "evaluated"
+    },
+    {
+     "capability": "boundary-grounding",
+     "status": "evaluated"
+    },
+    {
+     "capability": "observation-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "intent-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "invocation-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "execution-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "provenance-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "independent-verification",
+     "status": "evaluated"
+    },
+    {
+     "capability": "composition",
+     "status": "evaluated"
+    },
+    {
+     "capability": "counter-evidence",
+     "status": "evaluated"
+    }
+   ],
+   "fatal_reasons": [],
+   "inherited_limitations": [
+    [
+     "draft-sergeev-wexp-core-02/fixture-1",
+     "L-scope"
+    ]
+   ],
+   "maximal_supported_claims": [
+    {
+     "base": "execution",
+     "qualifiers": []
+    }
+   ],
+   "recorder_relations": [],
+   "semantics_version": "wexp-core-2",
+   "substantive_reasons": [],
+   "support_entries": [
+    {
+     "basis_refs": [
+      [
+       "draft-sergeev-wexp-core-02/fixture-1",
+       "bd"
+      ],
+      [
+       "draft-sergeev-wexp-core-02/fixture-1",
+       "I"
+      ]
+     ],
+     "claim": {
+      "base": "intent",
+      "qualifiers": []
+     },
+     "limitations": [
+      [
+       "draft-sergeev-wexp-core-02/fixture-1",
+       "L-scope"
+      ]
+     ]
+    },
+    {
+     "basis_refs": [
+      [
+       "draft-sergeev-wexp-core-02/fixture-1",
+       "bd"
+      ],
+      [
+       "draft-sergeev-wexp-core-02/fixture-1",
+       "E"
+      ]
+     ],
+     "claim": {
+      "base": "execution",
+      "qualifiers": []
+     },
+     "limitations": []
+    }
+   ],
+   "support_relations": [
+    {
+     "relation": "equal",
+     "supported_claim": {
+      "base": "execution",
+      "qualifiers": []
+     }
+    }
+   ],
+   "supported_claims": [
+    {
+     "base": "intent",
+     "qualifiers": []
+    },
+    {
+     "base": "execution",
+     "qualifiers": []
+    }
+   ],
+   "target": "T",
+   "verdict": "accept"
+  },
+  "alternative_reading": "not projected: substantive_reasons={} (reading the projection as limited to findings bearing on the asserted claim); inherited_limitations still {L-scope} because 'every support-entry limitation' is in the union",
+  "id": "R47",
+  "primary_reading": "projected: substantive_reasons={E_EVIDENCE_COVERAGE_MISMATCH} (Section 8.4: 'for every boundary, base, or qualifier finding that is the asserted role or an exact premise of a SupportEntry: add its registered substantive reasons to reasons'; Section 8.6: '... or from a finding that is an exact premise of a reported support entry')",
+  "question": "A substantive reason carried by a supported but NON-asserted base finding (intent, while execution is asserted): is it projected into substantive_reasons because that finding is 'an exact premise of a SupportEntry' (intent is a member of SupportedClaims), or excluded because substantive reasons 'describe why evidence does not support the asserted claim'?"
+ }
+]

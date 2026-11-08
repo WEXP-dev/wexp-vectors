@@ -1,0 +1,49 @@
+{
+  "runner_repository": "WEXP-dev/wexp-ref",
+  "runner_commit_git_rev_parse_HEAD": "56289024c9ee748111f1f1d4f42728ffe04d8d69",
+  "runner_checkout_clean": true,
+  "appraiser_py_sha256_recomputed_from_checkout": "e0ea740ce09a65cc6a48495a39730483da1f00583e1e864e6269a2eab4187ddd",
+  "corpus_sha256_argument": "d5d2c9d54185f04ac59ac2b5642853a6ebd00c3d28a3239d62682186f5df323f",
+  "runs": [
+    {
+      "report": "py312-normal.json",
+      "interpreter": "python3.12 (CPython 3.12.13)",
+      "optimize_flag": false,
+      "argv": [
+        "python3.12",
+        "-B",
+        "-m",
+        "wexp_ref.core02.qualify",
+        "--corpus",
+        "<corpus.json>",
+        "--expected-sha256",
+        "d5d2c9d5...",
+        "--output",
+        "py312-normal.json"
+      ],
+      "report_sha256": "13d1e57ec7264139845e5df2c91306c3adb456c33e94c78f93ba5efb8ecf44bf"
+    },
+    {
+      "report": "py312-optimized.json",
+      "interpreter": "python3.12 (CPython 3.12.13)",
+      "optimize_flag": true,
+      "argv": [
+        "python3.12",
+        "-B",
+        "-O",
+        "-m",
+        "wexp_ref.core02.qualify",
+        "--corpus",
+        "<corpus.json>",
+        "--expected-sha256",
+        "d5d2c9d5...",
+        "--output",
+        "py312-optimized.json"
+      ],
+      "report_sha256": "13d1e57ec7264139845e5df2c91306c3adb456c33e94c78f93ba5efb8ecf44bf"
+    }
+  ],
+  "note": "The qualify report schema carries no mode or timestamp field; mode and order are attested by this record. The two reports are byte-identical because the appraisal is deterministic and the report contains no mode-dependent member. Both runs were made after the component-wise comparison of the two derivations (comparison.json) had been completed; the isolated session never had access to any engine output.",
+  "recorded_at_utc": "2026-11-06T18:01:10Z",
+  "platform": "macOS-15.7.9-arm64-arm-64bit"
+}
