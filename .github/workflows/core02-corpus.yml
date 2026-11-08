@@ -31,3 +31,10 @@ jobs:
           python vectors/WEXP-CORE-02-VECTORS-001/corpus.py --check --output build/core02-normal.json
           python -O vectors/WEXP-CORE-02-VECTORS-001/corpus.py --check --output build/core02-optimized.json
           cmp build/core02-normal.json build/core02-optimized.json
+      - name: Verify set 002 (section 7 boundary matrix) frozen data and expansion
+        run: |
+          python vectors/WEXP-CORE-02-VECTORS-002/verify.py --rebuild --source-xml build/specification/drafts/core/02/draft-sergeev-wexp-core-02.xml
+          python -O vectors/WEXP-CORE-02-VECTORS-002/verify.py --rebuild --source-xml build/specification/drafts/core/02/draft-sergeev-wexp-core-02.xml
+          python vectors/WEXP-CORE-02-VECTORS-002/corpus.py --check --output build/core02-set002-normal.json
+          python -O vectors/WEXP-CORE-02-VECTORS-002/corpus.py --check --output build/core02-set002-optimized.json
+          cmp build/core02-set002-normal.json build/core02-set002-optimized.json

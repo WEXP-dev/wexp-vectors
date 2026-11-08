@@ -14,6 +14,7 @@ specification -> reviewed requirements -> frozen expectations -> implementation 
 | Package | Exact contract | What is available |
 |---|---|---|
 | [WEXP-CORE-02-VECTORS-001](vectors/WEXP-CORE-02-VECTORS-001/README.md) | Core-02 / `wexp-core-2` | 89 complete logical inputs and twenty-component expectations (frozen `corpus.json`): 16 normative transcriptions, 73 derived controls |
+| [WEXP-CORE-02-VECTORS-002](vectors/WEXP-CORE-02-VECTORS-002/README.md) | Core-02 / `wexp-core-2` | 35 non-normative derived cases for the section 7 boundary matrix (status x grounding x target_binding): 32 matrix cells, 2 section 12 controls, 1 probe; expectations frozen by an isolated session before any engine run; set 001 unchanged |
 | [WEXP-COVERAGE-00-LOGIC-001](vectors/WEXP-COVERAGE-00-LOGIC-001/README.md) | Coverage-00 / `coverage/0.2.0` | 12 known-finite-world examples plus bounded relation, delivery and aggregation checks; **not the full Coverage evaluator** |
 | [Core-01 sets 001-003](CORE-CORPORA.md#core-01-vector-set) | Core-01 | Historical sets of 16, 9 and 7 cases, unchanged |
 | [Core-00 slice](CORE-CORPORA.md#core-00-candidate-slice) | Core-00 | Seven historical candidate cases, unchanged |
@@ -41,6 +42,30 @@ full-result comparison and optional `--source-xml` verification. The
 [dedicated workflow](.github/workflows/core02-corpus.yml) checks the pinned public
 XML and normal/optimized rebuilds on Python 3.12 and 3.13. Exact identities are
 recorded in [COMPATIBILITY.json](COMPATIBILITY.json).
+
+### Set 002: section 7 boundary matrix
+
+```sh
+python vectors/WEXP-CORE-02-VECTORS-002/verify.py --rebuild
+```
+
+[WEXP-CORE-02-VECTORS-002](vectors/WEXP-CORE-02-VECTORS-002/README.md) adds 35 cases
+for the Boundary Ceiling matrix `boundary_finding.status` x `grounding` x
+`target_binding`. Set 001 revision 2 instantiates four of the 36 Core-observable cells
+and never varies the boundary target binding; the 32 empty cells, two section 12 scope
+controls and one acceptance probe are here. Set 001 is unchanged.
+
+    expanded corpus sha256   9e301333bfdaa4a96068fe44adc0cde3f8eb63bc08f77f164d1d568f609a8bc0
+    manifest sha256          3961528fd349b584285d181ce466e0447d4e9f69a223ab33a4a70b1d6fdff8cb
+    specification sha256     de983051a1c6ea51ea9b7f965fe9eabf2d97af92ab2f074781bd44e3f99c8782
+
+[Matrix with section 7 citations and revision 2 overlay](docs/BOUNDARY-MATRIX-001.md),
+[derivation and freeze record](docs/core-02-boundary-matrix-002.md),
+[specification ambiguities met](docs/SPEC-ISSUES-core02-s7.md). The expected results
+were derived by a separate isolated session from the published text alone, stored
+verbatim, and hashed before `wexp_ref.core02` was run. The derivation record lists every
+divergence between the matrix author, the isolated session and the engine, with its
+classification. The same Core-02 workflow verifies this set's frozen data and expansion.
 
 ## Coverage-00
 
