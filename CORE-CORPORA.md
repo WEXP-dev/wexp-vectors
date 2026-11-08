@@ -32,6 +32,7 @@ retain their original bindings; publication of Core-02 does not requalify them.
 | Set | Specification | Vectors | Status |
 |---|---|---|---|
 | [`vectors/WEXP-CORE-02-VECTORS-001/`](vectors/WEXP-CORE-02-VECTORS-001/) | `draft-sergeev-wexp-core-02` (posted) | 89 | source-encoded; 16 normative transcriptions and 73 derived controls |
+| [`vectors/WEXP-CORE-02-VECTORS-002/`](vectors/WEXP-CORE-02-VECTORS-002/) | `draft-sergeev-wexp-core-02` (posted) | 35 | source-encoded; section 7 boundary matrix: 32 matrix cells, 2 section 12 controls, 1 probe; set 001 unchanged |
 | [`vectors/WEXP-CORE-01-VECTORS-001/`](vectors/WEXP-CORE-01-VECTORS-001/) | `draft-sergeev-wexp-core-01` (posted) | 16 | specification-derived |
 | [`vectors/WEXP-CORE-01-VECTORS-002/`](vectors/WEXP-CORE-01-VECTORS-002/) | `draft-sergeev-wexp-core-01` (posted) | 9 | specification-derived |
 | [`vectors/WEXP-CORE-01-VECTORS-003/`](vectors/WEXP-CORE-01-VECTORS-003/) | `draft-sergeev-wexp-core-01` (posted) | 7 | specification-derived |

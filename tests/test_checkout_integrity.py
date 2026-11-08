@@ -17,6 +17,7 @@ PRESERVED_PATHSPECS = (
     "examples/non-normative-schema-example.json",
     "vectors",
     ":(glob)evidence/core-01-set-002/*.json",
+    ":(glob)evidence/core-02-set-002/*.json",
     "evidence/core-02-set-001-rederivation",
     "provenance/PUBLIC-GENESIS.json",
 )

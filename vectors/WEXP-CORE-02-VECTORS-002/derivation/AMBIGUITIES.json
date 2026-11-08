@@ -1,0 +1,1910 @@
+[
+ {
+  "alternative_expected": {
+   "asserted_claim": {
+    "base": "execution",
+    "qualifiers": []
+   },
+   "asserted_claim_supported": false,
+   "boundary_ceiling": null,
+   "boundary_grounding": "asserted-only",
+   "counter_evidence": [
+    {
+     "affected_claims": [],
+     "basis_refs": [],
+     "limitations": [],
+     "reasons": [],
+     "status": "not-supplied"
+    }
+   ],
+   "evaluation_context": {
+    "evaluated_at": "2026-10-12T00:00:00Z",
+    "id": "C",
+    "profile_identifiers": [
+     "draft-sergeev-wexp-core-02/fixture-1"
+    ],
+    "trust_configuration": "core02-fixture-trust-1"
+   },
+   "evaluation_gap_entries": [],
+   "evaluation_gaps": [],
+   "evaluation_scope": [
+    {
+     "capability": "carrier-mapping",
+     "status": "evaluated"
+    },
+    {
+     "capability": "authenticity",
+     "status": "evaluated"
+    },
+    {
+     "capability": "target-binding",
+     "status": "evaluated"
+    },
+    {
+     "capability": "boundary-grounding",
+     "status": "evaluated"
+    },
+    {
+     "capability": "observation-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "intent-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "invocation-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "execution-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "provenance-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "independent-verification",
+     "status": "evaluated"
+    },
+    {
+     "capability": "composition",
+     "status": "evaluated"
+    },
+    {
+     "capability": "counter-evidence",
+     "status": "evaluated"
+    }
+   ],
+   "fatal_reasons": [],
+   "inherited_limitations": [
+    [
+     "draft-sergeev-wexp-core-02/fixture-1",
+     "L-boundary"
+    ]
+   ],
+   "maximal_supported_claims": [],
+   "recorder_relations": [],
+   "semantics_version": "wexp-core-2",
+   "substantive_reasons": [
+    "E_BOUNDARY_NOT_SUPPORTED"
+   ],
+   "support_entries": [],
+   "support_relations": [],
+   "supported_claims": [],
+   "target": "T",
+   "verdict": "downgrade"
+  },
+  "alternative_reading": "Precedence suppresses: only the status row's token is emitted unless status = supported.",
+  "id": "B11",
+  "primary_reading": "Both rows: the normative algorithm tests each row's exact predicate independently; precedence governs ceiling usability/base admission, not diagnostic suppression.",
+  "question": "Section 7: 'The boundary status has deterministic precedence.' Does precedence suppress the target-binding row of the 8.6 matrix when status is unsupported or not-evaluated, or are both rows emitted as the 8.4 loop and 8.6 ('every applicable row is evaluated independently exactly once'; 'All simultaneously applicable distinct tokens are emitted') state?"
+ },
+ {
+  "alternative_expected": {
+   "asserted_claim": {
+    "base": "execution",
+    "qualifiers": []
+   },
+   "asserted_claim_supported": false,
+   "boundary_ceiling": null,
+   "boundary_grounding": "asserted-only",
+   "counter_evidence": [
+    {
+     "affected_claims": [],
+     "basis_refs": [],
+     "limitations": [],
+     "reasons": [],
+     "status": "not-supplied"
+    }
+   ],
+   "evaluation_context": {
+    "evaluated_at": "2026-10-12T00:00:00Z",
+    "id": "C",
+    "profile_identifiers": [
+     "draft-sergeev-wexp-core-02/fixture-1"
+    ],
+    "trust_configuration": "core02-fixture-trust-1"
+   },
+   "evaluation_gap_entries": [],
+   "evaluation_gaps": [],
+   "evaluation_scope": [
+    {
+     "capability": "carrier-mapping",
+     "status": "evaluated"
+    },
+    {
+     "capability": "authenticity",
+     "status": "evaluated"
+    },
+    {
+     "capability": "target-binding",
+     "status": "not-evaluated"
+    },
+    {
+     "capability": "boundary-grounding",
+     "status": "not-evaluated"
+    },
+    {
+     "capability": "observation-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "intent-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "invocation-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "execution-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "provenance-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "independent-verification",
+     "status": "evaluated"
+    },
+    {
+     "capability": "composition",
+     "status": "evaluated"
+    },
+    {
+     "capability": "counter-evidence",
+     "status": "evaluated"
+    }
+   ],
+   "fatal_reasons": [],
+   "inherited_limitations": [
+    [
+     "draft-sergeev-wexp-core-02/fixture-1",
+     "L-boundary"
+    ]
+   ],
+   "maximal_supported_claims": [],
+   "recorder_relations": [],
+   "semantics_version": "wexp-core-2",
+   "substantive_reasons": [
+    "E_BOUNDARY_NOT_SUPPORTED"
+   ],
+   "support_entries": [],
+   "support_relations": [],
+   "supported_claims": [],
+   "target": "T",
+   "verdict": "downgrade"
+  },
+  "alternative_reading": "Precedence suppresses: only the status row's token is emitted unless status = supported.",
+  "id": "B12",
+  "primary_reading": "Both rows: the normative algorithm tests each row's exact predicate independently; precedence governs ceiling usability/base admission, not diagnostic suppression.",
+  "question": "Section 7: 'The boundary status has deterministic precedence.' Does precedence suppress the target-binding row of the 8.6 matrix when status is unsupported or not-evaluated, or are both rows emitted as the 8.4 loop and 8.6 ('every applicable row is evaluated independently exactly once'; 'All simultaneously applicable distinct tokens are emitted') state?"
+ },
+ {
+  "alternative_expected": {
+   "asserted_claim": {
+    "base": "execution",
+    "qualifiers": []
+   },
+   "asserted_claim_supported": false,
+   "boundary_ceiling": null,
+   "boundary_grounding": "attributed",
+   "counter_evidence": [
+    {
+     "affected_claims": [],
+     "basis_refs": [],
+     "limitations": [],
+     "reasons": [],
+     "status": "not-supplied"
+    }
+   ],
+   "evaluation_context": {
+    "evaluated_at": "2026-10-12T00:00:00Z",
+    "id": "C",
+    "profile_identifiers": [
+     "draft-sergeev-wexp-core-02/fixture-1"
+    ],
+    "trust_configuration": "core02-fixture-trust-1"
+   },
+   "evaluation_gap_entries": [],
+   "evaluation_gaps": [],
+   "evaluation_scope": [
+    {
+     "capability": "carrier-mapping",
+     "status": "evaluated"
+    },
+    {
+     "capability": "authenticity",
+     "status": "evaluated"
+    },
+    {
+     "capability": "target-binding",
+     "status": "evaluated"
+    },
+    {
+     "capability": "boundary-grounding",
+     "status": "evaluated"
+    },
+    {
+     "capability": "observation-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "intent-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "invocation-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "execution-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "provenance-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "independent-verification",
+     "status": "evaluated"
+    },
+    {
+     "capability": "composition",
+     "status": "evaluated"
+    },
+    {
+     "capability": "counter-evidence",
+     "status": "evaluated"
+    }
+   ],
+   "fatal_reasons": [],
+   "inherited_limitations": [
+    [
+     "draft-sergeev-wexp-core-02/fixture-1",
+     "L-boundary"
+    ]
+   ],
+   "maximal_supported_claims": [],
+   "recorder_relations": [],
+   "semantics_version": "wexp-core-2",
+   "substantive_reasons": [
+    "E_BOUNDARY_NOT_SUPPORTED"
+   ],
+   "support_entries": [],
+   "support_relations": [],
+   "supported_claims": [],
+   "target": "T",
+   "verdict": "downgrade"
+  },
+  "alternative_reading": "Precedence suppresses: only the status row's token is emitted unless status = supported.",
+  "id": "B13",
+  "primary_reading": "Both rows: the normative algorithm tests each row's exact predicate independently; precedence governs ceiling usability/base admission, not diagnostic suppression.",
+  "question": "Section 7: 'The boundary status has deterministic precedence.' Does precedence suppress the target-binding row of the 8.6 matrix when status is unsupported or not-evaluated, or are both rows emitted as the 8.4 loop and 8.6 ('every applicable row is evaluated independently exactly once'; 'All simultaneously applicable distinct tokens are emitted') state?"
+ },
+ {
+  "alternative_expected": {
+   "asserted_claim": {
+    "base": "execution",
+    "qualifiers": []
+   },
+   "asserted_claim_supported": false,
+   "boundary_ceiling": null,
+   "boundary_grounding": "attributed",
+   "counter_evidence": [
+    {
+     "affected_claims": [],
+     "basis_refs": [],
+     "limitations": [],
+     "reasons": [],
+     "status": "not-supplied"
+    }
+   ],
+   "evaluation_context": {
+    "evaluated_at": "2026-10-12T00:00:00Z",
+    "id": "C",
+    "profile_identifiers": [
+     "draft-sergeev-wexp-core-02/fixture-1"
+    ],
+    "trust_configuration": "core02-fixture-trust-1"
+   },
+   "evaluation_gap_entries": [],
+   "evaluation_gaps": [],
+   "evaluation_scope": [
+    {
+     "capability": "carrier-mapping",
+     "status": "evaluated"
+    },
+    {
+     "capability": "authenticity",
+     "status": "evaluated"
+    },
+    {
+     "capability": "target-binding",
+     "status": "not-evaluated"
+    },
+    {
+     "capability": "boundary-grounding",
+     "status": "not-evaluated"
+    },
+    {
+     "capability": "observation-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "intent-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "invocation-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "execution-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "provenance-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "independent-verification",
+     "status": "evaluated"
+    },
+    {
+     "capability": "composition",
+     "status": "evaluated"
+    },
+    {
+     "capability": "counter-evidence",
+     "status": "evaluated"
+    }
+   ],
+   "fatal_reasons": [],
+   "inherited_limitations": [
+    [
+     "draft-sergeev-wexp-core-02/fixture-1",
+     "L-boundary"
+    ]
+   ],
+   "maximal_supported_claims": [],
+   "recorder_relations": [],
+   "semantics_version": "wexp-core-2",
+   "substantive_reasons": [
+    "E_BOUNDARY_NOT_SUPPORTED"
+   ],
+   "support_entries": [],
+   "support_relations": [],
+   "supported_claims": [],
+   "target": "T",
+   "verdict": "downgrade"
+  },
+  "alternative_reading": "Precedence suppresses: only the status row's token is emitted unless status = supported.",
+  "id": "B14",
+  "primary_reading": "Both rows: the normative algorithm tests each row's exact predicate independently; precedence governs ceiling usability/base admission, not diagnostic suppression.",
+  "question": "Section 7: 'The boundary status has deterministic precedence.' Does precedence suppress the target-binding row of the 8.6 matrix when status is unsupported or not-evaluated, or are both rows emitted as the 8.4 loop and 8.6 ('every applicable row is evaluated independently exactly once'; 'All simultaneously applicable distinct tokens are emitted') state?"
+ },
+ {
+  "alternative_expected": {
+   "asserted_claim": {
+    "base": "execution",
+    "qualifiers": []
+   },
+   "asserted_claim_supported": false,
+   "boundary_ceiling": null,
+   "boundary_grounding": "attested",
+   "counter_evidence": [
+    {
+     "affected_claims": [],
+     "basis_refs": [],
+     "limitations": [],
+     "reasons": [],
+     "status": "not-supplied"
+    }
+   ],
+   "evaluation_context": {
+    "evaluated_at": "2026-10-12T00:00:00Z",
+    "id": "C",
+    "profile_identifiers": [
+     "draft-sergeev-wexp-core-02/fixture-1"
+    ],
+    "trust_configuration": "core02-fixture-trust-1"
+   },
+   "evaluation_gap_entries": [],
+   "evaluation_gaps": [],
+   "evaluation_scope": [
+    {
+     "capability": "carrier-mapping",
+     "status": "evaluated"
+    },
+    {
+     "capability": "authenticity",
+     "status": "evaluated"
+    },
+    {
+     "capability": "target-binding",
+     "status": "evaluated"
+    },
+    {
+     "capability": "boundary-grounding",
+     "status": "evaluated"
+    },
+    {
+     "capability": "observation-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "intent-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "invocation-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "execution-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "provenance-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "independent-verification",
+     "status": "evaluated"
+    },
+    {
+     "capability": "composition",
+     "status": "evaluated"
+    },
+    {
+     "capability": "counter-evidence",
+     "status": "evaluated"
+    }
+   ],
+   "fatal_reasons": [],
+   "inherited_limitations": [
+    [
+     "draft-sergeev-wexp-core-02/fixture-1",
+     "L-boundary"
+    ]
+   ],
+   "maximal_supported_claims": [],
+   "recorder_relations": [],
+   "semantics_version": "wexp-core-2",
+   "substantive_reasons": [
+    "E_BOUNDARY_NOT_SUPPORTED"
+   ],
+   "support_entries": [],
+   "support_relations": [],
+   "supported_claims": [],
+   "target": "T",
+   "verdict": "downgrade"
+  },
+  "alternative_reading": "Precedence suppresses: only the status row's token is emitted unless status = supported.",
+  "id": "B16",
+  "primary_reading": "Both rows: the normative algorithm tests each row's exact predicate independently; precedence governs ceiling usability/base admission, not diagnostic suppression.",
+  "question": "Section 7: 'The boundary status has deterministic precedence.' Does precedence suppress the target-binding row of the 8.6 matrix when status is unsupported or not-evaluated, or are both rows emitted as the 8.4 loop and 8.6 ('every applicable row is evaluated independently exactly once'; 'All simultaneously applicable distinct tokens are emitted') state?"
+ },
+ {
+  "alternative_expected": {
+   "asserted_claim": {
+    "base": "execution",
+    "qualifiers": []
+   },
+   "asserted_claim_supported": false,
+   "boundary_ceiling": null,
+   "boundary_grounding": "attested",
+   "counter_evidence": [
+    {
+     "affected_claims": [],
+     "basis_refs": [],
+     "limitations": [],
+     "reasons": [],
+     "status": "not-supplied"
+    }
+   ],
+   "evaluation_context": {
+    "evaluated_at": "2026-10-12T00:00:00Z",
+    "id": "C",
+    "profile_identifiers": [
+     "draft-sergeev-wexp-core-02/fixture-1"
+    ],
+    "trust_configuration": "core02-fixture-trust-1"
+   },
+   "evaluation_gap_entries": [],
+   "evaluation_gaps": [],
+   "evaluation_scope": [
+    {
+     "capability": "carrier-mapping",
+     "status": "evaluated"
+    },
+    {
+     "capability": "authenticity",
+     "status": "evaluated"
+    },
+    {
+     "capability": "target-binding",
+     "status": "not-evaluated"
+    },
+    {
+     "capability": "boundary-grounding",
+     "status": "not-evaluated"
+    },
+    {
+     "capability": "observation-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "intent-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "invocation-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "execution-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "provenance-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "independent-verification",
+     "status": "evaluated"
+    },
+    {
+     "capability": "composition",
+     "status": "evaluated"
+    },
+    {
+     "capability": "counter-evidence",
+     "status": "evaluated"
+    }
+   ],
+   "fatal_reasons": [],
+   "inherited_limitations": [
+    [
+     "draft-sergeev-wexp-core-02/fixture-1",
+     "L-boundary"
+    ]
+   ],
+   "maximal_supported_claims": [],
+   "recorder_relations": [],
+   "semantics_version": "wexp-core-2",
+   "substantive_reasons": [
+    "E_BOUNDARY_NOT_SUPPORTED"
+   ],
+   "support_entries": [],
+   "support_relations": [],
+   "supported_claims": [],
+   "target": "T",
+   "verdict": "downgrade"
+  },
+  "alternative_reading": "Precedence suppresses: only the status row's token is emitted unless status = supported.",
+  "id": "B17",
+  "primary_reading": "Both rows: the normative algorithm tests each row's exact predicate independently; precedence governs ceiling usability/base admission, not diagnostic suppression.",
+  "question": "Section 7: 'The boundary status has deterministic precedence.' Does precedence suppress the target-binding row of the 8.6 matrix when status is unsupported or not-evaluated, or are both rows emitted as the 8.4 loop and 8.6 ('every applicable row is evaluated independently exactly once'; 'All simultaneously applicable distinct tokens are emitted') state?"
+ },
+ {
+  "alternative_expected": {
+   "asserted_claim": {
+    "base": "execution",
+    "qualifiers": []
+   },
+   "asserted_claim_supported": false,
+   "boundary_ceiling": null,
+   "boundary_grounding": "asserted-only",
+   "counter_evidence": [
+    {
+     "affected_claims": [],
+     "basis_refs": [],
+     "limitations": [],
+     "reasons": [],
+     "status": "not-supplied"
+    }
+   ],
+   "evaluation_context": {
+    "evaluated_at": "2026-10-12T00:00:00Z",
+    "id": "C",
+    "profile_identifiers": [
+     "draft-sergeev-wexp-core-02/fixture-1"
+    ],
+    "trust_configuration": "core02-fixture-trust-1"
+   },
+   "evaluation_gap_entries": [
+    {
+     "affected_claims": [
+      {
+       "base": "execution",
+       "qualifiers": []
+      }
+     ],
+     "basis_refs": [
+      [
+       "draft-sergeev-wexp-core-02/fixture-1",
+       "bd"
+      ]
+     ],
+     "evaluation_context_ref": "C",
+     "limitations": [
+      [
+       "draft-sergeev-wexp-core-02/fixture-1",
+       "L-boundary"
+      ]
+     ],
+     "target": "T",
+     "token": "E_BOUNDARY_NOT_EVALUATED"
+    }
+   ],
+   "evaluation_gaps": [
+    "E_BOUNDARY_NOT_EVALUATED"
+   ],
+   "evaluation_scope": [
+    {
+     "capability": "carrier-mapping",
+     "status": "evaluated"
+    },
+    {
+     "capability": "authenticity",
+     "status": "evaluated"
+    },
+    {
+     "capability": "target-binding",
+     "status": "evaluated"
+    },
+    {
+     "capability": "boundary-grounding",
+     "status": "not-evaluated"
+    },
+    {
+     "capability": "observation-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "intent-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "invocation-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "execution-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "provenance-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "independent-verification",
+     "status": "evaluated"
+    },
+    {
+     "capability": "composition",
+     "status": "evaluated"
+    },
+    {
+     "capability": "counter-evidence",
+     "status": "evaluated"
+    }
+   ],
+   "fatal_reasons": [],
+   "inherited_limitations": [
+    [
+     "draft-sergeev-wexp-core-02/fixture-1",
+     "L-boundary"
+    ]
+   ],
+   "maximal_supported_claims": [],
+   "recorder_relations": [],
+   "semantics_version": "wexp-core-2",
+   "substantive_reasons": [],
+   "support_entries": [],
+   "support_relations": [],
+   "supported_claims": [],
+   "target": "T",
+   "verdict": "downgrade"
+  },
+  "alternative_reading": "Unidirectional: only grounding = not-evaluated constrains status; the input is valid; Section 7 'When status = not-evaluated, no base is added and the appraiser records E_BOUNDARY_NOT_EVALUATED' and the 8.6 boundary rows apply -> downgrade with gap E_BOUNDARY_NOT_EVALUATED (plus E_EVIDENCE_NOT_BOUND when target_binding = unsupported), boundary_grounding preserved, boundary_ceiling unavailable, inherited_limitations {L-boundary}.",
+  "id": "B21",
+  "primary_reading": "Bidirectional: the sentence names the single valid pairing (status = not-evaluated, grounding = not-evaluated); status = not-evaluated paired with any other grounding is E_PROFILE_MAPPING_INVALID -> reject, fixed projection.",
+  "question": "Section 6: 'grounding = not-evaluated is valid only with status = not-evaluated; either field paired differently produces E_PROFILE_MAPPING_INVALID.' Does 'either field paired differently' also make status = not-evaluated with a concrete grounding (asserted-only/attributed/attested) a cross-field violation?"
+ },
+ {
+  "alternative_expected": {
+   "asserted_claim": {
+    "base": "execution",
+    "qualifiers": []
+   },
+   "asserted_claim_supported": false,
+   "boundary_ceiling": null,
+   "boundary_grounding": "asserted-only",
+   "counter_evidence": [
+    {
+     "affected_claims": [],
+     "basis_refs": [],
+     "limitations": [],
+     "reasons": [],
+     "status": "not-supplied"
+    }
+   ],
+   "evaluation_context": {
+    "evaluated_at": "2026-10-12T00:00:00Z",
+    "id": "C",
+    "profile_identifiers": [
+     "draft-sergeev-wexp-core-02/fixture-1"
+    ],
+    "trust_configuration": "core02-fixture-trust-1"
+   },
+   "evaluation_gap_entries": [
+    {
+     "affected_claims": [
+      {
+       "base": "execution",
+       "qualifiers": []
+      }
+     ],
+     "basis_refs": [
+      [
+       "draft-sergeev-wexp-core-02/fixture-1",
+       "bd"
+      ]
+     ],
+     "evaluation_context_ref": "C",
+     "limitations": [
+      [
+       "draft-sergeev-wexp-core-02/fixture-1",
+       "L-boundary"
+      ]
+     ],
+     "target": "T",
+     "token": "E_BOUNDARY_NOT_EVALUATED"
+    }
+   ],
+   "evaluation_gaps": [
+    "E_BOUNDARY_NOT_EVALUATED"
+   ],
+   "evaluation_scope": [
+    {
+     "capability": "carrier-mapping",
+     "status": "evaluated"
+    },
+    {
+     "capability": "authenticity",
+     "status": "evaluated"
+    },
+    {
+     "capability": "target-binding",
+     "status": "evaluated"
+    },
+    {
+     "capability": "boundary-grounding",
+     "status": "not-evaluated"
+    },
+    {
+     "capability": "observation-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "intent-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "invocation-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "execution-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "provenance-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "independent-verification",
+     "status": "evaluated"
+    },
+    {
+     "capability": "composition",
+     "status": "evaluated"
+    },
+    {
+     "capability": "counter-evidence",
+     "status": "evaluated"
+    }
+   ],
+   "fatal_reasons": [],
+   "inherited_limitations": [
+    [
+     "draft-sergeev-wexp-core-02/fixture-1",
+     "L-boundary"
+    ]
+   ],
+   "maximal_supported_claims": [],
+   "recorder_relations": [],
+   "semantics_version": "wexp-core-2",
+   "substantive_reasons": [
+    "E_EVIDENCE_NOT_BOUND"
+   ],
+   "support_entries": [],
+   "support_relations": [],
+   "supported_claims": [],
+   "target": "T",
+   "verdict": "downgrade"
+  },
+  "alternative_reading": "Unidirectional: only grounding = not-evaluated constrains status; the input is valid; Section 7 'When status = not-evaluated, no base is added and the appraiser records E_BOUNDARY_NOT_EVALUATED' and the 8.6 boundary rows apply -> downgrade with gap E_BOUNDARY_NOT_EVALUATED (plus E_EVIDENCE_NOT_BOUND when target_binding = unsupported), boundary_grounding preserved, boundary_ceiling unavailable, inherited_limitations {L-boundary}.",
+  "id": "B22",
+  "primary_reading": "Bidirectional: the sentence names the single valid pairing (status = not-evaluated, grounding = not-evaluated); status = not-evaluated paired with any other grounding is E_PROFILE_MAPPING_INVALID -> reject, fixed projection.",
+  "question": "Section 6: 'grounding = not-evaluated is valid only with status = not-evaluated; either field paired differently produces E_PROFILE_MAPPING_INVALID.' Does 'either field paired differently' also make status = not-evaluated with a concrete grounding (asserted-only/attributed/attested) a cross-field violation?"
+ },
+ {
+  "alternative_expected": {
+   "asserted_claim": {
+    "base": "execution",
+    "qualifiers": []
+   },
+   "asserted_claim_supported": false,
+   "boundary_ceiling": null,
+   "boundary_grounding": "asserted-only",
+   "counter_evidence": [
+    {
+     "affected_claims": [],
+     "basis_refs": [],
+     "limitations": [],
+     "reasons": [],
+     "status": "not-supplied"
+    }
+   ],
+   "evaluation_context": {
+    "evaluated_at": "2026-10-12T00:00:00Z",
+    "id": "C",
+    "profile_identifiers": [
+     "draft-sergeev-wexp-core-02/fixture-1"
+    ],
+    "trust_configuration": "core02-fixture-trust-1"
+   },
+   "evaluation_gap_entries": [
+    {
+     "affected_claims": [
+      {
+       "base": "execution",
+       "qualifiers": []
+      }
+     ],
+     "basis_refs": [
+      [
+       "draft-sergeev-wexp-core-02/fixture-1",
+       "bd"
+      ]
+     ],
+     "evaluation_context_ref": "C",
+     "limitations": [
+      [
+       "draft-sergeev-wexp-core-02/fixture-1",
+       "L-boundary"
+      ]
+     ],
+     "target": "T",
+     "token": "E_BOUNDARY_NOT_EVALUATED"
+    }
+   ],
+   "evaluation_gaps": [
+    "E_BOUNDARY_NOT_EVALUATED"
+   ],
+   "evaluation_scope": [
+    {
+     "capability": "carrier-mapping",
+     "status": "evaluated"
+    },
+    {
+     "capability": "authenticity",
+     "status": "evaluated"
+    },
+    {
+     "capability": "target-binding",
+     "status": "not-evaluated"
+    },
+    {
+     "capability": "boundary-grounding",
+     "status": "not-evaluated"
+    },
+    {
+     "capability": "observation-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "intent-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "invocation-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "execution-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "provenance-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "independent-verification",
+     "status": "evaluated"
+    },
+    {
+     "capability": "composition",
+     "status": "evaluated"
+    },
+    {
+     "capability": "counter-evidence",
+     "status": "evaluated"
+    }
+   ],
+   "fatal_reasons": [],
+   "inherited_limitations": [
+    [
+     "draft-sergeev-wexp-core-02/fixture-1",
+     "L-boundary"
+    ]
+   ],
+   "maximal_supported_claims": [],
+   "recorder_relations": [],
+   "semantics_version": "wexp-core-2",
+   "substantive_reasons": [],
+   "support_entries": [],
+   "support_relations": [],
+   "supported_claims": [],
+   "target": "T",
+   "verdict": "downgrade"
+  },
+  "alternative_reading": "Unidirectional: only grounding = not-evaluated constrains status; the input is valid; Section 7 'When status = not-evaluated, no base is added and the appraiser records E_BOUNDARY_NOT_EVALUATED' and the 8.6 boundary rows apply -> downgrade with gap E_BOUNDARY_NOT_EVALUATED (plus E_EVIDENCE_NOT_BOUND when target_binding = unsupported), boundary_grounding preserved, boundary_ceiling unavailable, inherited_limitations {L-boundary}.",
+  "id": "B23",
+  "primary_reading": "Bidirectional: the sentence names the single valid pairing (status = not-evaluated, grounding = not-evaluated); status = not-evaluated paired with any other grounding is E_PROFILE_MAPPING_INVALID -> reject, fixed projection.",
+  "question": "Section 6: 'grounding = not-evaluated is valid only with status = not-evaluated; either field paired differently produces E_PROFILE_MAPPING_INVALID.' Does 'either field paired differently' also make status = not-evaluated with a concrete grounding (asserted-only/attributed/attested) a cross-field violation?"
+ },
+ {
+  "alternative_expected": {
+   "asserted_claim": {
+    "base": "execution",
+    "qualifiers": []
+   },
+   "asserted_claim_supported": false,
+   "boundary_ceiling": null,
+   "boundary_grounding": "attributed",
+   "counter_evidence": [
+    {
+     "affected_claims": [],
+     "basis_refs": [],
+     "limitations": [],
+     "reasons": [],
+     "status": "not-supplied"
+    }
+   ],
+   "evaluation_context": {
+    "evaluated_at": "2026-10-12T00:00:00Z",
+    "id": "C",
+    "profile_identifiers": [
+     "draft-sergeev-wexp-core-02/fixture-1"
+    ],
+    "trust_configuration": "core02-fixture-trust-1"
+   },
+   "evaluation_gap_entries": [
+    {
+     "affected_claims": [
+      {
+       "base": "execution",
+       "qualifiers": []
+      }
+     ],
+     "basis_refs": [
+      [
+       "draft-sergeev-wexp-core-02/fixture-1",
+       "bd"
+      ]
+     ],
+     "evaluation_context_ref": "C",
+     "limitations": [
+      [
+       "draft-sergeev-wexp-core-02/fixture-1",
+       "L-boundary"
+      ]
+     ],
+     "target": "T",
+     "token": "E_BOUNDARY_NOT_EVALUATED"
+    }
+   ],
+   "evaluation_gaps": [
+    "E_BOUNDARY_NOT_EVALUATED"
+   ],
+   "evaluation_scope": [
+    {
+     "capability": "carrier-mapping",
+     "status": "evaluated"
+    },
+    {
+     "capability": "authenticity",
+     "status": "evaluated"
+    },
+    {
+     "capability": "target-binding",
+     "status": "evaluated"
+    },
+    {
+     "capability": "boundary-grounding",
+     "status": "not-evaluated"
+    },
+    {
+     "capability": "observation-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "intent-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "invocation-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "execution-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "provenance-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "independent-verification",
+     "status": "evaluated"
+    },
+    {
+     "capability": "composition",
+     "status": "evaluated"
+    },
+    {
+     "capability": "counter-evidence",
+     "status": "evaluated"
+    }
+   ],
+   "fatal_reasons": [],
+   "inherited_limitations": [
+    [
+     "draft-sergeev-wexp-core-02/fixture-1",
+     "L-boundary"
+    ]
+   ],
+   "maximal_supported_claims": [],
+   "recorder_relations": [],
+   "semantics_version": "wexp-core-2",
+   "substantive_reasons": [],
+   "support_entries": [],
+   "support_relations": [],
+   "supported_claims": [],
+   "target": "T",
+   "verdict": "downgrade"
+  },
+  "alternative_reading": "Unidirectional: only grounding = not-evaluated constrains status; the input is valid; Section 7 'When status = not-evaluated, no base is added and the appraiser records E_BOUNDARY_NOT_EVALUATED' and the 8.6 boundary rows apply -> downgrade with gap E_BOUNDARY_NOT_EVALUATED (plus E_EVIDENCE_NOT_BOUND when target_binding = unsupported), boundary_grounding preserved, boundary_ceiling unavailable, inherited_limitations {L-boundary}.",
+  "id": "B24",
+  "primary_reading": "Bidirectional: the sentence names the single valid pairing (status = not-evaluated, grounding = not-evaluated); status = not-evaluated paired with any other grounding is E_PROFILE_MAPPING_INVALID -> reject, fixed projection.",
+  "question": "Section 6: 'grounding = not-evaluated is valid only with status = not-evaluated; either field paired differently produces E_PROFILE_MAPPING_INVALID.' Does 'either field paired differently' also make status = not-evaluated with a concrete grounding (asserted-only/attributed/attested) a cross-field violation?"
+ },
+ {
+  "alternative_expected": {
+   "asserted_claim": {
+    "base": "execution",
+    "qualifiers": []
+   },
+   "asserted_claim_supported": false,
+   "boundary_ceiling": null,
+   "boundary_grounding": "attributed",
+   "counter_evidence": [
+    {
+     "affected_claims": [],
+     "basis_refs": [],
+     "limitations": [],
+     "reasons": [],
+     "status": "not-supplied"
+    }
+   ],
+   "evaluation_context": {
+    "evaluated_at": "2026-10-12T00:00:00Z",
+    "id": "C",
+    "profile_identifiers": [
+     "draft-sergeev-wexp-core-02/fixture-1"
+    ],
+    "trust_configuration": "core02-fixture-trust-1"
+   },
+   "evaluation_gap_entries": [
+    {
+     "affected_claims": [
+      {
+       "base": "execution",
+       "qualifiers": []
+      }
+     ],
+     "basis_refs": [
+      [
+       "draft-sergeev-wexp-core-02/fixture-1",
+       "bd"
+      ]
+     ],
+     "evaluation_context_ref": "C",
+     "limitations": [
+      [
+       "draft-sergeev-wexp-core-02/fixture-1",
+       "L-boundary"
+      ]
+     ],
+     "target": "T",
+     "token": "E_BOUNDARY_NOT_EVALUATED"
+    }
+   ],
+   "evaluation_gaps": [
+    "E_BOUNDARY_NOT_EVALUATED"
+   ],
+   "evaluation_scope": [
+    {
+     "capability": "carrier-mapping",
+     "status": "evaluated"
+    },
+    {
+     "capability": "authenticity",
+     "status": "evaluated"
+    },
+    {
+     "capability": "target-binding",
+     "status": "evaluated"
+    },
+    {
+     "capability": "boundary-grounding",
+     "status": "not-evaluated"
+    },
+    {
+     "capability": "observation-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "intent-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "invocation-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "execution-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "provenance-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "independent-verification",
+     "status": "evaluated"
+    },
+    {
+     "capability": "composition",
+     "status": "evaluated"
+    },
+    {
+     "capability": "counter-evidence",
+     "status": "evaluated"
+    }
+   ],
+   "fatal_reasons": [],
+   "inherited_limitations": [
+    [
+     "draft-sergeev-wexp-core-02/fixture-1",
+     "L-boundary"
+    ]
+   ],
+   "maximal_supported_claims": [],
+   "recorder_relations": [],
+   "semantics_version": "wexp-core-2",
+   "substantive_reasons": [
+    "E_EVIDENCE_NOT_BOUND"
+   ],
+   "support_entries": [],
+   "support_relations": [],
+   "supported_claims": [],
+   "target": "T",
+   "verdict": "downgrade"
+  },
+  "alternative_reading": "Unidirectional: only grounding = not-evaluated constrains status; the input is valid; Section 7 'When status = not-evaluated, no base is added and the appraiser records E_BOUNDARY_NOT_EVALUATED' and the 8.6 boundary rows apply -> downgrade with gap E_BOUNDARY_NOT_EVALUATED (plus E_EVIDENCE_NOT_BOUND when target_binding = unsupported), boundary_grounding preserved, boundary_ceiling unavailable, inherited_limitations {L-boundary}.",
+  "id": "B25",
+  "primary_reading": "Bidirectional: the sentence names the single valid pairing (status = not-evaluated, grounding = not-evaluated); status = not-evaluated paired with any other grounding is E_PROFILE_MAPPING_INVALID -> reject, fixed projection.",
+  "question": "Section 6: 'grounding = not-evaluated is valid only with status = not-evaluated; either field paired differently produces E_PROFILE_MAPPING_INVALID.' Does 'either field paired differently' also make status = not-evaluated with a concrete grounding (asserted-only/attributed/attested) a cross-field violation?"
+ },
+ {
+  "alternative_expected": {
+   "asserted_claim": {
+    "base": "execution",
+    "qualifiers": []
+   },
+   "asserted_claim_supported": false,
+   "boundary_ceiling": null,
+   "boundary_grounding": "attributed",
+   "counter_evidence": [
+    {
+     "affected_claims": [],
+     "basis_refs": [],
+     "limitations": [],
+     "reasons": [],
+     "status": "not-supplied"
+    }
+   ],
+   "evaluation_context": {
+    "evaluated_at": "2026-10-12T00:00:00Z",
+    "id": "C",
+    "profile_identifiers": [
+     "draft-sergeev-wexp-core-02/fixture-1"
+    ],
+    "trust_configuration": "core02-fixture-trust-1"
+   },
+   "evaluation_gap_entries": [
+    {
+     "affected_claims": [
+      {
+       "base": "execution",
+       "qualifiers": []
+      }
+     ],
+     "basis_refs": [
+      [
+       "draft-sergeev-wexp-core-02/fixture-1",
+       "bd"
+      ]
+     ],
+     "evaluation_context_ref": "C",
+     "limitations": [
+      [
+       "draft-sergeev-wexp-core-02/fixture-1",
+       "L-boundary"
+      ]
+     ],
+     "target": "T",
+     "token": "E_BOUNDARY_NOT_EVALUATED"
+    }
+   ],
+   "evaluation_gaps": [
+    "E_BOUNDARY_NOT_EVALUATED"
+   ],
+   "evaluation_scope": [
+    {
+     "capability": "carrier-mapping",
+     "status": "evaluated"
+    },
+    {
+     "capability": "authenticity",
+     "status": "evaluated"
+    },
+    {
+     "capability": "target-binding",
+     "status": "not-evaluated"
+    },
+    {
+     "capability": "boundary-grounding",
+     "status": "not-evaluated"
+    },
+    {
+     "capability": "observation-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "intent-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "invocation-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "execution-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "provenance-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "independent-verification",
+     "status": "evaluated"
+    },
+    {
+     "capability": "composition",
+     "status": "evaluated"
+    },
+    {
+     "capability": "counter-evidence",
+     "status": "evaluated"
+    }
+   ],
+   "fatal_reasons": [],
+   "inherited_limitations": [
+    [
+     "draft-sergeev-wexp-core-02/fixture-1",
+     "L-boundary"
+    ]
+   ],
+   "maximal_supported_claims": [],
+   "recorder_relations": [],
+   "semantics_version": "wexp-core-2",
+   "substantive_reasons": [],
+   "support_entries": [],
+   "support_relations": [],
+   "supported_claims": [],
+   "target": "T",
+   "verdict": "downgrade"
+  },
+  "alternative_reading": "Unidirectional: only grounding = not-evaluated constrains status; the input is valid; Section 7 'When status = not-evaluated, no base is added and the appraiser records E_BOUNDARY_NOT_EVALUATED' and the 8.6 boundary rows apply -> downgrade with gap E_BOUNDARY_NOT_EVALUATED (plus E_EVIDENCE_NOT_BOUND when target_binding = unsupported), boundary_grounding preserved, boundary_ceiling unavailable, inherited_limitations {L-boundary}.",
+  "id": "B26",
+  "primary_reading": "Bidirectional: the sentence names the single valid pairing (status = not-evaluated, grounding = not-evaluated); status = not-evaluated paired with any other grounding is E_PROFILE_MAPPING_INVALID -> reject, fixed projection.",
+  "question": "Section 6: 'grounding = not-evaluated is valid only with status = not-evaluated; either field paired differently produces E_PROFILE_MAPPING_INVALID.' Does 'either field paired differently' also make status = not-evaluated with a concrete grounding (asserted-only/attributed/attested) a cross-field violation?"
+ },
+ {
+  "alternative_expected": {
+   "asserted_claim": {
+    "base": "execution",
+    "qualifiers": []
+   },
+   "asserted_claim_supported": false,
+   "boundary_ceiling": null,
+   "boundary_grounding": "attested",
+   "counter_evidence": [
+    {
+     "affected_claims": [],
+     "basis_refs": [],
+     "limitations": [],
+     "reasons": [],
+     "status": "not-supplied"
+    }
+   ],
+   "evaluation_context": {
+    "evaluated_at": "2026-10-12T00:00:00Z",
+    "id": "C",
+    "profile_identifiers": [
+     "draft-sergeev-wexp-core-02/fixture-1"
+    ],
+    "trust_configuration": "core02-fixture-trust-1"
+   },
+   "evaluation_gap_entries": [
+    {
+     "affected_claims": [
+      {
+       "base": "execution",
+       "qualifiers": []
+      }
+     ],
+     "basis_refs": [
+      [
+       "draft-sergeev-wexp-core-02/fixture-1",
+       "bd"
+      ]
+     ],
+     "evaluation_context_ref": "C",
+     "limitations": [
+      [
+       "draft-sergeev-wexp-core-02/fixture-1",
+       "L-boundary"
+      ]
+     ],
+     "target": "T",
+     "token": "E_BOUNDARY_NOT_EVALUATED"
+    }
+   ],
+   "evaluation_gaps": [
+    "E_BOUNDARY_NOT_EVALUATED"
+   ],
+   "evaluation_scope": [
+    {
+     "capability": "carrier-mapping",
+     "status": "evaluated"
+    },
+    {
+     "capability": "authenticity",
+     "status": "evaluated"
+    },
+    {
+     "capability": "target-binding",
+     "status": "evaluated"
+    },
+    {
+     "capability": "boundary-grounding",
+     "status": "not-evaluated"
+    },
+    {
+     "capability": "observation-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "intent-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "invocation-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "execution-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "provenance-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "independent-verification",
+     "status": "evaluated"
+    },
+    {
+     "capability": "composition",
+     "status": "evaluated"
+    },
+    {
+     "capability": "counter-evidence",
+     "status": "evaluated"
+    }
+   ],
+   "fatal_reasons": [],
+   "inherited_limitations": [
+    [
+     "draft-sergeev-wexp-core-02/fixture-1",
+     "L-boundary"
+    ]
+   ],
+   "maximal_supported_claims": [],
+   "recorder_relations": [],
+   "semantics_version": "wexp-core-2",
+   "substantive_reasons": [],
+   "support_entries": [],
+   "support_relations": [],
+   "supported_claims": [],
+   "target": "T",
+   "verdict": "downgrade"
+  },
+  "alternative_reading": "Unidirectional: only grounding = not-evaluated constrains status; the input is valid; Section 7 'When status = not-evaluated, no base is added and the appraiser records E_BOUNDARY_NOT_EVALUATED' and the 8.6 boundary rows apply -> downgrade with gap E_BOUNDARY_NOT_EVALUATED (plus E_EVIDENCE_NOT_BOUND when target_binding = unsupported), boundary_grounding preserved, boundary_ceiling unavailable, inherited_limitations {L-boundary}.",
+  "id": "B27",
+  "primary_reading": "Bidirectional: the sentence names the single valid pairing (status = not-evaluated, grounding = not-evaluated); status = not-evaluated paired with any other grounding is E_PROFILE_MAPPING_INVALID -> reject, fixed projection.",
+  "question": "Section 6: 'grounding = not-evaluated is valid only with status = not-evaluated; either field paired differently produces E_PROFILE_MAPPING_INVALID.' Does 'either field paired differently' also make status = not-evaluated with a concrete grounding (asserted-only/attributed/attested) a cross-field violation?"
+ },
+ {
+  "alternative_expected": {
+   "asserted_claim": {
+    "base": "execution",
+    "qualifiers": []
+   },
+   "asserted_claim_supported": false,
+   "boundary_ceiling": null,
+   "boundary_grounding": "attested",
+   "counter_evidence": [
+    {
+     "affected_claims": [],
+     "basis_refs": [],
+     "limitations": [],
+     "reasons": [],
+     "status": "not-supplied"
+    }
+   ],
+   "evaluation_context": {
+    "evaluated_at": "2026-10-12T00:00:00Z",
+    "id": "C",
+    "profile_identifiers": [
+     "draft-sergeev-wexp-core-02/fixture-1"
+    ],
+    "trust_configuration": "core02-fixture-trust-1"
+   },
+   "evaluation_gap_entries": [
+    {
+     "affected_claims": [
+      {
+       "base": "execution",
+       "qualifiers": []
+      }
+     ],
+     "basis_refs": [
+      [
+       "draft-sergeev-wexp-core-02/fixture-1",
+       "bd"
+      ]
+     ],
+     "evaluation_context_ref": "C",
+     "limitations": [
+      [
+       "draft-sergeev-wexp-core-02/fixture-1",
+       "L-boundary"
+      ]
+     ],
+     "target": "T",
+     "token": "E_BOUNDARY_NOT_EVALUATED"
+    }
+   ],
+   "evaluation_gaps": [
+    "E_BOUNDARY_NOT_EVALUATED"
+   ],
+   "evaluation_scope": [
+    {
+     "capability": "carrier-mapping",
+     "status": "evaluated"
+    },
+    {
+     "capability": "authenticity",
+     "status": "evaluated"
+    },
+    {
+     "capability": "target-binding",
+     "status": "evaluated"
+    },
+    {
+     "capability": "boundary-grounding",
+     "status": "not-evaluated"
+    },
+    {
+     "capability": "observation-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "intent-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "invocation-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "execution-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "provenance-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "independent-verification",
+     "status": "evaluated"
+    },
+    {
+     "capability": "composition",
+     "status": "evaluated"
+    },
+    {
+     "capability": "counter-evidence",
+     "status": "evaluated"
+    }
+   ],
+   "fatal_reasons": [],
+   "inherited_limitations": [
+    [
+     "draft-sergeev-wexp-core-02/fixture-1",
+     "L-boundary"
+    ]
+   ],
+   "maximal_supported_claims": [],
+   "recorder_relations": [],
+   "semantics_version": "wexp-core-2",
+   "substantive_reasons": [
+    "E_EVIDENCE_NOT_BOUND"
+   ],
+   "support_entries": [],
+   "support_relations": [],
+   "supported_claims": [],
+   "target": "T",
+   "verdict": "downgrade"
+  },
+  "alternative_reading": "Unidirectional: only grounding = not-evaluated constrains status; the input is valid; Section 7 'When status = not-evaluated, no base is added and the appraiser records E_BOUNDARY_NOT_EVALUATED' and the 8.6 boundary rows apply -> downgrade with gap E_BOUNDARY_NOT_EVALUATED (plus E_EVIDENCE_NOT_BOUND when target_binding = unsupported), boundary_grounding preserved, boundary_ceiling unavailable, inherited_limitations {L-boundary}.",
+  "id": "B28",
+  "primary_reading": "Bidirectional: the sentence names the single valid pairing (status = not-evaluated, grounding = not-evaluated); status = not-evaluated paired with any other grounding is E_PROFILE_MAPPING_INVALID -> reject, fixed projection.",
+  "question": "Section 6: 'grounding = not-evaluated is valid only with status = not-evaluated; either field paired differently produces E_PROFILE_MAPPING_INVALID.' Does 'either field paired differently' also make status = not-evaluated with a concrete grounding (asserted-only/attributed/attested) a cross-field violation?"
+ },
+ {
+  "alternative_expected": {
+   "asserted_claim": {
+    "base": "execution",
+    "qualifiers": []
+   },
+   "asserted_claim_supported": false,
+   "boundary_ceiling": null,
+   "boundary_grounding": "attested",
+   "counter_evidence": [
+    {
+     "affected_claims": [],
+     "basis_refs": [],
+     "limitations": [],
+     "reasons": [],
+     "status": "not-supplied"
+    }
+   ],
+   "evaluation_context": {
+    "evaluated_at": "2026-10-12T00:00:00Z",
+    "id": "C",
+    "profile_identifiers": [
+     "draft-sergeev-wexp-core-02/fixture-1"
+    ],
+    "trust_configuration": "core02-fixture-trust-1"
+   },
+   "evaluation_gap_entries": [
+    {
+     "affected_claims": [
+      {
+       "base": "execution",
+       "qualifiers": []
+      }
+     ],
+     "basis_refs": [
+      [
+       "draft-sergeev-wexp-core-02/fixture-1",
+       "bd"
+      ]
+     ],
+     "evaluation_context_ref": "C",
+     "limitations": [
+      [
+       "draft-sergeev-wexp-core-02/fixture-1",
+       "L-boundary"
+      ]
+     ],
+     "target": "T",
+     "token": "E_BOUNDARY_NOT_EVALUATED"
+    }
+   ],
+   "evaluation_gaps": [
+    "E_BOUNDARY_NOT_EVALUATED"
+   ],
+   "evaluation_scope": [
+    {
+     "capability": "carrier-mapping",
+     "status": "evaluated"
+    },
+    {
+     "capability": "authenticity",
+     "status": "evaluated"
+    },
+    {
+     "capability": "target-binding",
+     "status": "not-evaluated"
+    },
+    {
+     "capability": "boundary-grounding",
+     "status": "not-evaluated"
+    },
+    {
+     "capability": "observation-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "intent-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "invocation-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "execution-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "provenance-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "independent-verification",
+     "status": "evaluated"
+    },
+    {
+     "capability": "composition",
+     "status": "evaluated"
+    },
+    {
+     "capability": "counter-evidence",
+     "status": "evaluated"
+    }
+   ],
+   "fatal_reasons": [],
+   "inherited_limitations": [
+    [
+     "draft-sergeev-wexp-core-02/fixture-1",
+     "L-boundary"
+    ]
+   ],
+   "maximal_supported_claims": [],
+   "recorder_relations": [],
+   "semantics_version": "wexp-core-2",
+   "substantive_reasons": [],
+   "support_entries": [],
+   "support_relations": [],
+   "supported_claims": [],
+   "target": "T",
+   "verdict": "downgrade"
+  },
+  "alternative_reading": "Unidirectional: only grounding = not-evaluated constrains status; the input is valid; Section 7 'When status = not-evaluated, no base is added and the appraiser records E_BOUNDARY_NOT_EVALUATED' and the 8.6 boundary rows apply -> downgrade with gap E_BOUNDARY_NOT_EVALUATED (plus E_EVIDENCE_NOT_BOUND when target_binding = unsupported), boundary_grounding preserved, boundary_ceiling unavailable, inherited_limitations {L-boundary}.",
+  "id": "B29",
+  "primary_reading": "Bidirectional: the sentence names the single valid pairing (status = not-evaluated, grounding = not-evaluated); status = not-evaluated paired with any other grounding is E_PROFILE_MAPPING_INVALID -> reject, fixed projection.",
+  "question": "Section 6: 'grounding = not-evaluated is valid only with status = not-evaluated; either field paired differently produces E_PROFILE_MAPPING_INVALID.' Does 'either field paired differently' also make status = not-evaluated with a concrete grounding (asserted-only/attributed/attested) a cross-field violation?"
+ },
+ {
+  "alternative_expected": {
+   "asserted_claim": {
+    "base": "execution",
+    "qualifiers": []
+   },
+   "asserted_claim_supported": false,
+   "boundary_ceiling": null,
+   "boundary_grounding": "not-evaluated",
+   "counter_evidence": [
+    {
+     "affected_claims": [],
+     "basis_refs": [],
+     "limitations": [],
+     "reasons": [],
+     "status": "not-supplied"
+    }
+   ],
+   "evaluation_context": {
+    "evaluated_at": "2026-10-12T00:00:00Z",
+    "id": "C",
+    "profile_identifiers": [
+     "draft-sergeev-wexp-core-02/fixture-1"
+    ],
+    "trust_configuration": "core02-fixture-trust-1"
+   },
+   "evaluation_gap_entries": [
+    {
+     "affected_claims": [
+      {
+       "base": "execution",
+       "qualifiers": []
+      }
+     ],
+     "basis_refs": [
+      [
+       "draft-sergeev-wexp-core-02/fixture-1",
+       "bd"
+      ]
+     ],
+     "evaluation_context_ref": "C",
+     "limitations": [
+      [
+       "draft-sergeev-wexp-core-02/fixture-1",
+       "L-boundary"
+      ]
+     ],
+     "target": "T",
+     "token": "E_BOUNDARY_NOT_EVALUATED"
+    }
+   ],
+   "evaluation_gaps": [
+    "E_BOUNDARY_NOT_EVALUATED"
+   ],
+   "evaluation_scope": [
+    {
+     "capability": "carrier-mapping",
+     "status": "evaluated"
+    },
+    {
+     "capability": "authenticity",
+     "status": "evaluated"
+    },
+    {
+     "capability": "target-binding",
+     "status": "evaluated"
+    },
+    {
+     "capability": "boundary-grounding",
+     "status": "not-evaluated"
+    },
+    {
+     "capability": "observation-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "intent-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "invocation-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "execution-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "provenance-support",
+     "status": "evaluated"
+    },
+    {
+     "capability": "independent-verification",
+     "status": "evaluated"
+    },
+    {
+     "capability": "composition",
+     "status": "evaluated"
+    },
+    {
+     "capability": "counter-evidence",
+     "status": "evaluated"
+    }
+   ],
+   "fatal_reasons": [],
+   "inherited_limitations": [
+    [
+     "draft-sergeev-wexp-core-02/fixture-1",
+     "L-boundary"
+    ]
+   ],
+   "maximal_supported_claims": [],
+   "recorder_relations": [],
+   "semantics_version": "wexp-core-2",
+   "substantive_reasons": [],
+   "support_entries": [],
+   "support_relations": [],
+   "supported_claims": [],
+   "target": "T",
+   "verdict": "downgrade"
+  },
+  "alternative_reading": "Precedence suppresses: only the status row's token is emitted unless status = supported.",
+  "id": "B31",
+  "primary_reading": "Both rows: the normative algorithm tests each row's exact predicate independently; precedence governs ceiling usability/base admission, not diagnostic suppression.",
+  "question": "Section 7: 'The boundary status has deterministic precedence.' Does precedence suppress the target-binding row of the 8.6 matrix when status is unsupported or not-evaluated, or are both rows emitted as the 8.4 loop and 8.6 ('every applicable row is evaluated independently exactly once'; 'All simultaneously applicable distinct tokens are emitted') state?"
+ },
+ {
+  "alternative_expected": {
+   "asserted_claim": null,
+   "asserted_claim_supported": false,
+   "boundary_ceiling": null,
+   "boundary_grounding": null,
+   "counter_evidence": null,
+   "evaluation_context": null,
+   "evaluation_gap_entries": [],
+   "evaluation_gaps": [],
+   "evaluation_scope": null,
+   "fatal_reasons": [
+    "E_PROFILE_MAPPING_INVALID"
+   ],
+   "inherited_limitations": null,
+   "maximal_supported_claims": [],
+   "recorder_relations": null,
+   "semantics_version": "wexp-core-2",
+   "substantive_reasons": [],
+   "support_entries": [],
+   "support_relations": [],
+   "supported_claims": [],
+   "target": null,
+   "verdict": "reject"
+  },
+  "alternative_reading": "Yes: reading 'that the evaluation context accepts' as an invariant and the Section 13 description as fixing attributed as the atom's minimum, asserted-only is below the minimum -> reject {E_PROFILE_MAPPING_INVALID} (fixed projection).",
+  "id": "B35",
+  "primary_reading": "No: the trust configuration is an opaque atom (6.1) that Core does not interpret; Section 12 'Core does not decide from profile-defined trust data'; the Section 6.2 invariant list does not include grounding acceptance; the only E_PROFILE_MAPPING_INVALID consequences stated in the Section 6 paragraph are the missing ceiling_base and the not-evaluated pairing. Core returns accept and 'still reports the weaker grounding and its limitations'.",
+  "question": "B35: status = supported, grounding = asserted-only under core02-fixture-trust-1, which Section 13 describes as the atom 'which accepts attributed boundary grounding'. Section 6 says 'A supported boundary has a grounding value ... that the evaluation context accepts' and Section 7 says an asserted-only finding 'can be supported only when the evaluation context explicitly accepts that grounding class'. Is this a Core-checkable cross-field invariant?"
+ }
+]

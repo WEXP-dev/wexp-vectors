@@ -7,4 +7,5 @@
 /vectors/** -text
 /evidence/core-01-set-002/*.json -text
 /provenance/PUBLIC-GENESIS.json -text
+/evidence/core-02-set-002/*.json -text
 /evidence/core-02-set-001-rederivation/** -text
