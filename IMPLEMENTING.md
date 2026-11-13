@@ -3,6 +3,13 @@
 A route for someone building their own WEXP implementation, from outside this
 project.
 
+This guide is scoped to Core-01. For Core-02, start from the package READMEs of
+[WEXP-CORE-02-VECTORS-001](vectors/WEXP-CORE-02-VECTORS-001/README.md) (89 cases; its
+[logical encoding](vectors/WEXP-CORE-02-VECTORS-001/README.md#logical-encoding) defines
+the JSON representation of inputs and results and names the fixture profile) and
+[WEXP-CORE-02-VECTORS-002](vectors/WEXP-CORE-02-VECTORS-002/README.md) (35 cases).
+Sections 4 to 8 below apply to a Core-02 implementation as well.
+
 There is no certification here, no badge, no endorsement, and no conformance
 programme. There is a specification, a published set of expectations derived
 from it, and a way to report what your implementation did.
@@ -86,7 +93,8 @@ Compare against the expectation as published. A comparison that normalizes away
 a difference is not a comparison.
 
 The repository validates itself; the commands are in
-[`README.md`](README.md#clone-and-validate-locally).
+[`CORE-CORPORA.md`](CORE-CORPORA.md#clone-and-validate-locally) for the Core-00 and
+Core-01 packages and in [`README.md`](README.md) for Core-02 and Coverage-00.
 
 ## 5. Publish the parts that let someone disagree with you
 

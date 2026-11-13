@@ -18,8 +18,13 @@ For each proposed specification-derived vector:
    `WEXP-CORE-00-REQ-NNNN`.
 5. Make the abstract input facts and expected observable result self-contained
    and implementation-neutral. Include a concise specification derivation.
-6. Add the vector to `manifests/vectors.json` with its exact SHA-256 digest,
-   matching metadata, and honest candidate or release status.
+6. Add the vector to the integrity manifest that binds its package, with its exact
+   SHA-256 digest, matching metadata, and honest status: `manifests/vectors.json`
+   for the Core-00 slice; the set descriptor and the set manifest under `manifests/`
+   for Core-01; the package `manifest.json` for Core-02 and Coverage-00. The cases
+   and expectations of a frozen Core-02 package are not changed in place; set 002
+   (`WEXP-CORE-02-VECTORS-002`) added new cases as a separate package with its own
+   manifest and expectation freeze.
 7. Run the validator and unit tests documented in `README.md`.
 
 If the specification is ambiguous, stop and document the ambiguity through the

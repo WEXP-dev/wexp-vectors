@@ -14,7 +14,7 @@ specification -> reviewed requirements -> frozen expectations -> implementation 
 | Package | Exact contract | What is available |
 |---|---|---|
 | [WEXP-CORE-02-VECTORS-001](vectors/WEXP-CORE-02-VECTORS-001/README.md) | Core-02 / `wexp-core-2` | 89 complete logical inputs and twenty-component expectations (frozen `corpus.json`): 16 normative transcriptions, 73 derived controls |
-| [WEXP-CORE-02-VECTORS-002](vectors/WEXP-CORE-02-VECTORS-002/README.md) | Core-02 / `wexp-core-2` | 35 non-normative derived cases for the section 7 boundary matrix (status x grounding x target_binding): 32 matrix cells, 2 section 12 controls, 1 probe; expectations frozen by an isolated session before any engine run; set 001 unchanged |
+| [WEXP-CORE-02-VECTORS-002](vectors/WEXP-CORE-02-VECTORS-002/README.md) | Core-02 / `wexp-core-2` | 35 non-normative derived cases for the section 7 boundary matrix (status x grounding x target_binding): 32 matrix cells, 2 section 12 controls, 1 probe; expectations derived in a separate session of the same project and, as recorded, hashed before the first engine run; set 001 unchanged |
 | [WEXP-COVERAGE-00-LOGIC-001](vectors/WEXP-COVERAGE-00-LOGIC-001/README.md) | Coverage-00 / `coverage/0.2.0` | 12 known-finite-world examples plus bounded relation, delivery and aggregation checks; **not the full Coverage evaluator** |
 | [Core-01 sets 001-003](CORE-CORPORA.md#core-01-vector-set) | Core-01 | Historical sets of 16, 9 and 7 cases, unchanged |
 | [Core-00 slice](CORE-CORPORA.md#core-00-candidate-slice) | Core-00 | Seven historical candidate cases, unchanged |
@@ -43,6 +43,16 @@ full-result comparison and optional `--source-xml` verification. The
 XML and normal/optimized rebuilds on Python 3.12 and 3.13. Exact identities are
 recorded in [COMPATIBILITY.json](COMPATIBILITY.json).
 
+A separate session, operated by the same person, re-derived the 89 set 001 expected
+results; that it consulted neither appraiser is an operator declaration and has not been
+independently verified. The session was given the published text, the case inputs
+without expected results, the fixture profile catalog, a brief and one format reference. Its handoff digests,
+delivered files and component-wise comparison are in
+[evidence/core-02-set-001-rederivation](evidence/core-02-set-001-rederivation/README.md):
+89 of 89 cases are equal on all twenty components, and five readings are marked open.
+The list of files the session reports having opened is its own declaration. Set 001 is
+unchanged, and the record is not independent external review.
+
 ### Set 002: section 7 boundary matrix
 
 ```sh
@@ -62,10 +72,14 @@ controls and one acceptance probe are here. Set 001 is unchanged.
 [Matrix with section 7 citations and revision 2 overlay](docs/BOUNDARY-MATRIX-001.md),
 [derivation and freeze record](docs/core-02-boundary-matrix-002.md),
 [specification ambiguities met](docs/SPEC-ISSUES-core02-s7.md). The expected results
-were derived by a separate isolated session from the published text alone, stored
-verbatim, and hashed before `wexp_ref.core02` was run. The derivation record lists every
-divergence between the matrix author, the isolated session and the engine, with its
-classification. The same Core-02 workflow verifies this set's frozen data and expansion.
+were derived in a separate session of the same project (one operator), stored verbatim,
+and, as recorded, hashed before `wexp_ref.core02` was first run. The files that session
+was given and the files it reports having opened are recorded with the derivation; that
+it read nothing else is an operator declaration that Git history cannot show. The
+derivation record lists every divergence between the matrix author, the derivation
+session and the engine, with its classification. This is same-project work, not
+independent external review. The same Core-02 workflow verifies this set's frozen data
+and expansion.
 
 ## Coverage-00
 
@@ -82,9 +96,10 @@ conformance is supplied. See the [exact-source workflow](.github/workflows/cover
 
 ## Historical Core corpora and installation guidance
 
-The previous detailed README is preserved byte-for-byte in
-[CORE-CORPORA.md](CORE-CORPORA.md), including original case derivations, freeze
-records, schema descriptions, POSIX commands and Windows PowerShell 5.1 guidance.
+The previous detailed README is preserved in [CORE-CORPORA.md](CORE-CORPORA.md)
+(byte-for-byte as of commit `c1ef9e5`; one table row for set 002 was added later),
+including original case derivations, freeze records, schema descriptions, POSIX
+commands and Windows PowerShell 5.1 guidance.
 [IMPLEMENTING.md](IMPLEMENTING.md) remains explicitly Core-01-scoped.
 
 ```sh
@@ -108,6 +123,7 @@ fails on changed bytes; line-ending hints do not make different bytes equivalent
 - [Appraisal Core specifications](https://github.com/WEXP-dev/wexp-appraisal-core-spec): posted Core-02 and retained historical revisions.
 - [Coverage specification](https://github.com/WEXP-dev/wexp-coverage-spec): separate Coverage-00 semantics and optional deployment profile.
 - [Reference tooling](https://github.com/WEXP-dev/wexp-ref): an optional implementation consumer, never the source of expectations.
+- [Second appraiser](https://github.com/WEXP-dev/wexp-check): a second Core-02 implementation, written in a separate AI-assisted session operated by the same person as wexp-ref. That the session did not consult wexp-ref or any WEXP corpus expectations is an operator declaration and has not been independently verified; the wexp-ref Core-02 module was public before wexp-check started. Its initial version was frozen before the first recorded corpus comparison; later changes are documented there. Its [record of 10 November 2026](https://github.com/WEXP-dev/wexp-check/blob/4af1e69d5f9b3e28ed8efffba07e188a26a25828/reproductions/2026-11-10-lemonnier/README.md) shows both corpus comparisons (89/89 and 35/35) replayed by Laurent Lemonnier in his own GitHub Actions at the pinned revisions of code and inputs: a real repetition of the comparison by a third-party operator, with the same code, not an independent implementation.
 - [Interop records](https://github.com/WEXP-dev/wexp-interop): exact experimental packages and reproduction limits; historical results do not establish new-version compatibility.
 
 ## Licensing and contribution

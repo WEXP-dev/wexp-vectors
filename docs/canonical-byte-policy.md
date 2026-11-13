@@ -16,10 +16,11 @@ the actual binding graph rather than on filename extensions.
 | `vectors/WEXP-CORE-01-VECTORS-*/profile.json` | Its raw digest is declared by the set descriptor and the public set manifest. |
 | `vectors/WEXP-CORE-01-VECTORS-*/descriptor.json` | Its raw digest is declared by the public set manifest. |
 | `vectors/WEXP-CORE-01-VECTORS-*/spec/*.xml` | Its raw digest and byte count are declared by the descriptor and public set manifest. |
-| `schema/core-01-*.schema.json` | Raw digests are declared by both Core-01 set manifests. |
+| `schema/core-01-*.schema.json` | Raw digests are declared by all three Core-01 set manifests. |
 | `vectors/core-00/*.json`, `examples/non-normative-schema-example.json` | Raw digests are declared by `manifests/vectors.json`. |
 | `schema/vector.schema.json`, `schema/core-00-test-harness.schema.json`, `requirements/core-00.json` | Raw digests are declared by `manifests/vectors.json`. |
-| `manifests/*.json`, `vectors/**/SHA256SUMS`, `vectors/WEXP-CORE-02-VECTORS-*/manifest.json` | Integrity controls. Core-01 set 002's `SHA256SUMS` is itself manifest-bound; all of these controls must be delivered without checkout rewriting. |
+| Files whose digests are declared by `vectors/WEXP-CORE-02-VECTORS-*/manifest.json` (its `files`, `frozen_data` and `harness_representation` entries) or by `vectors/WEXP-COVERAGE-00-LOGIC-001/manifest.json` | Package sources, frozen data (`corpus.json`, `cases.json`), delivered expectations and derivation files, and the hash-bound package READMEs. |
+| `manifests/*.json`, `vectors/**/SHA256SUMS`, `vectors/WEXP-CORE-02-VECTORS-*/manifest.json`, `vectors/WEXP-COVERAGE-00-LOGIC-001/manifest.json` | Integrity controls. The `SHA256SUMS` files of Core-01 sets 002 and 003 are themselves manifest-bound; all of these controls must be delivered without checkout rewriting. |
 | `evidence/core-01-set-002/*.json`, `evidence/core-02-set-002/*.json`, `evidence/core-02-set-001-rederivation/**`, `provenance/PUBLIC-GENESIS.json` | Scoped published evidence and provenance controls. They retain repository bytes during checkout. |
 
 The `.gitattributes` rules use `-text` for these paths. That tells Git not to
