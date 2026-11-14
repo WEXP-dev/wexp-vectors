@@ -1,0 +1,153 @@
+{
+  "harness": {
+    "harness_schema_id": "urn:wexp:core-01:vectors-003:harness",
+    "label": "WEXP Core-01 vector harness 004",
+    "vector_schema_id": "urn:wexp:core-01:vectors-003:vector"
+  },
+  "non_claims": [
+    "Profile vocabulary restates the frozen CORE-01 snapshot registries for qualification only."
+  ],
+  "orderings": {
+    "base": [
+      "observation",
+      "intent",
+      "invocation",
+      "execution"
+    ],
+    "qualifier": [
+      "PROV",
+      "IV"
+    ]
+  },
+  "profile_id": "wexp-core-01-vectors-004-profile",
+  "profile_version": 1,
+  "qualifier_admissibility": {
+    "PROV": [
+      "execution"
+    ]
+  },
+  "qualifier_independence": {
+    "IV": "supported",
+    "PROV": "not-applicable"
+  },
+  "representation": "core-01-qualification-001-harness",
+  "scope_keys": [
+    "carrier-mapping",
+    "authenticity",
+    "target-binding",
+    "boundary-grounding",
+    "observation-support",
+    "intent-support",
+    "invocation-support",
+    "execution-support",
+    "provenance-support",
+    "independent-verification",
+    "composition",
+    "counter-evidence"
+  ],
+  "semantics_version": "wexp-core-1",
+  "status_domains": {
+    "assessment": [
+      "supported",
+      "unsupported",
+      "not-evaluated"
+    ],
+    "boundary-grounding": [
+      "asserted-only",
+      "attributed",
+      "attested",
+      "not-evaluated"
+    ],
+    "counter-evidence": [
+      "not-supplied",
+      "not-evaluated",
+      "resolved-no-defeat",
+      "unresolved-material",
+      "defeating"
+    ],
+    "independence": [
+      "supported",
+      "unsupported",
+      "not-evaluated",
+      "not-applicable"
+    ]
+  },
+  "token_registry": {
+    "classes": {
+      "fatal": [
+        "E_CLAIM_OUT_OF_DOMAIN",
+        "E_MALFORMED_NORMALIZED_INPUT",
+        "E_PROFILE_MAPPING_INVALID",
+        "E_UNKNOWN_CRITICAL_SEMANTIC",
+        "E_UNSUPPORTED_SEMANTICS_VERSION"
+      ],
+      "gap": [
+        "E_IV_NOT_EVALUATED",
+        "E_COUNTER_EVIDENCE_NOT_EVALUATED"
+      ],
+      "substantive": [
+        "E_BASE_EXCEEDS_BOUNDARY",
+        "E_MISSING_REQUIRED_EVIDENCE",
+        "E_COUNTER_EVIDENCE_UNRESOLVED",
+        "P_COUNTER_FAIL"
+      ]
+    },
+    "derived_only": [
+      "E_MALFORMED_NORMALIZED_INPUT",
+      "E_UNSUPPORTED_SEMANTICS_VERSION",
+      "E_PROFILE_MAPPING_INVALID",
+      "E_CLAIM_OUT_OF_DOMAIN"
+    ],
+    "foreign_rejected": [],
+    "roles": {
+      "base_exceeds_boundary": "E_BASE_EXCEEDS_BOUNDARY",
+      "claim_out_of_domain": "E_CLAIM_OUT_OF_DOMAIN",
+      "counter_evidence_not_evaluated": "E_COUNTER_EVIDENCE_NOT_EVALUATED",
+      "counter_evidence_unresolved": "E_COUNTER_EVIDENCE_UNRESOLVED",
+      "malformed_normalized_input": "E_MALFORMED_NORMALIZED_INPUT",
+      "missing_required_evidence": "E_MISSING_REQUIRED_EVIDENCE",
+      "profile_mapping_invalid": "E_PROFILE_MAPPING_INVALID",
+      "qualifier_not_evaluated": "E_IV_NOT_EVALUATED",
+      "unknown_critical": "E_UNKNOWN_CRITICAL_SEMANTIC",
+      "unsupported_semantics_version": "E_UNSUPPORTED_SEMANTICS_VERSION"
+    },
+    "supplied_fatal": [
+      "E_UNKNOWN_CRITICAL_SEMANTIC"
+    ]
+  },
+  "vector_bindings": {
+    "WEXP-CORE-01-V004-TV-4001": {
+      "classification": "boundary-grounding-attested-control",
+      "requirement_ids": [
+        "WEXP-CORE-01-V004-REQ-S4001"
+      ],
+      "source_fixture": "S4001"
+    },
+    "WEXP-CORE-01-V004-TV-4002": {
+      "classification": "boundary-grounding-pairing-fatal",
+      "requirement_ids": [
+        "WEXP-CORE-01-V004-REQ-S4002"
+      ],
+      "source_fixture": "S4002"
+    },
+    "WEXP-CORE-01-V004-TV-4003": {
+      "classification": "pairing-precedes-supplied-fatal-control",
+      "requirement_ids": [
+        "WEXP-CORE-01-V004-REQ-S4003"
+      ],
+      "source_fixture": "S4003"
+    }
+  },
+  "verdict_rules": {
+    "precedence": [
+      "fatal",
+      "substantive",
+      "default"
+    ],
+    "verdicts": {
+      "default": "accept",
+      "fatal": "reject",
+      "substantive": "downgrade"
+    }
+  }
+}

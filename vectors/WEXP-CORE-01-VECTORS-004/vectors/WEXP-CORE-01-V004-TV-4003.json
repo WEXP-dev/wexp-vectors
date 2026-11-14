@@ -1,0 +1,110 @@
+{
+  "candidate_id": "WEXP-CORE-01-VECTORS-004",
+  "classification": "pairing-precedes-supplied-fatal-control",
+  "derivation": "Section 6.2 orders a cross-field violation at position 4 and a non-empty valid fatal_conditions set at position 5, and states that 'no later check or diagnostic is added after any earlier rejection branch wins.' E_UNKNOWN_CRITICAL_SEMANTIC is a Core-defined supplied fatal member and is validly supplied here, so position 5 would fire on this input were position 4 satisfied. Position 4 is not satisfied, so the result is E_PROFILE_MAPPING_INVALID alone and the supplied token is neither returned nor unioned in. The projection is the same fixed rejection.",
+  "expected": {
+    "asserted_claim": null,
+    "asserted_claim_supported": false,
+    "boundary_ceiling": null,
+    "boundary_grounding": null,
+    "counter_evidence": null,
+    "evaluation_context": null,
+    "evaluation_gap_entries": [],
+    "evaluation_gaps": [],
+    "evaluation_scope": null,
+    "fatal_reasons": [
+      "E_PROFILE_MAPPING_INVALID"
+    ],
+    "inherited_limitations": null,
+    "maximal_supported_claims": [],
+    "recorder_relations": null,
+    "semantics_version": "wexp-core-1",
+    "substantive_reasons": [],
+    "support_entries": [],
+    "support_relations": [],
+    "supported_claims": [],
+    "target": null,
+    "verdict": "reject"
+  },
+  "expected_code": "E_PROFILE_MAPPING_INVALID",
+  "harness_representation": "WEXP Core-01 vector harness 004",
+  "input": {
+    "asserted_claim": {
+      "base": "execution",
+      "qualifiers": []
+    },
+    "base_findings": [
+      {
+        "base": "execution",
+        "basis_refs": [
+          "execution-T"
+        ],
+        "evaluation_context_ref": "C",
+        "limitations": [],
+        "reasons": [],
+        "semantic_validation": "supported",
+        "target": "T",
+        "target_binding": "supported"
+      }
+    ],
+    "boundary_finding": {
+      "basis_refs": [
+        "bd"
+      ],
+      "ceiling_base": "execution",
+      "evaluation_context_ref": "C",
+      "grounding": "not-evaluated",
+      "limitations": [],
+      "reasons": [],
+      "status": "supported",
+      "target": "T",
+      "target_binding": "supported"
+    },
+    "counter_evidence": [
+      {
+        "affected_claims": [],
+        "basis_refs": [],
+        "limitations": [],
+        "reasons": [],
+        "status": "not-supplied"
+      }
+    ],
+    "evaluation_context": {
+      "id": "C"
+    },
+    "evaluation_scope": {
+      "authenticity": "evaluated",
+      "boundary-grounding": "not-evaluated",
+      "carrier-mapping": "evaluated",
+      "composition": "evaluated",
+      "counter-evidence": "evaluated",
+      "execution-support": "evaluated",
+      "independent-verification": "evaluated",
+      "intent-support": "evaluated",
+      "invocation-support": "evaluated",
+      "observation-support": "evaluated",
+      "provenance-support": "evaluated",
+      "target-binding": "evaluated"
+    },
+    "fatal_conditions": [
+      "E_UNKNOWN_CRITICAL_SEMANTIC"
+    ],
+    "inherited_limitations": [],
+    "profile_evaluation_gaps": [],
+    "qualifier_findings": [],
+    "recorder_relations": [],
+    "representation": "core-01-qualification-001-harness",
+    "semantics_version": "wexp-core-1",
+    "target": "T"
+  },
+  "purpose": "The same pairing violation carrying a valid supplied fatal condition. The result must name the cross-field violation, not the supplied condition: an input rejected for the wrong reason is a different result from one rejected for the right reason. This is an ordering consequence control for the invariant above, not a second invariant.",
+  "requirement_ids": [
+    "WEXP-CORE-01-V004-REQ-S4003"
+  ],
+  "snapshot": {
+    "id": "draft-sergeev-wexp-core-01",
+    "xml_sha256": "84c0a16467585c29925339a10dd287c2e67bfe21ed592826254bf424dc24f56d"
+  },
+  "source_fixture": "S4003",
+  "vector_id": "WEXP-CORE-01-V004-TV-4003"
+}
